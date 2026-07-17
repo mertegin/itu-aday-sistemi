@@ -502,6 +502,30 @@ ARGUMENTS: dict[str, DefenseArgument] = {
         ],
     ),
 
+    "itu_worship_facilities": DefenseArgument(
+        id="itu_worship_facilities",
+        label="Kampüste ibadet imkânları",
+        technique="direct_information + inclusion",
+        trigger_hint="Aday cami, mescit, namaz veya ibadet imkânını açıkça soruyor",
+        talking_points=[
+            "Bu başlığı yalnız aday açıkça sorduğunda yanıtla; isim, görünüş veya konuşma biçiminden inanç çıkarımı yapma.",
+            "RAG'deki resmî kampüs haritasında bulunan camiyi ve öğrenci geri bildirimindeki fakülte mescidini kaynak türlerini ayırarak söyle.",
+            "Sınavda ibadet izni veya Ramazan uygulaması gibi RAG'de doğrulanmayan bir kural uydurma.",
+        ],
+    ),
+
+    "itu_social_venues": DefenseArgument(
+        id="itu_social_venues",
+        label="Ayazağa'da sosyal mekânlar ve günlük yaşam",
+        technique="experiential_evidence + direct_information",
+        trigger_hint="Aday sinema, maç izleme, kafe, pizza, market veya kampüste buluşma noktası soruyor",
+        talking_points=[
+            "Sorulan ihtiyaca doğrudan RAG'deki adlandırılmış mekân veya etkinlik örnekleriyle cevap ver.",
+            "Resmî kampüs listesindeki mekânlarla öğrenci geri bildirimindeki dönemsel deneyimleri birbirinden ayır.",
+            "Geçmiş bir Dünya Kupası etkinliğini sürekli veya her dönem garanti edilen program gibi anlatma.",
+        ],
+    ),
+
     "itu_admission_reality": DefenseArgument(
         id="itu_admission_reality",
         label="Sıralama ve tercih gerçekliği",
@@ -509,8 +533,8 @@ ARGUMENTS: dict[str, DefenseArgument] = {
         trigger_hint="Aday taban sırası, puan, girme ihtimali veya başka bölüm sırası soruyor",
         talking_points=[
             "Sorulan bölümün kaynaklı taban sırasını ve yılı açıkça söyle.",
-            "Kesin gelir/gelmez deme; güvenli, sınırda veya geride çerçevesini deterministik profile göre kullan.",
-            "İTÜ Bilgisayar hedefini tercih listesinde gerçekçi bir konuma yerleştirmesine yardım et.",
+            "Aday geçen yılın tabanının gerisindeyse bunu açıkça '2025 tabanına göre geride' diye söyle; yalnız gelecek yıl için kesin sonuç verme.",
+            "İTÜ Bilgisayar gerçekçi değilse, sıralamaya uyan İTÜ bölümünü yalnız kaynaklı 2025 tabanlarıyla alternatif olarak göster.",
         ],
     ),
 

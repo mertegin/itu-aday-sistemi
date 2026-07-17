@@ -181,6 +181,36 @@ async def test_generation_api_error_falls_back_to_relevant_rag(client):
     assert len(data["response_text"].split()) <= 65
 
 
+async def test_verifier_rewrites_off_topic_draft_without_copying_rag_card(client):
+    class EvidenceWriterLLM(FakeLLMClient):
+        async def generate_response(self, **kwargs):
+            return "İTÜ Bilgisayar 2025 yılında 1.435 ile kapattı."
+
+        async def rewrite_response(self, **kwargs):
+            return (
+                "Bizim BLG 361E dersimizde ayrı laboratuvar saati 0 görünse de SQL, "
+                "uygulama geliştirme ve takım projesi var. Veritabanını yalnız teoride "
+                "bırakmıyoruz; 5 AKTS içinde tasarım ve sorgulamayı projeyle bağlıyorsun."
+            )
+
+    original = routes._orchestrator.llm
+    routes._orchestrator.llm = EvidenceWriterLLM()
+    try:
+        response = await client.post("/api/chat", json={
+            "text": "Veritabanı derslerinde uygulama yapılıyor mu?",
+        })
+    finally:
+        routes._orchestrator.llm = original
+
+    data = response.json()
+    assert data["xai_meta"]["decision_factors"]["route"]["primary_topic"] == "database_course"
+    assert data["rag"]["facts"][0]["id"] == "curriculum_database_practice_card"
+    assert data["response_pipeline"]["rewrite"]["succeeded"] is True
+    assert data["response_pipeline"]["last_resort"]["used"] is False
+    assert data["response_text"].startswith("Bizim BLG 361E")
+    assert "1.435" not in data["response_text"]
+
+
 async def test_sess_9504_curriculum_regression(client):
     first = await client.post("/api/chat", json={
         "text": "selam ben mert ve ben 700. oldum yksde Bilgisayar Mühendisliği bölümünde tam olarak ne öğretiliyor?",

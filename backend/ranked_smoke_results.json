@@ -1,0 +1,1417 @@
+{
+  "run_id": "b1c11d838902",
+  "seed": 20260717,
+  "api": "http://127.0.0.1:8002/api",
+  "questions_file": "C:\\Users\\90553\\.codex\\attachments\\76ddbb41-8f4e-4688-a179-54eeb31b94a4\\pasted-text.txt",
+  "summary": {
+    "conversations": 1,
+    "turns": 12,
+    "ok_turns": 12,
+    "warnings": {},
+    "fallback_turns": 0,
+    "fact_gate_replacements": 0,
+    "relevance_repairs": 2,
+    "admission_repairs": 0
+  },
+  "results": [
+    {
+      "id": "rank_0005_ai_girisim",
+      "title": "SAY 5 profili",
+      "rank": 5,
+      "result": {
+        "session_id": "sess_2cc61f113cbf",
+        "turns": [
+          {
+            "category": "Açılış",
+            "question": "Merhaba, ben Defne. SAY sıralamam 5 geldi; yapay zekâ ve girişimcilikle ilgileniyorum, İTÜ Bilgisayar'ı değerlendiriyorum.",
+            "answer": "İTÜ Bilgisayar 2025'te 1.435 ile kapattı; 5 sıralaman geçen yılki tabanın önünde. Bu güçlü bir konum, fakat yeni yılın tabanı oluşmadan garanti veremem.",
+            "elapsed_seconds": 12.38,
+            "argument_id": "active_listening",
+            "route": null,
+            "profile_rank": 5,
+            "academic": {
+              "risk_band": "safe",
+              "risk_bands": [
+                {
+                  "department": "bilgisayar",
+                  "band": "safe",
+                  "cutoff_2025": 1435
+                }
+              ],
+              "eligible_departments": [
+                {
+                  "department": "bilgisayar",
+                  "cutoff_2025": 1435,
+                  "band": "safe"
+                },
+                {
+                  "department": "yapay_zeka_veri",
+                  "cutoff_2025": 1947,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektronik_haberlesme",
+                  "cutoff_2025": 2126,
+                  "band": "safe"
+                },
+                {
+                  "department": "ucak",
+                  "cutoff_2025": 2235,
+                  "band": "safe"
+                },
+                {
+                  "department": "matematik",
+                  "cutoff_2025": 3495,
+                  "band": "safe"
+                },
+                {
+                  "department": "endustri",
+                  "cutoff_2025": 3723,
+                  "band": "safe"
+                },
+                {
+                  "department": "uzay",
+                  "cutoff_2025": 3988,
+                  "band": "safe"
+                },
+                {
+                  "department": "kontrol_otomasyon",
+                  "cutoff_2025": 4486,
+                  "band": "safe"
+                },
+                {
+                  "department": "makine",
+                  "cutoff_2025": 6106,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektrik",
+                  "cutoff_2025": 6124,
+                  "band": "safe"
+                }
+              ]
+            },
+            "checks": {
+              "word_count": 23,
+              "over_limit": false,
+              "empty": false,
+              "generation_fallback": false,
+              "rag_fact_count": 6,
+              "rag_top_id": "admission_itu_ai_data_2025_direct",
+              "rag_top_label": "İTÜ Yapay Zekâ ve Veri 2025 kabul gerçekliği",
+              "forbidden": [],
+              "sensitive_targeting": [],
+              "max_recent_similarity": 0.0,
+              "near_duplicate": false,
+              "admission_check": {},
+              "fact_gate": {
+                "clean": true,
+                "violations": [],
+                "replaced": false,
+                "original_text": null,
+                "scholarship_eligibility": {
+                  "repaired": false,
+                  "reason": "no_applicable_rank_card"
+                }
+              },
+              "relevance": {
+                "repaired": false,
+                "reason": "relevant",
+                "answer_overlap": 4,
+                "card_overlap": 3,
+                "card_id": "admission_itu_ai_data_2025_direct"
+              },
+              "repetition": {
+                "repaired": false,
+                "reason": "no_previous_answer"
+              },
+              "fallback_ok": true,
+              "ok": true
+            },
+            "rag_topics": [
+              "ranking",
+              "labs",
+              "entrepreneurship"
+            ]
+          },
+          {
+            "category": "Özel sıralama kontrolü",
+            "question": "Sıralamam 5 olduğuna göre İTÜ'nün başarı ödülü ve bursları bana ne sağlar?",
+            "answer": "Koç Bilgisayar Mühendisliği %100 burslu genel kontenjanı 2025'te 18, taban SAY başarı sırası 113'tü. Örneğin 435 sıralama, geçen yılın %100 burslu tabanının gerisindedir; ücretli veya %50 indirimli kontenjanlar ayrı değerlendirilmelidir. Maddi tarafta senin için aylık burs mu, yoksa yurt desteği mi daha kritik?",
+            "elapsed_seconds": 15.08,
+            "argument_id": "itu_financial_support",
+            "route": null,
+            "profile_rank": 5,
+            "academic": {
+              "risk_band": "safe",
+              "risk_bands": [
+                {
+                  "department": "bilgisayar",
+                  "band": "safe",
+                  "cutoff_2025": 1435
+                }
+              ],
+              "eligible_departments": [
+                {
+                  "department": "bilgisayar",
+                  "cutoff_2025": 1435,
+                  "band": "safe"
+                },
+                {
+                  "department": "yapay_zeka_veri",
+                  "cutoff_2025": 1947,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektronik_haberlesme",
+                  "cutoff_2025": 2126,
+                  "band": "safe"
+                },
+                {
+                  "department": "ucak",
+                  "cutoff_2025": 2235,
+                  "band": "safe"
+                },
+                {
+                  "department": "matematik",
+                  "cutoff_2025": 3495,
+                  "band": "safe"
+                },
+                {
+                  "department": "endustri",
+                  "cutoff_2025": 3723,
+                  "band": "safe"
+                },
+                {
+                  "department": "uzay",
+                  "cutoff_2025": 3988,
+                  "band": "safe"
+                },
+                {
+                  "department": "kontrol_otomasyon",
+                  "cutoff_2025": 4486,
+                  "band": "safe"
+                },
+                {
+                  "department": "makine",
+                  "cutoff_2025": 6106,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektrik",
+                  "cutoff_2025": 6124,
+                  "band": "safe"
+                }
+              ]
+            },
+            "checks": {
+              "word_count": 43,
+              "over_limit": false,
+              "empty": false,
+              "generation_fallback": false,
+              "rag_fact_count": 6,
+              "rag_top_id": "scholarship_rank_1_10",
+              "rag_top_label": "İlk 10 başarı ödülü",
+              "forbidden": [],
+              "sensitive_targeting": [],
+              "max_recent_similarity": 0.094,
+              "near_duplicate": false,
+              "admission_check": {},
+              "fact_gate": {
+                "clean": true,
+                "violations": [],
+                "replaced": false,
+                "original_text": null,
+                "scholarship_eligibility": {
+                  "repaired": false,
+                  "reason": "eligible_tier_and_conditions_present",
+                  "card_id": "scholarship_rank_1_10"
+                }
+              },
+              "relevance": {
+                "repaired": false,
+                "reason": "relevant",
+                "answer_overlap": 2,
+                "card_overlap": 2,
+                "card_id": "scholarship_rank_1_10"
+              },
+              "repetition": {
+                "repaired": true,
+                "reason": "duplicate_answer",
+                "similarity": 1.0,
+                "card_id": "admission_koc_compe_full_2025_direct",
+                "original_text": "İTÜ Bilgisayar 2025'te 1.435 ile kapattı; 5 sıralaman geçen yılki tabanın önünde. Bu güçlü bir konum, fakat yeni yılın tabanı oluşmadan garanti veremem."
+              },
+              "fallback_ok": true,
+              "ok": true
+            },
+            "rag_topics": [
+              "ranking",
+              "scholarship",
+              "financial_support",
+              "financial_concern",
+              "housing",
+              "campus"
+            ]
+          },
+          {
+            "category": "Özel sıralama kontrolü",
+            "question": "Koç Bilgisayar %100 burslu ile İTÜ Bilgisayar arasında kabul ve maliyet açısından durumum ne?",
+            "answer": "2025'te Koç Bilgisayar %100 burslu 113, İTÜ Bilgisayar 1.435 ile kapattı; 5 sıralaman iki tabanın da önünde, fakat yeni yıl için ikisi de garanti değil. İTÜ devlet üniversitesi olduğu için eğitim ücretsiz; ilk-10 paketinde tek seferlik 100.000 TL ve başarı koşullarına bağlı düzenli ödül var. Koç'un net toplam teklifini bu paketle karşılaştırmak gerekir.",
+            "elapsed_seconds": 9.63,
+            "argument_id": "itu_financial_support",
+            "route": null,
+            "profile_rank": 5,
+            "academic": {
+              "risk_band": "safe",
+              "risk_bands": [
+                {
+                  "department": "bilgisayar",
+                  "band": "safe",
+                  "cutoff_2025": 1435
+                }
+              ],
+              "eligible_departments": [
+                {
+                  "department": "bilgisayar",
+                  "cutoff_2025": 1435,
+                  "band": "safe"
+                },
+                {
+                  "department": "yapay_zeka_veri",
+                  "cutoff_2025": 1947,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektronik_haberlesme",
+                  "cutoff_2025": 2126,
+                  "band": "safe"
+                },
+                {
+                  "department": "ucak",
+                  "cutoff_2025": 2235,
+                  "band": "safe"
+                },
+                {
+                  "department": "matematik",
+                  "cutoff_2025": 3495,
+                  "band": "safe"
+                },
+                {
+                  "department": "endustri",
+                  "cutoff_2025": 3723,
+                  "band": "safe"
+                },
+                {
+                  "department": "uzay",
+                  "cutoff_2025": 3988,
+                  "band": "safe"
+                },
+                {
+                  "department": "kontrol_otomasyon",
+                  "cutoff_2025": 4486,
+                  "band": "safe"
+                },
+                {
+                  "department": "makine",
+                  "cutoff_2025": 6106,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektrik",
+                  "cutoff_2025": 6124,
+                  "band": "safe"
+                }
+              ]
+            },
+            "checks": {
+              "word_count": 53,
+              "over_limit": false,
+              "empty": false,
+              "generation_fallback": false,
+              "rag_fact_count": 6,
+              "rag_top_id": "admission_koc_compe_full_2025_direct",
+              "rag_top_label": "Koç Bilgisayar %100 burslu 2025 kabul gerçekliği",
+              "forbidden": [],
+              "sensitive_targeting": [],
+              "max_recent_similarity": 0.231,
+              "near_duplicate": false,
+              "admission_check": {},
+              "fact_gate": {
+                "clean": true,
+                "violations": [],
+                "replaced": false,
+                "original_text": null,
+                "scholarship_eligibility": {
+                  "repaired": true,
+                  "reason": "applicable_rank_tier",
+                  "card_id": "scholarship_rank_1_10",
+                  "original_text": "Koç Bilgisayar'ın %100 burslu kontenjanı 113 sıralama ile kapandı, bu da geçmişteki tabanının altında. İTÜ'de ise 5 sıralaman, bölüm için güvenli bir konumda. İTÜ'de ilk tercih bursu ile yıllık 4.000 TL'ye kadar destek alabilirsin."
+                }
+              },
+              "relevance": {
+                "repaired": false,
+                "reason": "relevant",
+                "answer_overlap": 4,
+                "card_overlap": 3,
+                "card_id": "admission_koc_compe_full_2025_direct"
+              },
+              "repetition": {
+                "repaired": false,
+                "reason": "distinct",
+                "similarity": 0.208
+              },
+              "fallback_ok": true,
+              "ok": true
+            },
+            "rag_topics": [
+              "scholarship",
+              "financial_support",
+              "comparison",
+              "financial_concern",
+              "housing",
+              "campus"
+            ]
+          },
+          {
+            "category": "Özel sıralama kontrolü",
+            "question": "Yapay zekâ alanında çalışabileceğim hoca ve laboratuvarlardan somut örnek verir misin?",
+            "answer": "Bizim yapay zekâ-veri hattımızda Burak Berk Üstündağ, Hazım Kemal Ekenel ve Ayşe Tosun Kühn somut hoca örnekleri. Fakültedeki 18 araştırma laboratuvarı arasında AI Sistemleri, Veri Analitiği ve Görsel Zekâ başlıkları bulunuyor; lisans öğrencisi ilgili hocayla proje uyumunu konuşarak bu çalışmalara katılabiliyor.",
+            "elapsed_seconds": 10.27,
+            "argument_id": "itu_faculty_research",
+            "route": null,
+            "profile_rank": 5,
+            "academic": {
+              "risk_band": "safe",
+              "risk_bands": [
+                {
+                  "department": "bilgisayar",
+                  "band": "safe",
+                  "cutoff_2025": 1435
+                }
+              ],
+              "eligible_departments": [
+                {
+                  "department": "bilgisayar",
+                  "cutoff_2025": 1435,
+                  "band": "safe"
+                },
+                {
+                  "department": "yapay_zeka_veri",
+                  "cutoff_2025": 1947,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektronik_haberlesme",
+                  "cutoff_2025": 2126,
+                  "band": "safe"
+                },
+                {
+                  "department": "ucak",
+                  "cutoff_2025": 2235,
+                  "band": "safe"
+                },
+                {
+                  "department": "matematik",
+                  "cutoff_2025": 3495,
+                  "band": "safe"
+                },
+                {
+                  "department": "endustri",
+                  "cutoff_2025": 3723,
+                  "band": "safe"
+                },
+                {
+                  "department": "uzay",
+                  "cutoff_2025": 3988,
+                  "band": "safe"
+                },
+                {
+                  "department": "kontrol_otomasyon",
+                  "cutoff_2025": 4486,
+                  "band": "safe"
+                },
+                {
+                  "department": "makine",
+                  "cutoff_2025": 6106,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektrik",
+                  "cutoff_2025": 6124,
+                  "band": "safe"
+                }
+              ]
+            },
+            "checks": {
+              "word_count": 41,
+              "over_limit": false,
+              "empty": false,
+              "generation_fallback": false,
+              "rag_fact_count": 6,
+              "rag_top_id": "ai_faculty_lab_answer_card",
+              "rag_top_label": "Yapay zekâ için hoca ve laboratuvar örnekleri",
+              "forbidden": [],
+              "sensitive_targeting": [],
+              "max_recent_similarity": 0.0,
+              "near_duplicate": false,
+              "admission_check": {},
+              "fact_gate": {
+                "clean": true,
+                "violations": [],
+                "replaced": false,
+                "original_text": null,
+                "scholarship_eligibility": {
+                  "repaired": false,
+                  "reason": "no_applicable_rank_card"
+                }
+              },
+              "relevance": {
+                "repaired": true,
+                "reason": "top_card_more_relevant",
+                "answer_overlap": 4,
+                "card_overlap": 7,
+                "card_id": "ai_faculty_lab_answer_card",
+                "original_text": "Yapay zekâ alanında çalışabileceğin hocalarımızdan bazıları Burak Berk Üstündağ ve Hazım Kemal Ekenel. Burak Berk Üstündağ özellikle makine öğrenmesi üzerine çalışıyor, Hazım Kemal Ekenel ise görüntü işleme alanında uzman."
+              },
+              "repetition": {
+                "repaired": false,
+                "reason": "distinct",
+                "similarity": 0.0
+              },
+              "fallback_ok": true,
+              "ok": true
+            },
+            "rag_topics": [
+              "faculty",
+              "labs",
+              "teaching_quality",
+              "technical_resources"
+            ]
+          },
+          {
+            "category": "Kariyer ve mezuniyet sonrası",
+            "question": "Girişimcilik için okuldan destek alabilir miyim?",
+            "answer": "İTÜ Çekirdek, girişimciliği destekleyen güçlü bir ekosistem sunuyor. 2025'te 5.000'den fazla teknoloji girişimi desteklendi ve 2.000'den fazla girişim şirketleşti. Ayrıca, her yıl ortalama 500 startup'a destek sağlanıyor. Bu, girişimcilik yolculuğunda sana önemli bir avantaj sunar.",
+            "elapsed_seconds": 9.46,
+            "argument_id": "itu_entrepreneurship_ecosystem",
+            "route": null,
+            "profile_rank": 5,
+            "academic": {
+              "risk_band": "safe",
+              "risk_bands": [
+                {
+                  "department": "bilgisayar",
+                  "band": "safe",
+                  "cutoff_2025": 1435
+                }
+              ],
+              "eligible_departments": [
+                {
+                  "department": "bilgisayar",
+                  "cutoff_2025": 1435,
+                  "band": "safe"
+                },
+                {
+                  "department": "yapay_zeka_veri",
+                  "cutoff_2025": 1947,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektronik_haberlesme",
+                  "cutoff_2025": 2126,
+                  "band": "safe"
+                },
+                {
+                  "department": "ucak",
+                  "cutoff_2025": 2235,
+                  "band": "safe"
+                },
+                {
+                  "department": "matematik",
+                  "cutoff_2025": 3495,
+                  "band": "safe"
+                },
+                {
+                  "department": "endustri",
+                  "cutoff_2025": 3723,
+                  "band": "safe"
+                },
+                {
+                  "department": "uzay",
+                  "cutoff_2025": 3988,
+                  "band": "safe"
+                },
+                {
+                  "department": "kontrol_otomasyon",
+                  "cutoff_2025": 4486,
+                  "band": "safe"
+                },
+                {
+                  "department": "makine",
+                  "cutoff_2025": 6106,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektrik",
+                  "cutoff_2025": 6124,
+                  "band": "safe"
+                }
+              ]
+            },
+            "checks": {
+              "word_count": 35,
+              "over_limit": false,
+              "empty": false,
+              "generation_fallback": false,
+              "rag_fact_count": 6,
+              "rag_top_id": "itu_cekirdek_impact_2025",
+              "rag_top_label": "İTÜ Çekirdek'in 14 yıllık girişim desteği",
+              "forbidden": [],
+              "sensitive_targeting": [],
+              "max_recent_similarity": 0.057,
+              "near_duplicate": false,
+              "admission_check": {},
+              "fact_gate": {
+                "clean": true,
+                "violations": [],
+                "replaced": false,
+                "original_text": null,
+                "scholarship_eligibility": {
+                  "repaired": false,
+                  "reason": "no_applicable_rank_card"
+                }
+              },
+              "relevance": {
+                "repaired": false,
+                "reason": "relevant",
+                "answer_overlap": 2,
+                "card_overlap": 2,
+                "card_id": "itu_cekirdek_impact_2025"
+              },
+              "repetition": {
+                "repaired": false,
+                "reason": "distinct",
+                "similarity": 0.045
+              },
+              "fallback_ok": true,
+              "ok": true
+            },
+            "rag_topics": [
+              "entrepreneurship",
+              "career"
+            ]
+          },
+          {
+            "category": "İTÜ’nün diğer üniversitelerle karşılaştırılması",
+            "question": "İTÜ’nün eğitimi diğer üniversitelere göre daha mı zor?",
+            "answer": "İTÜ, QS 2026 Mühendislik ve Teknoloji'de dünya 91.'si; Bilgisayar Mühendisliği ABET akrediteli. Yapay zekâ çalışan Prof. Dr. Burak Berk Üstündağ'ın, öğrenci geri bildirimlerinde birebir ve e-posta yoluyla yardımcı olduğu aktarılıyor. Kararında eğitim, kampüs, maliyet ve kariyerden hangisi daha ağır basıyor?",
+            "elapsed_seconds": 8.27,
+            "argument_id": "itu_compe_differentiators",
+            "route": null,
+            "profile_rank": 5,
+            "academic": {
+              "risk_band": "safe",
+              "risk_bands": [
+                {
+                  "department": "bilgisayar",
+                  "band": "safe",
+                  "cutoff_2025": 1435
+                }
+              ],
+              "eligible_departments": [
+                {
+                  "department": "bilgisayar",
+                  "cutoff_2025": 1435,
+                  "band": "safe"
+                },
+                {
+                  "department": "yapay_zeka_veri",
+                  "cutoff_2025": 1947,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektronik_haberlesme",
+                  "cutoff_2025": 2126,
+                  "band": "safe"
+                },
+                {
+                  "department": "ucak",
+                  "cutoff_2025": 2235,
+                  "band": "safe"
+                },
+                {
+                  "department": "matematik",
+                  "cutoff_2025": 3495,
+                  "band": "safe"
+                },
+                {
+                  "department": "endustri",
+                  "cutoff_2025": 3723,
+                  "band": "safe"
+                },
+                {
+                  "department": "uzay",
+                  "cutoff_2025": 3988,
+                  "band": "safe"
+                },
+                {
+                  "department": "kontrol_otomasyon",
+                  "cutoff_2025": 4486,
+                  "band": "safe"
+                },
+                {
+                  "department": "makine",
+                  "cutoff_2025": 6106,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektrik",
+                  "cutoff_2025": 6124,
+                  "band": "safe"
+                }
+              ]
+            },
+            "checks": {
+              "word_count": 40,
+              "over_limit": false,
+              "empty": false,
+              "generation_fallback": false,
+              "rag_fact_count": 6,
+              "rag_top_id": "differentiator_qs_abet_faculty_card",
+              "rag_top_label": "",
+              "forbidden": [],
+              "sensitive_targeting": [],
+              "max_recent_similarity": 0.078,
+              "near_duplicate": false,
+              "admission_check": {},
+              "fact_gate": {
+                "clean": true,
+                "violations": [],
+                "replaced": false,
+                "original_text": null,
+                "scholarship_eligibility": {
+                  "repaired": false,
+                  "reason": "no_applicable_rank_card"
+                }
+              },
+              "relevance": {
+                "repaired": false,
+                "reason": "relevant",
+                "answer_overlap": 2,
+                "card_overlap": 0,
+                "card_id": "differentiator_qs_abet_faculty_card"
+              },
+              "repetition": {
+                "repaired": false,
+                "reason": "distinct",
+                "similarity": 0.098
+              },
+              "fallback_ok": true,
+              "ok": true
+            },
+            "rag_topics": [
+              "comparison",
+              "differentiators",
+              "faculty",
+              "career_evidence"
+            ]
+          },
+          {
+            "category": "Projeler ve araştırma imkânları",
+            "question": "Projeler yarışmalara gönderiliyor mu?",
+            "answer": "Ders projeleri otomatik olarak yarışmaya gönderilmiyor; bunun bölüm genelinde yayımlanmış bir oranı da yok. Yarışma hedefleyen öğrenci projeyi danışman veya takımla büyütebilir: güncel öğrenci deneyiminde 19 üyeli İTÜNOM İHA, 2 roket ve 3 uydu geliştiren UZAYTEK ile TEKNOFEST'te yarışan İTÜ Sungur somut örnekler.",
+            "elapsed_seconds": 8.5,
+            "argument_id": "itu_research_projects",
+            "route": null,
+            "profile_rank": 5,
+            "academic": {
+              "risk_band": "safe",
+              "risk_bands": [
+                {
+                  "department": "bilgisayar",
+                  "band": "safe",
+                  "cutoff_2025": 1435
+                }
+              ],
+              "eligible_departments": [
+                {
+                  "department": "bilgisayar",
+                  "cutoff_2025": 1435,
+                  "band": "safe"
+                },
+                {
+                  "department": "yapay_zeka_veri",
+                  "cutoff_2025": 1947,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektronik_haberlesme",
+                  "cutoff_2025": 2126,
+                  "band": "safe"
+                },
+                {
+                  "department": "ucak",
+                  "cutoff_2025": 2235,
+                  "band": "safe"
+                },
+                {
+                  "department": "matematik",
+                  "cutoff_2025": 3495,
+                  "band": "safe"
+                },
+                {
+                  "department": "endustri",
+                  "cutoff_2025": 3723,
+                  "band": "safe"
+                },
+                {
+                  "department": "uzay",
+                  "cutoff_2025": 3988,
+                  "band": "safe"
+                },
+                {
+                  "department": "kontrol_otomasyon",
+                  "cutoff_2025": 4486,
+                  "band": "safe"
+                },
+                {
+                  "department": "makine",
+                  "cutoff_2025": 6106,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektrik",
+                  "cutoff_2025": 6124,
+                  "band": "safe"
+                }
+              ]
+            },
+            "checks": {
+              "word_count": 43,
+              "over_limit": false,
+              "empty": false,
+              "generation_fallback": false,
+              "rag_fact_count": 6,
+              "rag_top_id": "project_competition_honesty_card",
+              "rag_top_label": "Ders projeleri ve yarışmaya dönüşen takım projeleri",
+              "forbidden": [],
+              "sensitive_targeting": [],
+              "max_recent_similarity": 0.03,
+              "near_duplicate": false,
+              "admission_check": {},
+              "fact_gate": {
+                "clean": true,
+                "violations": [],
+                "replaced": false,
+                "original_text": null,
+                "scholarship_eligibility": {
+                  "repaired": false,
+                  "reason": "no_applicable_rank_card"
+                }
+              },
+              "relevance": {
+                "repaired": false,
+                "reason": "relevant",
+                "answer_overlap": 3,
+                "card_overlap": 3,
+                "card_id": "project_competition_honesty_card"
+              },
+              "repetition": {
+                "repaired": false,
+                "reason": "distinct",
+                "similarity": 0.016
+              },
+              "fallback_ok": true,
+              "ok": true
+            },
+            "rag_topics": [
+              "research_projects",
+              "labs",
+              "faculty"
+            ]
+          },
+          {
+            "category": "İTÜ’nün diğer üniversitelerle karşılaştırılması",
+            "question": "İTÜ mü Bilkent mi daha iyi?",
+            "answer": "Bilkent de güçlü bir üniversite, ancak İTÜ'nün QS 2026 Mühendislik ve Teknoloji sıralaması 91. ve ABET akrediteli bir program sunuyor. Ayrıca, İTÜ'nün 18 laboratuvarı ve 37 öğretim üyesiyle geniş bir araştırma imkanı var. Eğitim maliyeti açısından devlet üniversitesi olması da büyük bir avantaj.",
+            "elapsed_seconds": 7.91,
+            "argument_id": "university_comparison_general",
+            "route": null,
+            "profile_rank": 5,
+            "academic": {
+              "risk_band": "safe",
+              "risk_bands": [
+                {
+                  "department": "bilgisayar",
+                  "band": "safe",
+                  "cutoff_2025": 1435
+                }
+              ],
+              "eligible_departments": [
+                {
+                  "department": "bilgisayar",
+                  "cutoff_2025": 1435,
+                  "band": "safe"
+                },
+                {
+                  "department": "yapay_zeka_veri",
+                  "cutoff_2025": 1947,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektronik_haberlesme",
+                  "cutoff_2025": 2126,
+                  "band": "safe"
+                },
+                {
+                  "department": "ucak",
+                  "cutoff_2025": 2235,
+                  "band": "safe"
+                },
+                {
+                  "department": "matematik",
+                  "cutoff_2025": 3495,
+                  "band": "safe"
+                },
+                {
+                  "department": "endustri",
+                  "cutoff_2025": 3723,
+                  "band": "safe"
+                },
+                {
+                  "department": "uzay",
+                  "cutoff_2025": 3988,
+                  "band": "safe"
+                },
+                {
+                  "department": "kontrol_otomasyon",
+                  "cutoff_2025": 4486,
+                  "band": "safe"
+                },
+                {
+                  "department": "makine",
+                  "cutoff_2025": 6106,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektrik",
+                  "cutoff_2025": 6124,
+                  "band": "safe"
+                }
+              ]
+            },
+            "checks": {
+              "word_count": 43,
+              "over_limit": false,
+              "empty": false,
+              "generation_fallback": false,
+              "rag_fact_count": 6,
+              "rag_top_id": "comparison_bilkent_honesty_card",
+              "rag_top_label": "Bilkent-İTÜ karşılaştırmasında kaynak sınırı",
+              "forbidden": [],
+              "sensitive_targeting": [],
+              "max_recent_similarity": 0.127,
+              "near_duplicate": false,
+              "admission_check": {},
+              "fact_gate": {
+                "clean": true,
+                "violations": [],
+                "replaced": false,
+                "original_text": null,
+                "scholarship_eligibility": {
+                  "repaired": false,
+                  "reason": "eligible_tier_and_conditions_present",
+                  "card_id": "scholarship_rank_1_10"
+                }
+              },
+              "relevance": {
+                "repaired": false,
+                "reason": "relevant",
+                "answer_overlap": 1,
+                "card_overlap": 0,
+                "card_id": "scholarship_rank_1_10"
+              },
+              "repetition": {
+                "repaired": false,
+                "reason": "distinct",
+                "similarity": 0.096
+              },
+              "fallback_ok": true,
+              "ok": true
+            },
+            "rag_topics": [
+              "comparison",
+              "differentiators",
+              "ranking",
+              "scholarship"
+            ]
+          },
+          {
+            "category": "Kariyer ve mezuniyet sonrası",
+            "question": "Bilgisayar mühendislerinin maaşları gelecekte düşer mi?",
+            "answer": "Bilgisayar mühendislerinin Türkiye'deki maaşlarının kesin düşeceğini veya artacağını gösteren bölüm özelinde güvenilir bir seri yok. Elde olan somut yön sinyali, ABD BLS'nin yazılım geliştirici istihdamında 2023-2033 için %17,9 büyüme projeksiyonu; rutin kodlama dönüşürken sistem tasarımı, güvenlik, veri ve yapay zekâ kurma becerileri önem kazanıyor.",
+            "elapsed_seconds": 8.39,
+            "argument_id": "future_of_compe",
+            "route": null,
+            "profile_rank": 5,
+            "academic": {
+              "risk_band": "safe",
+              "risk_bands": [
+                {
+                  "department": "bilgisayar",
+                  "band": "safe",
+                  "cutoff_2025": 1435
+                }
+              ],
+              "eligible_departments": [
+                {
+                  "department": "bilgisayar",
+                  "cutoff_2025": 1435,
+                  "band": "safe"
+                },
+                {
+                  "department": "yapay_zeka_veri",
+                  "cutoff_2025": 1947,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektronik_haberlesme",
+                  "cutoff_2025": 2126,
+                  "band": "safe"
+                },
+                {
+                  "department": "ucak",
+                  "cutoff_2025": 2235,
+                  "band": "safe"
+                },
+                {
+                  "department": "matematik",
+                  "cutoff_2025": 3495,
+                  "band": "safe"
+                },
+                {
+                  "department": "endustri",
+                  "cutoff_2025": 3723,
+                  "band": "safe"
+                },
+                {
+                  "department": "uzay",
+                  "cutoff_2025": 3988,
+                  "band": "safe"
+                },
+                {
+                  "department": "kontrol_otomasyon",
+                  "cutoff_2025": 4486,
+                  "band": "safe"
+                },
+                {
+                  "department": "makine",
+                  "cutoff_2025": 6106,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektrik",
+                  "cutoff_2025": 6124,
+                  "band": "safe"
+                }
+              ]
+            },
+            "checks": {
+              "word_count": 44,
+              "over_limit": false,
+              "empty": false,
+              "generation_fallback": false,
+              "rag_fact_count": 6,
+              "rag_top_id": "future_salary_ai_honesty_card",
+              "rag_top_label": "Yapay zekâ çağında iş ve maaş görünümü",
+              "forbidden": [],
+              "sensitive_targeting": [],
+              "max_recent_similarity": 0.065,
+              "near_duplicate": false,
+              "admission_check": {},
+              "fact_gate": {
+                "clean": true,
+                "violations": [],
+                "replaced": false,
+                "original_text": null,
+                "scholarship_eligibility": {
+                  "repaired": false,
+                  "reason": "no_applicable_rank_card"
+                }
+              },
+              "relevance": {
+                "repaired": true,
+                "reason": "top_card_more_relevant",
+                "answer_overlap": 0,
+                "card_overlap": 2,
+                "card_id": "future_salary_ai_honesty_card",
+                "original_text": "Kesin bir tahmin vermek zor; ancak ABD BLS verilerine göre, 2023-2033 döneminde yazılım geliştirme alanında %17,9 istihdam artışı öngörülüyor. Rutin kodlama otomatikleşirken, sistem tasarımı, güvenlik ve yapay zekâ kurma gibi beceriler daha fazla önem kazanacak."
+              },
+              "repetition": {
+                "repaired": false,
+                "reason": "distinct",
+                "similarity": 0.056
+              },
+              "fallback_ok": true,
+              "ok": true
+            },
+            "rag_topics": [
+              "career",
+              "future_of_field",
+              "career_evidence"
+            ]
+          },
+          {
+            "category": "Projeler ve araştırma imkânları",
+            "question": "Bitirme projesi nasıl seçiliyor?",
+            "answer": "Bitirme projeleri, 7. yarıyıldaki BLG 4901E Tasarım I dersiyle başlar. Öğrenciler, danışmanlarıyla yapılan düzenli toplantılarla proje konularını belirler. Proje, yazılım veya donanım olabilir ve genellikle 2-3 kişilik gruplar halinde yürütülür. Bu süreç, teoriyi uygulamaya dökme fırsatı sunar. Şimdiden en çok yazılım, yapay zekâ, donanım veya siber güvenlikten hangisi ilgini çekiyor?",
+            "elapsed_seconds": 10.06,
+            "argument_id": "itu_curriculum_details",
+            "route": null,
+            "profile_rank": 5,
+            "academic": {
+              "risk_band": "safe",
+              "risk_bands": [
+                {
+                  "department": "bilgisayar",
+                  "band": "safe",
+                  "cutoff_2025": 1435
+                }
+              ],
+              "eligible_departments": [
+                {
+                  "department": "bilgisayar",
+                  "cutoff_2025": 1435,
+                  "band": "safe"
+                },
+                {
+                  "department": "yapay_zeka_veri",
+                  "cutoff_2025": 1947,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektronik_haberlesme",
+                  "cutoff_2025": 2126,
+                  "band": "safe"
+                },
+                {
+                  "department": "ucak",
+                  "cutoff_2025": 2235,
+                  "band": "safe"
+                },
+                {
+                  "department": "matematik",
+                  "cutoff_2025": 3495,
+                  "band": "safe"
+                },
+                {
+                  "department": "endustri",
+                  "cutoff_2025": 3723,
+                  "band": "safe"
+                },
+                {
+                  "department": "uzay",
+                  "cutoff_2025": 3988,
+                  "band": "safe"
+                },
+                {
+                  "department": "kontrol_otomasyon",
+                  "cutoff_2025": 4486,
+                  "band": "safe"
+                },
+                {
+                  "department": "makine",
+                  "cutoff_2025": 6106,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektrik",
+                  "cutoff_2025": 6124,
+                  "band": "safe"
+                }
+              ]
+            },
+            "checks": {
+              "word_count": 50,
+              "over_limit": false,
+              "empty": false,
+              "generation_fallback": false,
+              "rag_fact_count": 6,
+              "rag_top_id": "curriculum_capstone_process_card",
+              "rag_top_label": "Bitirme projesinin yapısı ve danışman süreci",
+              "forbidden": [],
+              "sensitive_targeting": [],
+              "max_recent_similarity": 0.049,
+              "near_duplicate": false,
+              "admission_check": {},
+              "fact_gate": {
+                "clean": true,
+                "violations": [],
+                "replaced": false,
+                "original_text": null,
+                "scholarship_eligibility": {
+                  "repaired": false,
+                  "reason": "no_applicable_rank_card"
+                }
+              },
+              "relevance": {
+                "repaired": false,
+                "reason": "relevant",
+                "answer_overlap": 2,
+                "card_overlap": 2,
+                "card_id": "curriculum_capstone_process_card"
+              },
+              "repetition": {
+                "repaired": false,
+                "reason": "distinct",
+                "similarity": 0.028
+              },
+              "fallback_ok": true,
+              "ok": true
+            },
+            "rag_topics": [
+              "curriculum_projects",
+              "programming_languages",
+              "curriculum_systems",
+              "curriculum_ai",
+              "curriculum_security",
+              "curriculum"
+            ]
+          },
+          {
+            "category": "Projeler ve araştırma imkânları",
+            "question": "Teknofest takımları aktif mi?",
+            "answer": "Evet, Teknofest takımları oldukça aktif. Örneğin, İTÜNOM İHA, 19 üyesiyle insansız hava aracı geliştirme projeleri üzerinde çalışıyor. Ayrıca, UZAYTEK takımı roket, uydu ve İHA projeleri geliştiriyor; bu da mühendislik becerilerini uygulama fırsatı sunuyor.",
+            "elapsed_seconds": 7.35,
+            "argument_id": "itu_clubs_teams",
+            "route": null,
+            "profile_rank": 5,
+            "academic": {
+              "risk_band": "safe",
+              "risk_bands": [
+                {
+                  "department": "bilgisayar",
+                  "band": "safe",
+                  "cutoff_2025": 1435
+                }
+              ],
+              "eligible_departments": [
+                {
+                  "department": "bilgisayar",
+                  "cutoff_2025": 1435,
+                  "band": "safe"
+                },
+                {
+                  "department": "yapay_zeka_veri",
+                  "cutoff_2025": 1947,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektronik_haberlesme",
+                  "cutoff_2025": 2126,
+                  "band": "safe"
+                },
+                {
+                  "department": "ucak",
+                  "cutoff_2025": 2235,
+                  "band": "safe"
+                },
+                {
+                  "department": "matematik",
+                  "cutoff_2025": 3495,
+                  "band": "safe"
+                },
+                {
+                  "department": "endustri",
+                  "cutoff_2025": 3723,
+                  "band": "safe"
+                },
+                {
+                  "department": "uzay",
+                  "cutoff_2025": 3988,
+                  "band": "safe"
+                },
+                {
+                  "department": "kontrol_otomasyon",
+                  "cutoff_2025": 4486,
+                  "band": "safe"
+                },
+                {
+                  "department": "makine",
+                  "cutoff_2025": 6106,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektrik",
+                  "cutoff_2025": 6124,
+                  "band": "safe"
+                }
+              ]
+            },
+            "checks": {
+              "word_count": 33,
+              "over_limit": false,
+              "empty": false,
+              "generation_fallback": false,
+              "rag_fact_count": 6,
+              "rag_top_id": "insider_current_tech_teams_card",
+              "rag_top_label": "İHA, uydu ve TEKNOFEST takımları",
+              "forbidden": [],
+              "sensitive_targeting": [],
+              "max_recent_similarity": 0.074,
+              "near_duplicate": false,
+              "admission_check": {},
+              "fact_gate": {
+                "clean": true,
+                "violations": [],
+                "replaced": false,
+                "original_text": null,
+                "scholarship_eligibility": {
+                  "repaired": false,
+                  "reason": "no_applicable_rank_card"
+                }
+              },
+              "relevance": {
+                "repaired": false,
+                "reason": "relevant",
+                "answer_overlap": 3,
+                "card_overlap": 2,
+                "card_id": "insider_current_tech_teams_card"
+              },
+              "repetition": {
+                "repaired": false,
+                "reason": "distinct",
+                "similarity": 0.032
+              },
+              "fallback_ok": true,
+              "ok": true
+            },
+            "rag_topics": [
+              "campus",
+              "clubs_teams",
+              "student_social",
+              "research_projects"
+            ]
+          },
+          {
+            "category": "Kariyer ve mezuniyet sonrası",
+            "question": "İTÜ diploması iş görüşmelerinde avantaj sağlar mı?",
+            "answer": "İTÜ diploması, iş görüşmelerinde önemli bir avantaj sağlar. Mezunlarımızın %54'ü mezun olmadan işe başlıyor ve Kariyer.net analizinde bölümümüz 79,2 puanla birinci.",
+            "elapsed_seconds": 9.04,
+            "argument_id": "money_motivated_data",
+            "route": null,
+            "profile_rank": 5,
+            "academic": {
+              "risk_band": "safe",
+              "risk_bands": [
+                {
+                  "department": "bilgisayar",
+                  "band": "safe",
+                  "cutoff_2025": 1435
+                }
+              ],
+              "eligible_departments": [
+                {
+                  "department": "bilgisayar",
+                  "cutoff_2025": 1435,
+                  "band": "safe"
+                },
+                {
+                  "department": "yapay_zeka_veri",
+                  "cutoff_2025": 1947,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektronik_haberlesme",
+                  "cutoff_2025": 2126,
+                  "band": "safe"
+                },
+                {
+                  "department": "ucak",
+                  "cutoff_2025": 2235,
+                  "band": "safe"
+                },
+                {
+                  "department": "matematik",
+                  "cutoff_2025": 3495,
+                  "band": "safe"
+                },
+                {
+                  "department": "endustri",
+                  "cutoff_2025": 3723,
+                  "band": "safe"
+                },
+                {
+                  "department": "uzay",
+                  "cutoff_2025": 3988,
+                  "band": "safe"
+                },
+                {
+                  "department": "kontrol_otomasyon",
+                  "cutoff_2025": 4486,
+                  "band": "safe"
+                },
+                {
+                  "department": "makine",
+                  "cutoff_2025": 6106,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektrik",
+                  "cutoff_2025": 6124,
+                  "band": "safe"
+                }
+              ]
+            },
+            "checks": {
+              "word_count": 21,
+              "over_limit": false,
+              "empty": false,
+              "generation_fallback": false,
+              "rag_fact_count": 6,
+              "rag_top_id": "career_employment_companies_card",
+              "rag_top_label": "",
+              "forbidden": [],
+              "sensitive_targeting": [],
+              "max_recent_similarity": 0.016,
+              "near_duplicate": false,
+              "admission_check": {},
+              "fact_gate": {
+                "clean": true,
+                "violations": [],
+                "replaced": false,
+                "original_text": null,
+                "scholarship_eligibility": {
+                  "repaired": false,
+                  "reason": "no_applicable_rank_card"
+                }
+              },
+              "relevance": {
+                "repaired": false,
+                "reason": "relevant",
+                "answer_overlap": 4,
+                "card_overlap": 0,
+                "card_id": "career_employment_companies_card"
+              },
+              "repetition": {
+                "repaired": false,
+                "reason": "distinct",
+                "similarity": 0.0
+              },
+              "fallback_ok": true,
+              "ok": true
+            },
+            "rag_topics": [
+              "career",
+              "differentiators",
+              "career_evidence",
+              "future_of_field"
+            ]
+          }
+        ]
+      },
+      "error": null
+    }
+  ]
+}

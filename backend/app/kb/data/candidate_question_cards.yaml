@@ -141,3 +141,276 @@ facts:
       - "https://obs.itu.edu.tr/public/DersPlan/DersPlanDetay/2340"
       - "https://bbf.itu.edu.tr/ogrenciler/aday-ogrenciler"
     tags: ["bana uygun mu", "nasıl biri", "yaratıcı", "başarılı olabilir miyim", "mantıklı mı"]
+
+  - id: "project_competition_honesty_card"
+    label: "Ders projeleri ve yarışmaya dönüşen takım projeleri"
+    text: "Ders projeleri otomatik olarak yarışmaya gönderilmiyor; bunun bölüm genelinde yayımlanmış bir oranı da yok. Yarışma hedefleyen öğrenci projeyi danışman veya takımla büyütebilir: güncel öğrenci deneyiminde 19 üyeli İTÜNOM İHA, 2 roket ve 3 uydu geliştiren UZAYTEK ile TEKNOFEST'te yarışan İTÜ Sungur somut örnekler."
+    answer_card: true
+    topics: ["research_projects", "clubs_teams", "curriculum_projects"]
+    examples: ["İTÜNOM İHA", "UZAYTEK", "İTÜ Sungur", "TEKNOFEST"]
+    source: "İTÜ resmî takım sayfaları + öğrenci deneyimi"
+    year: 2026
+    confidence: medium
+    tags: ["projeler yarışmaya", "yarışmalara gönderiliyor", "proje yarışması", "teknofest"]
+
+  - id: "future_salary_ai_honesty_card"
+    label: "Yapay zekâ çağında iş ve maaş görünümü"
+    text: "Bilgisayar mühendislerinin Türkiye'deki maaşlarının kesin düşeceğini veya artacağını gösteren bölüm özelinde güvenilir bir seri yok. Elde olan somut yön sinyali, ABD BLS'nin yazılım geliştirici istihdamında 2023-2033 için %17,9 büyüme projeksiyonu; rutin kodlama dönüşürken sistem tasarımı, güvenlik, veri ve yapay zekâ kurma becerileri önem kazanıyor."
+    answer_card: true
+    topics: ["future_of_field", "career"]
+    examples: ["ABD BLS", "%17,9", "sistem tasarımı", "güvenlik"]
+    source: "ABD Çalışma İstatistikleri Bürosu"
+    source_url: "https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm"
+    year: "2023-2033 projeksiyonu"
+    confidence: high
+    tags: ["maaşlar gelecekte düşer", "maaş düşer", "yapay zeka işleri alır", "meslek biter"]
+
+  - id: "ai_faculty_lab_answer_card"
+    label: "Yapay zekâ için hoca ve laboratuvar örnekleri"
+    text: "Bizim yapay zekâ-veri hattımızda Burak Berk Üstündağ, Hazım Kemal Ekenel ve Ayşe Tosun Kühn somut hoca örnekleri. Fakültedeki 18 araştırma laboratuvarı arasında AI Sistemleri, Veri Analitiği ve Görsel Zekâ başlıkları bulunuyor; lisans öğrencisi ilgili hocayla proje uyumunu konuşarak bu çalışmalara katılabiliyor."
+    answer_card: true
+    topics: ["faculty", "labs", "research_projects"]
+    examples: ["Burak Berk Üstündağ", "Hazım Kemal Ekenel", "AI Sistemleri", "Veri Analitiği"]
+    source: "İTÜ Bilgisayar Mühendisliği öğretim üyeleri + İTÜ BBF"
+    source_urls:
+      - "https://bm.itu.edu.tr/personel/ogretim-uyeleri"
+      - "https://bbf.itu.edu.tr/ogrenciler/aday-ogrenciler"
+    year: 2026
+    confidence: high
+    tags: ["yapay zeka hoca ve laboratuvar", "ai hocaları", "yapay zeka laboratuvarı"]
+
+  - id: "comparison_bilkent_honesty_card"
+    label: "Bilkent-İTÜ karşılaştırmasında kaynak sınırı"
+    text: "Bilkent de güçlü bir üniversite; ancak güncel Bilkent bölüm verisi bu bilgi tabanında doğrulanmadığı için onun adına sıralama veya müfredat üstünlüğü uydurmak doğru olmaz. Bizim kaynaklı İTÜ kartlarımız net: QS 2026 Mühendislik ve Teknoloji dünya 91'inciliği, ABET, %100 İngilizce, 18 araştırma laboratuvarı ve devlet üniversitesi olarak ücretsiz eğitim."
+    answer_card: true
+    topics: ["comparison", "differentiators"]
+    examples: ["QS Mühendislik ve Teknoloji 91", "ABET", "18 araştırma laboratuvarı"]
+    source: "İTÜ resmî QS duyurusu + İTÜ BBF"
+    source_urls:
+      - "https://haberler.itu.edu.tr/haberdetay/2026/03/26/qs-alan-bazli-dunya-universite-siralamasi-aciklandi"
+      - "https://bbf.itu.edu.tr/ogrenciler/aday-ogrenciler"
+    year: 2026
+    confidence: high
+    tags: ["bilkent", "itü mü bilkent mi", "bilkent karşılaştırma"]
+
+  - id: "comparison_difficulty_honesty_card"
+    label: "İTÜ eğitiminin zorluğunu dürüst karşılaştırma"
+    text: "İTÜ'nün diğer üniversitelerden kesin olarak daha zor olduğunu gösteren ortak bir ölçüm yok. Bizim somut yükümüz her yarıyıl 30 AKTS; BLG 312E'de 3 programlama ödevi, BLG 335E'de 3 proje ve sistem-laboratuvar dersleri var. Yani düzenli çalışma isteyen zorlayıcı bir program, fakat kaynaksız biçimde 'hepsinden daha zor' diyemeyiz."
+    answer_card: true
+    topics: ["comparison", "differentiators", "academic_workload"]
+    examples: ["30 AKTS", "BLG 312E", "3 programlama ödevi", "BLG 335E", "3 proje"]
+    source: "İTÜ ÖBS ders planı ve ders katalogları"
+    source_urls:
+      - "https://obs.itu.edu.tr/public/DersPlan/DersPlanDetay/2340"
+      - "https://obs.itu.edu.tr/public/DersKatalog/DersKatalogBilgiBransDersKodu?bransKodu=BLG&dersNo=312"
+      - "https://obs.itu.edu.tr/public/DersKatalog/DersKatalogBilgiBransDersKodu?bransKodu=BLG&dersNo=335"
+    year: 2026
+    confidence: high
+    tags: ["diğer üniversitelere göre daha zor", "eğitimi daha mı zor", "itü çok zor"]
+
+  - id: "faculty_industry_experience_honesty_card"
+    label: "Hocaların sektör deneyimi hakkında dürüst cevap"
+    text: "Hocalarımızın araştırma alanları ve kişisel akademik profilleri açık; ancak bölüm, 37 öğretim üyesinin sektör deneyimini tek ölçütle veren güncel bir tablo yayımlamıyor. Bu yüzden 'hepsi sektörden geliyor' diyemeyiz; ilgilendiğin alandaki hocanın profilini ve projelerini tek tek kontrol etmek en doğru yol. Bizde akademik kadroyla proje bağı kurmanın somut kanalı danışmanlık, e-posta ve LÖKAP'tır."
+    answer_card: true
+    topics: ["teaching_quality", "faculty", "research_projects"]
+    examples: ["37 öğretim üyesi", "akademik profil", "LÖKAP"]
+    source: "İTÜ BBF ve İTÜ Bilgisayar Mühendisliği resmî sayfaları"
+    source_urls:
+      - "https://bbf.itu.edu.tr/ogrenciler/aday-ogrenciler"
+      - "https://bm.itu.edu.tr/personel/ogretim-uyeleri"
+    year: 2026
+    confidence: high
+    tags: ["sektör deneyimi", "sektörel deneyim", "hocalar sektörden", "akademisyenlerin sektör geçmişi"]
+
+  - id: "curriculum_modernity_answer_card"
+    label: "Ders içeriklerinin güncelliği"
+    text: "Bizim müfredat yalnızca klasik çekirdekte kalmıyor: 2026'da eklenen BLG 483E, 14 haftada LLM, prompt, üretken yapay zekâ ve AI destekli kodlama-test-hata ayıklamayı işliyor; 4 ödev toplam notun %40'ı. Bunun yanında C, veri yapıları, işletim sistemleri ve bilgisayar mimarisi gibi kalıcı temeller korunuyor; yani güncel araçlarla sağlam mühendislik çekirdeği birlikte ilerliyor."
+    answer_card: true
+    topics: ["teaching_quality", "curriculum", "curriculum_ai", "curriculum_projects"]
+    examples: ["BLG 483E", "14 hafta", "4 ödev", "%40"]
+    source: "İTÜ Bilgisayar Mühendisliği bölüm duyurusu ve güncel ders planı"
+    source_urls:
+      - "https://bm.itu.edu.tr/haberdetay/2026/01/05/yeni-se%C3%A7meli-ders---yapay-zeka-destekli-bilgisayar-m%C3%BChendisli%C4%9Fi"
+      - "https://obs.itu.edu.tr/public/DersPlan/DersPlanDetay/2340"
+    year: 2026
+    confidence: high
+    tags: ["ders içerikleri güncel", "müfredat güncel", "güncel teknoloji", "eski teknoloji", "modern ders"]
+
+  - id: "student_software_licenses_answer_card"
+    label: "Öğrenciye sunulan lisanslı yazılımlar"
+    text: "İTÜ BİDB'nin lisanslı yazılım hizmetinde MATLAB 2022b, Office 2021, SPSS 28, Visual Studio ve çok sayıda mühendislik yazılımı listeleniyor. MATLAB ve Simulink, İTÜ e-postasıyla kişisel bilgisayarda da kullanılabiliyor; diğer ürünlerde kampüs ağı, eşzamanlı kullanım veya VPN koşulu değişebildiği için kurulum sayfasındaki güncel erişim türü kontrol edilmeli."
+    answer_card: true
+    topics: ["technical_resources", "campus_life"]
+    examples: ["MATLAB 2022b", "Office 2021", "SPSS 28", "Visual Studio"]
+    source: "İTÜ Bilgi İşlem Daire Başkanlığı"
+    source_urls:
+      - "https://bidb.itu.edu.tr/hizmetler/lisansli-yazilim-hizmeti"
+      - "https://bidb.itu.edu.tr/seyir-defteri/blog/2018/01/29/matlab-tah-lisansi"
+      - "https://yardim.itu.edu.tr/search.aspx?s=Lisansl%C4%B1+Yaz%C4%B1l%C4%B1mlar"
+    year: 2026
+    confidence: high
+    tags: ["ücretsiz yazılım lisansı", "yazılım lisansı", "matlab", "office 365", "office", "github student"]
+
+  - id: "robotics_lab_access_answer_card"
+    label: "Robotik laboratuvarı ve lisans öğrencisi erişimi"
+    text: "Evet, fakültemizde Robotik Laboratuvarı dâhil 18 araştırma laboratuvarı var. Robotik Lab tanıtımında 120'den fazla yayın, 1.300'den fazla atıf, 100'den fazla lisans bitirme tezi ve ekipte 5 lisans öğrencisi belirtiliyor. Lisans öğrencisi ilgili hocayla proje uyumunu konuşup LÖKAP veya hoca projesi üzerinden katılabilir; erişim otomatik değil, izin ve hazırlık gerekiyor."
+    answer_card: true
+    topics: ["technical_resources", "labs", "research_projects", "faculty"]
+    examples: ["18 laboratuvar", "120+ yayın", "100+ lisans tezi", "5 lisans öğrencisi"]
+    source: "İTÜ BBF, İTÜ Robotik Laboratuvarı ve İTÜ BAP"
+    source_urls:
+      - "https://bbf.itu.edu.tr/ogrenciler/aday-ogrenciler"
+      - "https://bbf.itu.edu.tr/docs/librariesprovider62/default-document-library/bbf_lablar.pdf"
+      - "https://bapsis.itu.edu.tr/GetDoc.ashx?ID=1207"
+    year: 2026
+    confidence: high
+    tags: ["robotik laboratuvarı", "robotik lab", "robotik laboratuvarına gir", "robotik araştırma"]
+
+  - id: "erasmus_grant_sufficiency_answer_card"
+    label: "Erasmus hibesinin tutarı ve yeterlilik sınırı"
+    text: "Erasmus hibesi masrafın tamamını karşılayan burs değil, katkıdır. Güncel İTÜ sayfasında KA131 öğrenim hareketliliği için ülkeye göre aylık 450 veya 600 Avro, program dışı bazı ülkelerde 700 Avro; KA171'de aylık 700 Avro yazıyor. Kabul almak hibe garantisi değildir ve KA131'de en fazla 5 ay hibelendirme uygulanabildiğinden konaklama bütçesini ayrıca hesaplamak gerekir."
+    answer_card: true
+    topics: ["erasmus", "abroad", "financial_concern"]
+    examples: ["450 Avro", "600 Avro", "700 Avro", "en fazla 5 ay"]
+    source: "İTÜ Erasmus Ofisi güncel hibe sayfaları"
+    source_urls:
+      - "https://erasmus.itu.edu.tr/giden-%C3%B6%C4%9Frenci-personel-hareketlilikleri/ka131-program-%C3%BClkeleri/giden-%C3%B6%C4%9Frenciler/hibe-dagit%C4%B1m-kriterleri"
+      - "https://erasmus.itu.edu.tr/giden-%C3%B6%C4%9Frenci-personel-hareketlilikleri/ka-171-ortak-%C3%BClkeler/ogrenim-hareketliligi/hibe"
+    year: 2026
+    confidence: high
+    tags: ["erasmus bursu yeterli", "erasmus hibesi yeterli", "hibe ne kadar", "erasmus burs miktarı"]
+
+  - id: "global_exchange_america_honesty_card"
+    label: "ABD değişim seçeneği hakkında güncel ve dürüst cevap"
+    text: "ABD'de dönemlik değişimi şu anda garanti edemeyiz: İTÜ Global Exchange'in güncel açık listesinde Güney Kore, Kanada, Rusya, Japonya ve Pakistan var; kontenjanlar çoğunlukla üniversite başına 1-2 öğrenci ve lisans eşiği 2,50 GNO. ABD çift diploma ayrı ve ücretli bir yol; güncel Bilgisayar Mühendisliği ortak programı ABD'de değil, Uluslararası Saraybosna Üniversitesi ile yürütülüyor."
+    answer_card: true
+    topics: ["abroad", "global_exchange", "erasmus"]
+    examples: ["1-2 öğrenci", "2,50 GNO", "Kanada", "Saraybosna"]
+    source: "İTÜ Global Exchange ve İTÜ Çift Diploma Ofisi"
+    source_urls:
+      - "https://global.itu.edu.tr/tr/ogrenciler/uluslararasi-programlar/global-exchange"
+      - "https://uolp.itu.edu.tr/programlar"
+    year: 2026
+    confidence: high
+    tags: ["amerika değişim", "abd değişim", "amerika'da değişim", "amerika çift diploma", "abd çift diploma"]
+
+  - id: "worship_exam_policy_honesty_card"
+    label: "Sınav sırasında ibadet izni hakkında doğrulanmış sınır"
+    text: "Kampüs haritasında İTÜ Abdülhakim Sancak Camii yer alıyor ve öğrenci geri bildiriminde fakültemizde mescit bulunduğu belirtiliyor. Fakat Ramazan veya sınav sırasında namaz için her derste geçerli, yayımlanmış tek bir izin kuralı bulamadık; bunu kesin hak gibi söylemek doğru olmaz. Sınav özelindeki düzenleme önceden dersin hocası veya bölümle konuşulmalıdır."
+    answer_card: true
+    topics: ["worship_facilities", "academic_workload"]
+    examples: ["İTÜ Abdülhakim Sancak Camii", "fakülte mescidi"]
+    source: "İTÜ kampüs haritası + öğrenci geri bildirimi"
+    source_url: "https://erasmus.itu.edu.tr/docs/librariesprovider15/gelen-%C3%B6%C4%9Frenci/ka131/itu-campus-map-erasmus-office.pdf?sfvrsn=35ea67bb_2"
+    year: 2026
+    confidence: medium
+    tags: ["ramazanda sınav", "sınavda namaz", "namaz izni", "oruç sınav"]
+
+  - id: "lab_computer_currency_honesty_card"
+    label: "Laboratuvar bilgisayarlarının güncelliği hakkında kanıt sınırı"
+    text: "Fakültemizde 18 araştırma laboratuvarı bulunduğu resmî sayfada açık, fakat laboratuvar bilgisayarlarının modelini, yaşını veya yenileme takvimini gösteren güncel bir envanter yayımlanmıyor. Bu nedenle 'hepsi son model' diyemeyiz. Somut teknik imkân olarak üniversite lisanslı MATLAB, Office, SPSS ve Visual Studio sunuyor; belirli donanım ihtiyacı için ilgili laboratuvar hocasına sorulmalı."
+    answer_card: true
+    topics: ["technical_resources", "labs"]
+    examples: ["18 laboratuvar", "MATLAB", "SPSS", "Visual Studio"]
+    source: "İTÜ BBF ve İTÜ BİDB resmî sayfaları"
+    source_urls:
+      - "https://bbf.itu.edu.tr/ogrenciler/aday-ogrenciler"
+      - "https://bidb.itu.edu.tr/hizmetler/lisansli-yazilim-hizmeti"
+    year: 2026
+    confidence: high
+    tags: ["laboratuvar bilgisayarları güncel", "bilgisayarlar güncel", "son model bilgisayar", "laboratuvar cihazları yeni"]
+
+  - id: "ai_gpu_access_honesty_card"
+    label: "Yapay zekâ projelerinde GPU erişimi hakkında dürüst cevap"
+    text: "Yapay zekâ çalışabileceğimiz AI Sistemleri, Veri Analitiği ve Görsel Zekâ dâhil 18 laboratuvar var; ayrıca seçmeli havuzunda AI Accelerators Lab bulunuyor. Ancak bölümün herkese açık GPU modeli, sayısı veya sınırsız öğrenci erişimi yayımlanmış değil. GPU gerektiren projede ilgili hocayla kaynak ve proje uyumunu konuşmak gerekir; kişisel erişim garantisi veremeyiz."
+    answer_card: true
+    topics: ["technical_resources", "labs", "research_projects", "curriculum_ai"]
+    examples: ["18 laboratuvar", "AI Sistemleri", "Veri Analitiği", "AI Accelerators Lab"]
+    source: "İTÜ BBF ve İTÜ ÖBS güncel seçmeli havuzu"
+    source_urls:
+      - "https://bbf.itu.edu.tr/ogrenciler/aday-ogrenciler"
+      - "https://obs.itu.edu.tr/public/DersPlan/_DersGrupSearch?grupId=11782"
+    year: 2026
+    confidence: high
+    tags: ["gpu desteği", "gpu erişimi", "yapay zeka gpu", "ekran kartı", "gpu sunucu"]
+
+  - id: "erasmus_compe_partner_examples_card"
+    label: "Bilgisayar Mühendisliği Erasmus üniversite örnekleri"
+    text: "Bilgisayar Mühendisliği için seçenekler dönem ilanına göre değişiyor. 2025 hibe listesinde öğrencilerimizin yerleştiği somut örnekler arasında TU München, Tampere, TU Graz, Linz, Universidad de Alcalá, Wroclaw ve AGH Krakow var. Bunlar gelecek dönem kontenjan garantisi değil; tercih yapılırken aktif anlaşma, ders uyumu ve kota yeniden kontrol edilmeli."
+    answer_card: true
+    topics: ["erasmus", "abroad"]
+    examples: ["TU München", "Tampere", "TU Graz", "Linz", "Wroclaw"]
+    source: "İTÜ Erasmus Ofisi 2025 KA131 hibe listesi"
+    source_url: "https://erasmus.itu.edu.tr/docs/librariesprovider15/default-document-library/ads%C4%B1z-ek-00048.pdf?sfvrsn=36e70487_0"
+    year: 2025
+    confidence: high
+    tags: ["hangi üniversitelere gidilebilir", "bilgisayar mühendisliği erasmus", "erasmus üniversiteleri", "anlaşmalı üniversiteler"]
+
+  - id: "erasmus_language_requirement_card"
+    label: "Erasmus yabancı dil eşiği"
+    text: "'Zor mu?' kişiden kişiye değişir; önemli olan resmî eşik. İTÜ Erasmus başvurusunda İngilizce için en az B1 düzeyine karşılık gelen 65/100 gerekiyor ve seçim puanında yabancı dilin ağırlığı %50. Geçerli YDS, YÖKDİL, TOEFL, PTE veya son 2 yıl içindeki İTÜ Proficiency sonucu kabul edilebiliyor; güncel ilandaki belge koşulu ayrıca kontrol edilmeli."
+    answer_card: true
+    topics: ["erasmus", "english_prep", "abroad"]
+    examples: ["B1", "65/100", "%50", "İTÜ Proficiency"]
+    source: "İTÜ Erasmus Ofisi seçim ve dil koşulları"
+    source_urls:
+      - "https://erasmus.itu.edu.tr/giden-%C3%B6%C4%9Frenci-personel-hareketlilikleri/ka-171-ortak-%C3%BClkeler/ogrenim-hareketliligi/erasmus-ka171-program%C4%B1na-kimler-kat%C4%B1labilir"
+      - "https://erasmus.itu.edu.tr/haberdetay/2022/09/13/2022-proje-donemi-icin-itu-ye-tahsis-edilen-hibe-miktari-ulusal-ajans-tarafindan-ilan-edilmistir"
+    year: 2026
+    confidence: high
+    tags: ["erasmus dil sınavı", "erasmus dil sinavi", "dil sınavı zor", "erasmus ingilizce", "b1 65"]
+
+  - id: "curriculum_update_frequency_honesty_card"
+    label: "Müfredatın yenilenme sıklığı hakkında dürüst cevap"
+    text: "Bölümün müfredatı için 'her yıl tamamen yenilenir' şeklinde yayımlanmış sabit bir takvim yok. Güncelliğe somut örnek, 2026'da eklenen BLG 483E: 14 haftada LLM, üretken yapay zekâ ve AI destekli kodlama-test-hata ayıklamayı kapsıyor. Yani yeni içerik ekleniyor, fakat değişiklik sıklığını kaynaksız bir yıllık rutin gibi anlatmıyoruz."
+    answer_card: true
+    topics: ["curriculum", "teaching_quality", "curriculum_ai"]
+    examples: ["2026", "BLG 483E", "14 hafta", "LLM"]
+    source: "İTÜ Bilgisayar Mühendisliği bölüm duyurusu"
+    source_url: "https://bm.itu.edu.tr/haberdetay/2026/01/05/yeni-se%C3%A7meli-ders---yapay-zeka-destekli-bilgisayar-m%C3%BChendisli%C4%9Fi"
+    year: 2026
+    confidence: high
+    tags: ["müfredat ne sıklıkla yenileniyor", "müfredat ne zaman güncellenir", "her yıl yenileniyor", "ders planı güncellenme"]
+
+  - id: "equipment_loan_honesty_card"
+    label: "Proje ekipmanı ödünç alma hakkında kanıt sınırı"
+    text: "Fakülte genelinde her öğrenciye ekipman ödünç verildiğini belirleyen açık bir envanter veya standart politika yayımlanmıyor; bu yüzden otomatik ödünç garantisi veremeyiz. Bizde uygulanabilir yol, projeyi ilgili laboratuvar hocasıyla konuşmak: 18 laboratuvar ve LÖKAP üzerinden proje uyumu kurulabiliyor, kullanılacak cihaz ve erişim izni laboratuvara göre belirleniyor."
+    answer_card: true
+    topics: ["technical_resources", "research_projects", "labs"]
+    examples: ["18 laboratuvar", "LÖKAP", "hoca izni"]
+    source: "İTÜ BBF ve İTÜ BAP resmî sayfaları"
+    source_urls:
+      - "https://bbf.itu.edu.tr/ogrenciler/aday-ogrenciler"
+      - "https://bapsis.itu.edu.tr/GetDoc.ashx?ID=1207"
+    year: 2026
+    confidence: high
+    tags: ["ekipman ödünç", "cihaz ödünç", "proje ekipmanı", "malzeme ödünç"]
+
+  - id: "academic_career_support_card"
+    label: "Akademik kariyer isteyen lisans öğrencisine destek yolu"
+    text: "Akademisyenlik düşünen öğrenci için somut başlangıç yolu var: fakültemizdeki 18 laboratuvardan birinde hocayla proje uyumu kurabilir, LÖKAP kapsamında danışmanla lisans araştırmasına katılabilir. Robotik Lab tanıtımındaki 5 lisans öğrencisi ve 100'den fazla lisans bitirme tezi bunun örneği. Yayın veya akademik kadro garantisi değil, erken araştırma deneyimi sağlayan gerçek bir yol."
+    answer_card: true
+    topics: ["research_projects", "faculty", "labs", "abroad"]
+    examples: ["18 laboratuvar", "LÖKAP", "5 lisans öğrencisi", "100+ lisans tezi"]
+    source: "İTÜ BBF ve İTÜ BAP resmî kaynakları"
+    source_urls:
+      - "https://bbf.itu.edu.tr/docs/librariesprovider62/default-document-library/bbf_lablar.pdf"
+      - "https://bapsis.itu.edu.tr/GetDoc.ashx?ID=1207"
+    year: 2026
+    confidence: high
+    tags: ["akademisyen olmak", "akademik kariyer", "doktora hedefi", "araştırmacı olmak"]
+
+  - id: "teaching_materials_honesty_card"
+    label: "Derslerin slayt ve uygulama dengesi"
+    text: "Bütün hocalar için tek bir 'çoğunlukla slayt' kuralı yok; işleyiş derse ve hocaya göre değişir. Müfredatın yalnız sunumdan ibaret olmadığını gösteren somut örnekler var: BLG 312E'de 3 programlama ödevi, BLG 335E'de 3 proje; devre, mantık ve sistem derslerinde laboratuvar bileşenleri bulunuyor. Yani anlatımın yanında düzenli uygulama da var."
+    answer_card: true
+    topics: ["teaching_quality", "academic_workload", "curriculum_projects"]
+    examples: ["BLG 312E", "3 programlama ödevi", "BLG 335E", "3 proje"]
+    source: "İTÜ ÖBS ders katalogları ve güncel ders planı"
+    source_urls:
+      - "https://obs.itu.edu.tr/public/DersKatalog/DersKatalogBilgiBransDersKodu?bransKodu=BLG&dersNo=312"
+      - "https://obs.itu.edu.tr/public/DersKatalog/DersKatalogBilgiBransDersKodu?bransKodu=BLG&dersNo=335"
+      - "https://obs.itu.edu.tr/public/DersPlan/DersPlanDetay/2340"
+    year: 2026
+    confidence: high
+    tags: ["dersler slayttan", "slayttan işleniyor", "slayt ağırlıklı", "ders işleme biçimi"]

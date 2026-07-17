@@ -9,6 +9,8 @@ meta:
 
 area_groups:
   - id: "faculty_area_ai_data"
+    label: "Yapay zekâ ve veri alanında çalışan hocalarımız"
+    answer_card: true
     area: "Artificial Intelligence, Machine Learning, Deep Learning and Data Science"
     text: >
       İTÜ Bilgisayar Mühendisliği resmi öğretim üyesi sayfasında yapay zeka, makine öğrenmesi,
@@ -16,40 +18,55 @@ area_groups:
       Burak Berk Üstündağ, Hazım Kemal Ekenel, Mehmet Keskinöz, Nizamettin Aydın, Ali Çakmak,
       Ayşe Tosun Kühn, Mehmet Baysan, Yusuf Yaslan ve Muhammet Alkan yer alır.
     tags: ["ai", "yapay zeka", "makine öğrenmesi", "machine learning", "deep learning", "derin öğrenme", "data science", "veri bilimi", "veri analitiği"]
+    examples: ["Burak Berk Üstündağ", "Hazım Kemal Ekenel", "Ayşe Tosun Kühn"]
 
   - id: "faculty_area_vision_robotics"
+    label: "Görüntü işleme ve robotik alanında çalışan hocalarımız"
+    answer_card: true
     area: "Computer Vision, Image Processing, Graphics, Robotics and 3D Vision"
     text: >
       Görüntü işleme, bilgisayarlı görü, grafik, robotik veya 3D vision hattında resmi sayfada
       Hazım Kemal Ekenel, Mustafa Ersel Kamaşak, Uluğ Bayazıt, Gökhan İnce, İlkay Öksüz,
       Yusuf Hüseyin Şahin ve Arda İnceoğlu gibi isimler görünür.
     tags: ["computer vision", "bilgisayarlı görü", "görüntü işleme", "image processing", "robotik", "robotics", "3d vision", "graphics"]
+    examples: ["Gökhan İnce", "Hazım Kemal Ekenel", "İlkay Öksüz"]
 
   - id: "faculty_area_networks_security"
+    label: "Ağlar ve siber güvenlik alanında çalışan hocalarımız"
+    answer_card: true
     area: "Computer Networks, Cybersecurity, Privacy and Distributed Systems"
     text: >
       Bilgisayar ağları, siber güvenlik, gizlilik, blockchain, sensör ağları veya dağıtık sistemler
       tarafında resmi sayfada Abdül Halim Zaim, Deniz Turgay Altılar, Hacı Ali Mantar,
       Şerif Bahtiyar, Gökhan Seçinti, Mehmet Tahir Sandıkkaya ve Sanem Kabadayı gibi isimler görünür.
     tags: ["computer networks", "bilgisayar ağları", "ağ", "cybersecurity", "siber güvenlik", "privacy", "blockchain", "sensor networks", "distributed systems"]
+    examples: ["Şerif Bahtiyar", "Deniz Turgay Altılar", "Sanem Kabadayı"]
 
   - id: "faculty_area_health_bioinformatics"
+    label: "Sağlık bilişimi ve biyoinformatik alanında çalışan hocalarımız"
+    answer_card: true
     area: "Bioinformatics, Health Informatics, Biomedical and Medical Imaging"
     text: >
       Sağlık teknolojileri, biyoinformatik, sağlık bilişimi, biyomedikal veya tıbbi görüntüleme ilgisi
       için resmi sayfada Ali Çakmak, Mustafa Ersel Kamaşak, Nizamettin Aydın, İlkay Öksüz,
       Mehmet Baysan, Yusuf Hüseyin Şahin ve Muhammet Alkan ile ilişkili araştırma alanları yer alır.
     tags: ["sağlık", "tıp", "healthtech", "bioinformatics", "biyoinformatik", "health informatics", "sağlık bilişimi", "biomedical", "medical image", "tıbbi görüntüleme"]
+    examples: ["Ali Çakmak", "İlkay Öksüz", "Mustafa Ersel Kamaşak"]
 
   - id: "faculty_area_software_systems"
+    label: "Yazılım ve bilgisayar sistemleri alanında çalışan hocalarımız"
+    answer_card: true
     area: "Software Engineering, Software Testing, Formal Verification, Computing Systems and Architectures"
     text: >
       Yazılım mühendisliği, yazılım testi, formal verification, edge computing, paralel hesaplama veya
       bilgisayar mimarileri tarafında resmi sayfada Ayşe Tosun Kühn, Feza Buzluca, Tolga Ovatman,
       Yavuz Köroğlu ve Ayşe Yılmazer gibi isimler görünür.
     tags: ["software engineering", "yazılım mühendisliği", "software testing", "yazılım testi", "formal verification", "edge computing", "parallel computing", "computer architecture"]
+    examples: ["Ayşe Tosun Kühn", "Feza Buzluca", "Yavuz Köroğlu"]
 
   - id: "faculty_area_nlp"
+    label: "Doğal dil işleme alanında çalışan hocalarımız"
+    answer_card: true
     area: "Natural Language Processing"
     text: >
       Doğal dil işleme / NLP için resmi öğretim üyesi sayfasında Dilara Torunoğlu-Selamet'in

@@ -13,8 +13,10 @@
 
 Sabit hedef İTÜ Bilgisayar Mühendisliği'dir. Her turda güncel soru router ile
 önceliklendirilir; bandit geçmiş tepkilerden öğrenir; utility katmanı aday uyumu
-ve hedef faydasını birlikte değerlendirir. RAG, fact gate ve 65 kelimelik konuşma
-sınırı kaynaklı ve robot-seslendirmesine uygun yanıt üretimini korur.
+ve hedef faydasını birlikte değerlendirir. RAG hazır cevap vermek yerine atomik
+bir kanıt paketi üretir; LLM doğal cevabı yazar, doğrulayıcı sorun bulursa tek bir
+kanıta bağlı yeniden yazım yapılır. Deterministik kart cevabı yalnız API hatası
+veya başarısız ikinci yazımda son çaredir. Çıktı 65 kelimeyle sınırlandırılır.
 
 Teknik akış ve formüller: [`docs/negotiation-v2.md`](docs/negotiation-v2.md)
 

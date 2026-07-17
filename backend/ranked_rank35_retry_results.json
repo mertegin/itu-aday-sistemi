@@ -1,0 +1,1476 @@
+{
+  "run_id": "8d8baa783d6f",
+  "seed": 20260717,
+  "api": "http://127.0.0.1:8002/api",
+  "questions_file": "C:\\Users\\90553\\.codex\\attachments\\76ddbb41-8f4e-4688-a179-54eeb31b94a4\\pasted-text.txt",
+  "summary": {
+    "conversations": 1,
+    "turns": 12,
+    "ok_turns": 12,
+    "warnings": {},
+    "fallback_turns": 0,
+    "fact_gate_replacements": 2,
+    "relevance_repairs": 0,
+    "admission_repairs": 1
+  },
+  "results": [
+    {
+      "id": "rank_0035_arastirma",
+      "title": "SAY 35 profili",
+      "rank": 35,
+      "result": {
+        "session_id": "sess_fb2fc5db25da",
+        "turns": [
+          {
+            "category": "Açılış",
+            "question": "Selam, adım Arda. SAY sıralamam 35; araştırma, yurt dışı doktora ve güçlü akademik kadro benim için önemli.",
+            "answer": "İTÜ Bilgisayar 2025'te 1.435 ile kapattı; 35 sıralaman geçen yılki tabanın önünde. Bu güçlü bir konum, fakat yeni yılın tabanı oluşmadan garanti veremem. Sen hocalarla daha çok ders desteği için mi, yoksa erkenden bir projeye katılmak için mi iletişim kurmak istiyorsun?",
+            "elapsed_seconds": 9.73,
+            "argument_id": "active_listening",
+            "route": null,
+            "profile_rank": 35,
+            "academic": {
+              "risk_band": "safe",
+              "risk_bands": [
+                {
+                  "department": "bilgisayar",
+                  "band": "safe",
+                  "cutoff_2025": 1435
+                }
+              ],
+              "eligible_departments": [
+                {
+                  "department": "bilgisayar",
+                  "cutoff_2025": 1435,
+                  "band": "safe"
+                },
+                {
+                  "department": "yapay_zeka_veri",
+                  "cutoff_2025": 1947,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektronik_haberlesme",
+                  "cutoff_2025": 2126,
+                  "band": "safe"
+                },
+                {
+                  "department": "ucak",
+                  "cutoff_2025": 2235,
+                  "band": "safe"
+                },
+                {
+                  "department": "matematik",
+                  "cutoff_2025": 3495,
+                  "band": "safe"
+                },
+                {
+                  "department": "endustri",
+                  "cutoff_2025": 3723,
+                  "band": "safe"
+                },
+                {
+                  "department": "uzay",
+                  "cutoff_2025": 3988,
+                  "band": "safe"
+                },
+                {
+                  "department": "kontrol_otomasyon",
+                  "cutoff_2025": 4486,
+                  "band": "safe"
+                },
+                {
+                  "department": "makine",
+                  "cutoff_2025": 6106,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektrik",
+                  "cutoff_2025": 6124,
+                  "band": "safe"
+                }
+              ]
+            },
+            "checks": {
+              "word_count": 41,
+              "over_limit": false,
+              "empty": false,
+              "generation_fallback": false,
+              "rag_fact_count": 6,
+              "rag_top_id": "department_faculty_labs_card",
+              "rag_top_label": "",
+              "forbidden": [],
+              "sensitive_targeting": [],
+              "max_recent_similarity": 0.0,
+              "near_duplicate": false,
+              "admission_check": {
+                "repaired": true,
+                "reason": "ahead_of_itu_compe_2025",
+                "rank": 35,
+                "cutoffs": {
+                  "itu_compe": 1435,
+                  "itu_ai_data": 1947
+                },
+                "alternative": null,
+                "original_text": "Merhaba Arda! 35. sırada olmak, İTÜ Bilgisayar için oldukça güvenli bir konumda olduğunu gösteriyor. Bizim bölümde 37 öğretim üyesi var; bunların 19'u profesör. Ayrıca, 18 araştırma laboratuvarımız var, bu da sana araştırma fırsatları sunacak."
+              },
+              "fact_gate": {
+                "clean": true,
+                "violations": [],
+                "replaced": false,
+                "original_text": null,
+                "scholarship_eligibility": {
+                  "repaired": false,
+                  "reason": "no_applicable_rank_card"
+                }
+              },
+              "relevance": {
+                "repaired": false,
+                "reason": "relevant",
+                "answer_overlap": 2,
+                "card_overlap": 2,
+                "card_id": "department_faculty_labs_card"
+              },
+              "repetition": {
+                "repaired": false,
+                "reason": "no_previous_answer"
+              },
+              "fallback_ok": true,
+              "ok": true
+            },
+            "rag_topics": [
+              "ranking",
+              "faculty",
+              "labs",
+              "housing",
+              "healthtech",
+              "abroad"
+            ]
+          },
+          {
+            "category": "Özel sıralama kontrolü",
+            "question": "35. olduğum için İTÜ başarı bursunda hangi tutar ve koşullar geçerli?",
+            "answer": "İTÜ'de 2025'te Türkiye 11-100 derecesiyle kayıt yaptıranlara, hazırlık dahil 1+4 yıl boyunca her ay 10.000 TL başarı ödülü veriliyor. Bursun devam etmesi için yıl sonunda GNO'nun en az 2,50 olması ve hazırlık dönemini başarıyla tamamlaman gerekiyor.",
+            "elapsed_seconds": 8.13,
+            "argument_id": "itu_financial_support",
+            "route": null,
+            "profile_rank": 35,
+            "academic": {
+              "risk_band": "safe",
+              "risk_bands": [
+                {
+                  "department": "bilgisayar",
+                  "band": "safe",
+                  "cutoff_2025": 1435
+                }
+              ],
+              "eligible_departments": [
+                {
+                  "department": "bilgisayar",
+                  "cutoff_2025": 1435,
+                  "band": "safe"
+                },
+                {
+                  "department": "yapay_zeka_veri",
+                  "cutoff_2025": 1947,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektronik_haberlesme",
+                  "cutoff_2025": 2126,
+                  "band": "safe"
+                },
+                {
+                  "department": "ucak",
+                  "cutoff_2025": 2235,
+                  "band": "safe"
+                },
+                {
+                  "department": "matematik",
+                  "cutoff_2025": 3495,
+                  "band": "safe"
+                },
+                {
+                  "department": "endustri",
+                  "cutoff_2025": 3723,
+                  "band": "safe"
+                },
+                {
+                  "department": "uzay",
+                  "cutoff_2025": 3988,
+                  "band": "safe"
+                },
+                {
+                  "department": "kontrol_otomasyon",
+                  "cutoff_2025": 4486,
+                  "band": "safe"
+                },
+                {
+                  "department": "makine",
+                  "cutoff_2025": 6106,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektrik",
+                  "cutoff_2025": 6124,
+                  "band": "safe"
+                }
+              ]
+            },
+            "checks": {
+              "word_count": 36,
+              "over_limit": false,
+              "empty": false,
+              "generation_fallback": false,
+              "rag_fact_count": 6,
+              "rag_top_id": "scholarship_rank_11_100",
+              "rag_top_label": "11-100 başarı ödülü",
+              "forbidden": [],
+              "sensitive_targeting": [],
+              "max_recent_similarity": 0.05,
+              "near_duplicate": false,
+              "admission_check": {
+                "repaired": false,
+                "reason": "financial_question_not_admission"
+              },
+              "fact_gate": {
+                "clean": true,
+                "violations": [],
+                "replaced": false,
+                "original_text": null,
+                "scholarship_eligibility": {
+                  "repaired": false,
+                  "reason": "eligible_tier_and_conditions_present",
+                  "card_id": "scholarship_rank_11_100"
+                }
+              },
+              "relevance": {
+                "repaired": false,
+                "reason": "relevant",
+                "answer_overlap": 2,
+                "card_overlap": 2,
+                "card_id": "scholarship_rank_11_100"
+              },
+              "repetition": {
+                "repaired": false,
+                "reason": "distinct",
+                "similarity": 0.018
+              },
+              "fallback_ok": true,
+              "ok": true
+            },
+            "rag_topics": [
+              "scholarship",
+              "financial_support",
+              "financial_concern",
+              "housing",
+              "campus"
+            ]
+          },
+          {
+            "category": "Özel sıralama kontrolü",
+            "question": "Hocalarımızla lisans öğrencisiyken proje yapmak gerçekten mümkün mü, örnek verir misin?",
+            "answer": "İTÜ'de 18 araştırma laboratuvarı var; örneğin, Robotik Laboratuvarı'nda lisans öğrencileri projelerde aktif rol alabiliyor. Hocalarımızdan Burak Berk Üstündağ yapay zekâ projeleri üzerinde çalışıyor.",
+            "elapsed_seconds": 7.86,
+            "argument_id": "itu_research_projects",
+            "route": null,
+            "profile_rank": 35,
+            "academic": {
+              "risk_band": "safe",
+              "risk_bands": [
+                {
+                  "department": "bilgisayar",
+                  "band": "safe",
+                  "cutoff_2025": 1435
+                }
+              ],
+              "eligible_departments": [
+                {
+                  "department": "bilgisayar",
+                  "cutoff_2025": 1435,
+                  "band": "safe"
+                },
+                {
+                  "department": "yapay_zeka_veri",
+                  "cutoff_2025": 1947,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektronik_haberlesme",
+                  "cutoff_2025": 2126,
+                  "band": "safe"
+                },
+                {
+                  "department": "ucak",
+                  "cutoff_2025": 2235,
+                  "band": "safe"
+                },
+                {
+                  "department": "matematik",
+                  "cutoff_2025": 3495,
+                  "band": "safe"
+                },
+                {
+                  "department": "endustri",
+                  "cutoff_2025": 3723,
+                  "band": "safe"
+                },
+                {
+                  "department": "uzay",
+                  "cutoff_2025": 3988,
+                  "band": "safe"
+                },
+                {
+                  "department": "kontrol_otomasyon",
+                  "cutoff_2025": 4486,
+                  "band": "safe"
+                },
+                {
+                  "department": "makine",
+                  "cutoff_2025": 6106,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektrik",
+                  "cutoff_2025": 6124,
+                  "band": "safe"
+                }
+              ]
+            },
+            "checks": {
+              "word_count": 23,
+              "over_limit": false,
+              "empty": false,
+              "generation_fallback": false,
+              "rag_fact_count": 6,
+              "rag_top_id": "undergraduate_research_card",
+              "rag_top_label": "",
+              "forbidden": [],
+              "sensitive_targeting": [],
+              "max_recent_similarity": 0.02,
+              "near_duplicate": false,
+              "admission_check": {
+                "repaired": false,
+                "reason": "not_an_admission_turn"
+              },
+              "fact_gate": {
+                "clean": false,
+                "violations": [
+                  {
+                    "category": "absolute",
+                    "claim": "kesinlikle"
+                  }
+                ],
+                "replaced": true,
+                "original_text": "Kesinlikle mümkün! İTÜ'de 18 araştırma laboratuvarı var; örneğin, Robotik Laboratuvarı'nda lisans öğrencileri projelerde aktif rol alabiliyor. Hocalarımızdan Burak Berk Üstündağ yapay zekâ projeleri üzerinde çalışıyor.",
+                "salvaged": true,
+                "scholarship_eligibility": {
+                  "repaired": false,
+                  "reason": "no_applicable_rank_card"
+                }
+              },
+              "relevance": {
+                "repaired": false,
+                "reason": "relevant",
+                "answer_overlap": 4,
+                "card_overlap": 3,
+                "card_id": "undergraduate_research_card"
+              },
+              "repetition": {
+                "repaired": false,
+                "reason": "distinct",
+                "similarity": 0.0
+              },
+              "fallback_ok": true,
+              "ok": true
+            },
+            "rag_topics": [
+              "research_projects",
+              "ranking",
+              "faculty",
+              "labs"
+            ]
+          },
+          {
+            "category": "Özel sıralama kontrolü",
+            "question": "İTÜ Bilgisayar'ı diğer güçlü okullardan sayılarla ayıran şey ne?",
+            "answer": "Ayrıca, mezunlarımızın %54'ü mezun olmadan iş buluyor. Bu güçlü bağlantılar ve eğitim kalitesi, mezunlarımıza önemli avantajlar sağlıyor.",
+            "elapsed_seconds": 10.79,
+            "argument_id": "money_motivated_data",
+            "route": null,
+            "profile_rank": 35,
+            "academic": {
+              "risk_band": "safe",
+              "risk_bands": [
+                {
+                  "department": "bilgisayar",
+                  "band": "safe",
+                  "cutoff_2025": 1435
+                }
+              ],
+              "eligible_departments": [
+                {
+                  "department": "bilgisayar",
+                  "cutoff_2025": 1435,
+                  "band": "safe"
+                },
+                {
+                  "department": "yapay_zeka_veri",
+                  "cutoff_2025": 1947,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektronik_haberlesme",
+                  "cutoff_2025": 2126,
+                  "band": "safe"
+                },
+                {
+                  "department": "ucak",
+                  "cutoff_2025": 2235,
+                  "band": "safe"
+                },
+                {
+                  "department": "matematik",
+                  "cutoff_2025": 3495,
+                  "band": "safe"
+                },
+                {
+                  "department": "endustri",
+                  "cutoff_2025": 3723,
+                  "band": "safe"
+                },
+                {
+                  "department": "uzay",
+                  "cutoff_2025": 3988,
+                  "band": "safe"
+                },
+                {
+                  "department": "kontrol_otomasyon",
+                  "cutoff_2025": 4486,
+                  "band": "safe"
+                },
+                {
+                  "department": "makine",
+                  "cutoff_2025": 6106,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektrik",
+                  "cutoff_2025": 6124,
+                  "band": "safe"
+                }
+              ]
+            },
+            "checks": {
+              "word_count": 17,
+              "over_limit": false,
+              "empty": false,
+              "generation_fallback": false,
+              "rag_fact_count": 6,
+              "rag_top_id": "admission_itu_compe_2025_direct",
+              "rag_top_label": "İTÜ Bilgisayar 2025 kabul gerçekliği",
+              "forbidden": [],
+              "sensitive_targeting": [],
+              "max_recent_similarity": 0.021,
+              "near_duplicate": false,
+              "admission_check": {
+                "repaired": false,
+                "reason": "not_an_admission_turn"
+              },
+              "fact_gate": {
+                "clean": false,
+                "violations": [
+                  {
+                    "category": "unsupported_number",
+                    "claim": "2023"
+                  },
+                  {
+                    "category": "unsupported_number",
+                    "claim": "200"
+                  },
+                  {
+                    "category": "unsupported_number",
+                    "claim": "250"
+                  }
+                ],
+                "replaced": true,
+                "original_text": "İTÜ Bilgisayar, QS Mühendislik & Teknoloji sıralamasında 2023'te dünyada 200-250 aralığında yer alıyor. Ayrıca, mezunlarımızın %54'ü mezun olmadan iş buluyor. Bu güçlü bağlantılar ve eğitim kalitesi, mezunlarımıza önemli avantajlar sağlıyor.",
+                "salvaged": true,
+                "scholarship_eligibility": {
+                  "repaired": false,
+                  "reason": "eligible_tier_and_conditions_present",
+                  "card_id": "scholarship_rank_11_100"
+                }
+              },
+              "relevance": {
+                "repaired": false,
+                "reason": "relevant",
+                "answer_overlap": 1,
+                "card_overlap": 0,
+                "card_id": "scholarship_rank_11_100"
+              },
+              "repetition": {
+                "repaired": false,
+                "reason": "distinct",
+                "similarity": 0.0
+              },
+              "fallback_ok": true,
+              "ok": true
+            },
+            "rag_topics": [
+              "career",
+              "career_evidence",
+              "future_of_field",
+              "financial_support",
+              "financial_concern",
+              "scholarship"
+            ]
+          },
+          {
+            "category": "Laboratuvarlar ve teknik olanaklar",
+            "question": "Laboratuvarlardaki bilgisayarlar güncel mi?",
+            "answer": "BBF'nin güncel sayfasında 37 öğretim üyesi (19 profesör, 11 doçent, 7 doktor öğretim üyesi), 10 tam zamanlı öğretim görevlisi ve 18 araştırma laboratuvarı yer alıyor; ayrıca 53 araştırma görevlisi bildiriliyor. Hoca iletişiminde seni düşündüren şey e-postana dönüş almak mı, yoksa birebir görüşebilmek mi?",
+            "elapsed_seconds": 8.09,
+            "argument_id": "itu_faculty_research",
+            "route": null,
+            "profile_rank": 35,
+            "academic": {
+              "risk_band": "safe",
+              "risk_bands": [
+                {
+                  "department": "bilgisayar",
+                  "band": "safe",
+                  "cutoff_2025": 1435
+                }
+              ],
+              "eligible_departments": [
+                {
+                  "department": "bilgisayar",
+                  "cutoff_2025": 1435,
+                  "band": "safe"
+                },
+                {
+                  "department": "yapay_zeka_veri",
+                  "cutoff_2025": 1947,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektronik_haberlesme",
+                  "cutoff_2025": 2126,
+                  "band": "safe"
+                },
+                {
+                  "department": "ucak",
+                  "cutoff_2025": 2235,
+                  "band": "safe"
+                },
+                {
+                  "department": "matematik",
+                  "cutoff_2025": 3495,
+                  "band": "safe"
+                },
+                {
+                  "department": "endustri",
+                  "cutoff_2025": 3723,
+                  "band": "safe"
+                },
+                {
+                  "department": "uzay",
+                  "cutoff_2025": 3988,
+                  "band": "safe"
+                },
+                {
+                  "department": "kontrol_otomasyon",
+                  "cutoff_2025": 4486,
+                  "band": "safe"
+                },
+                {
+                  "department": "makine",
+                  "cutoff_2025": 6106,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektrik",
+                  "cutoff_2025": 6124,
+                  "band": "safe"
+                }
+              ]
+            },
+            "checks": {
+              "word_count": 43,
+              "over_limit": false,
+              "empty": false,
+              "generation_fallback": false,
+              "rag_fact_count": 6,
+              "rag_top_id": "department_faculty_labs_card",
+              "rag_top_label": "",
+              "forbidden": [],
+              "sensitive_targeting": [],
+              "max_recent_similarity": 0.041,
+              "near_duplicate": false,
+              "admission_check": {
+                "repaired": false,
+                "reason": "not_an_admission_turn"
+              },
+              "fact_gate": {
+                "clean": true,
+                "violations": [],
+                "replaced": false,
+                "original_text": null,
+                "scholarship_eligibility": {
+                  "repaired": false,
+                  "reason": "no_applicable_rank_card"
+                }
+              },
+              "relevance": {
+                "repaired": false,
+                "reason": "relevant",
+                "answer_overlap": 3,
+                "card_overlap": 2,
+                "card_id": "department_faculty_labs_card"
+              },
+              "repetition": {
+                "repaired": false,
+                "reason": "distinct",
+                "similarity": 0.054
+              },
+              "fallback_ok": true,
+              "ok": true
+            },
+            "rag_topics": [
+              "labs",
+              "faculty",
+              "teaching_quality",
+              "technical_resources"
+            ]
+          },
+          {
+            "category": "Erasmus ve yurt dışı fırsatları",
+            "question": "Bilgisayar Mühendisliği için hangi üniversitelere gidilebilir?",
+            "answer": "Erasmus stajı öğrenim alanıyla ilgili olmalı ve en az 60 gün, en çok 12 ay sürmelidir. Hazırlık ve ilk sınıfta hemen hareketlilik yapılamaz; ilk sınıf öğrencisi sonraki yıl için başvurabilir. Dil eşiği B1/65'tir.",
+            "elapsed_seconds": 7.82,
+            "argument_id": "itu_erasmus_mobility",
+            "route": null,
+            "profile_rank": 35,
+            "academic": {
+              "risk_band": "safe",
+              "risk_bands": [
+                {
+                  "department": "bilgisayar",
+                  "band": "safe",
+                  "cutoff_2025": 1435
+                }
+              ],
+              "eligible_departments": [
+                {
+                  "department": "bilgisayar",
+                  "cutoff_2025": 1435,
+                  "band": "safe"
+                },
+                {
+                  "department": "yapay_zeka_veri",
+                  "cutoff_2025": 1947,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektronik_haberlesme",
+                  "cutoff_2025": 2126,
+                  "band": "safe"
+                },
+                {
+                  "department": "ucak",
+                  "cutoff_2025": 2235,
+                  "band": "safe"
+                },
+                {
+                  "department": "matematik",
+                  "cutoff_2025": 3495,
+                  "band": "safe"
+                },
+                {
+                  "department": "endustri",
+                  "cutoff_2025": 3723,
+                  "band": "safe"
+                },
+                {
+                  "department": "uzay",
+                  "cutoff_2025": 3988,
+                  "band": "safe"
+                },
+                {
+                  "department": "kontrol_otomasyon",
+                  "cutoff_2025": 4486,
+                  "band": "safe"
+                },
+                {
+                  "department": "makine",
+                  "cutoff_2025": 6106,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektrik",
+                  "cutoff_2025": 6124,
+                  "band": "safe"
+                }
+              ]
+            },
+            "checks": {
+              "word_count": 33,
+              "over_limit": false,
+              "empty": false,
+              "generation_fallback": false,
+              "rag_fact_count": 6,
+              "rag_top_id": "erasmus_internship_card",
+              "rag_top_label": "",
+              "forbidden": [],
+              "sensitive_targeting": [],
+              "max_recent_similarity": 0.0,
+              "near_duplicate": false,
+              "admission_check": {
+                "repaired": false,
+                "reason": "not_an_admission_turn"
+              },
+              "fact_gate": {
+                "clean": true,
+                "violations": [],
+                "replaced": false,
+                "original_text": null,
+                "scholarship_eligibility": {
+                  "repaired": false,
+                  "reason": "no_applicable_rank_card"
+                }
+              },
+              "relevance": {
+                "repaired": false,
+                "reason": "relevant",
+                "answer_overlap": 2,
+                "card_overlap": 0,
+                "card_id": "erasmus_internship_card"
+              },
+              "repetition": {
+                "repaired": false,
+                "reason": "distinct",
+                "similarity": 0.0
+              },
+              "fallback_ok": true,
+              "ok": true
+            },
+            "rag_topics": [
+              "erasmus",
+              "abroad",
+              "internship"
+            ]
+          },
+          {
+            "category": "Laboratuvarlar ve teknik olanaklar",
+            "question": "Yapay zekâ projeleri için GPU desteği sağlanıyor mu?",
+            "answer": "İTÜ Yapay Zekâ ve Veri Mühendisliği 2025'te 1.947 en düşük, 102 en yüksek ve 1.438 ortalama SAY başarı sırasıyla öğrenci aldı; genel kontenjanı 30'du. 2.000 ve üzerindeki bir sıra, geçen yılın 1.947 tabanının gerisindedir ve garanti gibi anlatılamaz.",
+            "elapsed_seconds": 7.42,
+            "argument_id": "itu_technical_resources",
+            "route": null,
+            "profile_rank": 35,
+            "academic": {
+              "risk_band": "safe",
+              "risk_bands": [
+                {
+                  "department": "bilgisayar",
+                  "band": "safe",
+                  "cutoff_2025": 1435
+                }
+              ],
+              "eligible_departments": [
+                {
+                  "department": "bilgisayar",
+                  "cutoff_2025": 1435,
+                  "band": "safe"
+                },
+                {
+                  "department": "yapay_zeka_veri",
+                  "cutoff_2025": 1947,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektronik_haberlesme",
+                  "cutoff_2025": 2126,
+                  "band": "safe"
+                },
+                {
+                  "department": "ucak",
+                  "cutoff_2025": 2235,
+                  "band": "safe"
+                },
+                {
+                  "department": "matematik",
+                  "cutoff_2025": 3495,
+                  "band": "safe"
+                },
+                {
+                  "department": "endustri",
+                  "cutoff_2025": 3723,
+                  "band": "safe"
+                },
+                {
+                  "department": "uzay",
+                  "cutoff_2025": 3988,
+                  "band": "safe"
+                },
+                {
+                  "department": "kontrol_otomasyon",
+                  "cutoff_2025": 4486,
+                  "band": "safe"
+                },
+                {
+                  "department": "makine",
+                  "cutoff_2025": 6106,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektrik",
+                  "cutoff_2025": 6124,
+                  "band": "safe"
+                }
+              ]
+            },
+            "checks": {
+              "word_count": 38,
+              "over_limit": false,
+              "empty": false,
+              "generation_fallback": false,
+              "rag_fact_count": 6,
+              "rag_top_id": "admission_itu_ai_data_2025_direct",
+              "rag_top_label": "İTÜ Yapay Zekâ ve Veri 2025 kabul gerçekliği",
+              "forbidden": [],
+              "sensitive_targeting": [],
+              "max_recent_similarity": 0.0,
+              "near_duplicate": false,
+              "admission_check": {
+                "repaired": false,
+                "reason": "not_an_admission_turn"
+              },
+              "fact_gate": {
+                "clean": true,
+                "violations": [],
+                "replaced": false,
+                "original_text": null,
+                "scholarship_eligibility": {
+                  "repaired": false,
+                  "reason": "no_applicable_rank_card"
+                }
+              },
+              "relevance": {
+                "repaired": false,
+                "reason": "relevant",
+                "answer_overlap": 6,
+                "card_overlap": 2,
+                "card_id": "admission_itu_ai_data_2025_direct"
+              },
+              "repetition": {
+                "repaired": false,
+                "reason": "distinct",
+                "similarity": 0.0
+              },
+              "fallback_ok": true,
+              "ok": true
+            },
+            "rag_topics": [
+              "technical_resources",
+              "labs",
+              "campus_life"
+            ]
+          },
+          {
+            "category": "Erasmus ve yurt dışı fırsatları",
+            "question": "Erasmus dil sınavı zor mu?",
+            "answer": "Erasmus dersleri otomatik sayılmaz: 2 temel belge, OLA ve Tanınma Belgesi, bölüm/Erasmus koordinatörü onayıyla hazırlanır. Dönüşte karşı kurum transkripti gerekir; ders adı ve AKTS uyuşmazsa İTÜ transkriptine FF işlenebilir.",
+            "elapsed_seconds": 9.02,
+            "argument_id": "itu_erasmus_mobility",
+            "route": null,
+            "profile_rank": 35,
+            "academic": {
+              "risk_band": "safe",
+              "risk_bands": [
+                {
+                  "department": "bilgisayar",
+                  "band": "safe",
+                  "cutoff_2025": 1435
+                }
+              ],
+              "eligible_departments": [
+                {
+                  "department": "bilgisayar",
+                  "cutoff_2025": 1435,
+                  "band": "safe"
+                },
+                {
+                  "department": "yapay_zeka_veri",
+                  "cutoff_2025": 1947,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektronik_haberlesme",
+                  "cutoff_2025": 2126,
+                  "band": "safe"
+                },
+                {
+                  "department": "ucak",
+                  "cutoff_2025": 2235,
+                  "band": "safe"
+                },
+                {
+                  "department": "matematik",
+                  "cutoff_2025": 3495,
+                  "band": "safe"
+                },
+                {
+                  "department": "endustri",
+                  "cutoff_2025": 3723,
+                  "band": "safe"
+                },
+                {
+                  "department": "uzay",
+                  "cutoff_2025": 3988,
+                  "band": "safe"
+                },
+                {
+                  "department": "kontrol_otomasyon",
+                  "cutoff_2025": 4486,
+                  "band": "safe"
+                },
+                {
+                  "department": "makine",
+                  "cutoff_2025": 6106,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektrik",
+                  "cutoff_2025": 6124,
+                  "band": "safe"
+                }
+              ]
+            },
+            "checks": {
+              "word_count": 29,
+              "over_limit": false,
+              "empty": false,
+              "generation_fallback": false,
+              "rag_fact_count": 6,
+              "rag_top_id": "erasmus_internship_card",
+              "rag_top_label": "",
+              "forbidden": [],
+              "sensitive_targeting": [],
+              "max_recent_similarity": 0.021,
+              "near_duplicate": false,
+              "admission_check": {
+                "repaired": false,
+                "reason": "not_an_admission_turn"
+              },
+              "fact_gate": {
+                "clean": true,
+                "violations": [],
+                "replaced": false,
+                "original_text": null,
+                "scholarship_eligibility": {
+                  "repaired": false,
+                  "reason": "no_applicable_rank_card"
+                }
+              },
+              "relevance": {
+                "repaired": false,
+                "reason": "relevant",
+                "answer_overlap": 4,
+                "card_overlap": 2,
+                "card_id": "erasmus_internship_card"
+              },
+              "repetition": {
+                "repaired": true,
+                "reason": "duplicate_answer",
+                "similarity": 1.0,
+                "card_id": "erasmus_course_recognition_card",
+                "original_text": "Erasmus stajı öğrenim alanıyla ilgili olmalı ve en az 60 gün, en çok 12 ay sürmelidir. Hazırlık ve ilk sınıfta hemen hareketlilik yapılamaz; ilk sınıf öğrencisi sonraki yıl için başvurabilir. Dil eşiği B1/65'tir."
+              },
+              "fallback_ok": true,
+              "ok": true
+            },
+            "rag_topics": [
+              "erasmus",
+              "abroad",
+              "internship"
+            ]
+          },
+          {
+            "category": "Hocalar ve eğitim kalitesi",
+            "question": "Bölüm müfredatı ne sıklıkla yenileniyor?",
+            "answer": "İTÜ Bilgisayar Mühendisliği müfredatı düzenli olarak güncelleniyor; her yıl, yeni teknolojiler ve endüstri ihtiyaçlarına göre gözden geçiriliyor. Bu sayede, öğrencilerimiz hem güncel bilgiye sahip oluyor hem de kariyer fırsatlarına daha iyi hazırlanıyor.",
+            "elapsed_seconds": 8.76,
+            "argument_id": "itu_curriculum_flexibility",
+            "route": null,
+            "profile_rank": 35,
+            "academic": {
+              "risk_band": "safe",
+              "risk_bands": [
+                {
+                  "department": "bilgisayar",
+                  "band": "safe",
+                  "cutoff_2025": 1435
+                }
+              ],
+              "eligible_departments": [
+                {
+                  "department": "bilgisayar",
+                  "cutoff_2025": 1435,
+                  "band": "safe"
+                },
+                {
+                  "department": "yapay_zeka_veri",
+                  "cutoff_2025": 1947,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektronik_haberlesme",
+                  "cutoff_2025": 2126,
+                  "band": "safe"
+                },
+                {
+                  "department": "ucak",
+                  "cutoff_2025": 2235,
+                  "band": "safe"
+                },
+                {
+                  "department": "matematik",
+                  "cutoff_2025": 3495,
+                  "band": "safe"
+                },
+                {
+                  "department": "endustri",
+                  "cutoff_2025": 3723,
+                  "band": "safe"
+                },
+                {
+                  "department": "uzay",
+                  "cutoff_2025": 3988,
+                  "band": "safe"
+                },
+                {
+                  "department": "kontrol_otomasyon",
+                  "cutoff_2025": 4486,
+                  "band": "safe"
+                },
+                {
+                  "department": "makine",
+                  "cutoff_2025": 6106,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektrik",
+                  "cutoff_2025": 6124,
+                  "band": "safe"
+                }
+              ]
+            },
+            "checks": {
+              "word_count": 32,
+              "over_limit": false,
+              "empty": false,
+              "generation_fallback": false,
+              "rag_fact_count": 6,
+              "rag_top_id": "curriculum_overview_card",
+              "rag_top_label": "",
+              "forbidden": [],
+              "sensitive_targeting": [],
+              "max_recent_similarity": 0.036,
+              "near_duplicate": false,
+              "admission_check": {
+                "repaired": false,
+                "reason": "not_an_admission_turn"
+              },
+              "fact_gate": {
+                "clean": true,
+                "violations": [],
+                "replaced": false,
+                "original_text": null,
+                "scholarship_eligibility": {
+                  "repaired": false,
+                  "reason": "no_applicable_rank_card"
+                }
+              },
+              "relevance": {
+                "repaired": false,
+                "reason": "relevant",
+                "answer_overlap": 1,
+                "card_overlap": 0,
+                "card_id": "curriculum_overview_card"
+              },
+              "repetition": {
+                "repaired": false,
+                "reason": "distinct",
+                "similarity": 0.0
+              },
+              "fallback_ok": true,
+              "ok": true
+            },
+            "rag_topics": [
+              "curriculum",
+              "double_major_transfer",
+              "graduation",
+              "specialization"
+            ]
+          },
+          {
+            "category": "Laboratuvarlar ve teknik olanaklar",
+            "question": "Projeler için ekipman ödünç alınabiliyor mu?",
+            "answer": "BBF aday sayfasındaki mezun araştırmasına göre öğrencilerin %54'ü mezun olmadan, %20'si mezuniyetten sonraki 6 ay içinde işe başlamıştır. Araştırmanın yılı sayfada belirtilmediği için oran bireysel iş garantisi değil, bölümün geçmiş sonucudur.",
+            "elapsed_seconds": 8.3,
+            "argument_id": "itu_technical_resources",
+            "route": null,
+            "profile_rank": 35,
+            "academic": {
+              "risk_band": "safe",
+              "risk_bands": [
+                {
+                  "department": "bilgisayar",
+                  "band": "safe",
+                  "cutoff_2025": 1435
+                }
+              ],
+              "eligible_departments": [
+                {
+                  "department": "bilgisayar",
+                  "cutoff_2025": 1435,
+                  "band": "safe"
+                },
+                {
+                  "department": "yapay_zeka_veri",
+                  "cutoff_2025": 1947,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektronik_haberlesme",
+                  "cutoff_2025": 2126,
+                  "band": "safe"
+                },
+                {
+                  "department": "ucak",
+                  "cutoff_2025": 2235,
+                  "band": "safe"
+                },
+                {
+                  "department": "matematik",
+                  "cutoff_2025": 3495,
+                  "band": "safe"
+                },
+                {
+                  "department": "endustri",
+                  "cutoff_2025": 3723,
+                  "band": "safe"
+                },
+                {
+                  "department": "uzay",
+                  "cutoff_2025": 3988,
+                  "band": "safe"
+                },
+                {
+                  "department": "kontrol_otomasyon",
+                  "cutoff_2025": 4486,
+                  "band": "safe"
+                },
+                {
+                  "department": "makine",
+                  "cutoff_2025": 6106,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektrik",
+                  "cutoff_2025": 6124,
+                  "band": "safe"
+                }
+              ]
+            },
+            "checks": {
+              "word_count": 31,
+              "over_limit": false,
+              "empty": false,
+              "generation_fallback": false,
+              "rag_fact_count": 6,
+              "rag_top_id": "department_employment_card",
+              "rag_top_label": "",
+              "forbidden": [],
+              "sensitive_targeting": [],
+              "max_recent_similarity": 0.019,
+              "near_duplicate": false,
+              "admission_check": {
+                "repaired": false,
+                "reason": "not_an_admission_turn"
+              },
+              "fact_gate": {
+                "clean": true,
+                "violations": [],
+                "replaced": false,
+                "original_text": null,
+                "scholarship_eligibility": {
+                  "repaired": false,
+                  "reason": "no_applicable_rank_card"
+                }
+              },
+              "relevance": {
+                "repaired": false,
+                "reason": "relevant",
+                "answer_overlap": 3,
+                "card_overlap": 0,
+                "card_id": "department_employment_card"
+              },
+              "repetition": {
+                "repaired": false,
+                "reason": "distinct",
+                "similarity": 0.021
+              },
+              "fallback_ok": true,
+              "ok": true
+            },
+            "rag_topics": [
+              "technical_resources",
+              "labs",
+              "campus_life"
+            ]
+          },
+          {
+            "category": "Hocalar ve eğitim kalitesi",
+            "question": "Akademisyen olmak isteyen öğrencilere destek veriliyor mu?",
+            "answer": "BBF'nin güncel sayfasında 37 öğretim üyesi (19 profesör, 11 doçent, 7 doktor öğretim üyesi), 10 tam zamanlı öğretim görevlisi ve 18 araştırma laboratuvarı yer alıyor; ayrıca 53 araştırma görevlisi bildiriliyor.",
+            "elapsed_seconds": 7.6,
+            "argument_id": "itu_faculty_research",
+            "route": null,
+            "profile_rank": 35,
+            "academic": {
+              "risk_band": "safe",
+              "risk_bands": [
+                {
+                  "department": "bilgisayar",
+                  "band": "safe",
+                  "cutoff_2025": 1435
+                }
+              ],
+              "eligible_departments": [
+                {
+                  "department": "bilgisayar",
+                  "cutoff_2025": 1435,
+                  "band": "safe"
+                },
+                {
+                  "department": "yapay_zeka_veri",
+                  "cutoff_2025": 1947,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektronik_haberlesme",
+                  "cutoff_2025": 2126,
+                  "band": "safe"
+                },
+                {
+                  "department": "ucak",
+                  "cutoff_2025": 2235,
+                  "band": "safe"
+                },
+                {
+                  "department": "matematik",
+                  "cutoff_2025": 3495,
+                  "band": "safe"
+                },
+                {
+                  "department": "endustri",
+                  "cutoff_2025": 3723,
+                  "band": "safe"
+                },
+                {
+                  "department": "uzay",
+                  "cutoff_2025": 3988,
+                  "band": "safe"
+                },
+                {
+                  "department": "kontrol_otomasyon",
+                  "cutoff_2025": 4486,
+                  "band": "safe"
+                },
+                {
+                  "department": "makine",
+                  "cutoff_2025": 6106,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektrik",
+                  "cutoff_2025": 6124,
+                  "band": "safe"
+                }
+              ]
+            },
+            "checks": {
+              "word_count": 30,
+              "over_limit": false,
+              "empty": false,
+              "generation_fallback": false,
+              "rag_fact_count": 6,
+              "rag_top_id": "department_faculty_labs_card",
+              "rag_top_label": "",
+              "forbidden": [],
+              "sensitive_targeting": [],
+              "max_recent_similarity": 0.024,
+              "near_duplicate": false,
+              "admission_check": {
+                "repaired": false,
+                "reason": "not_an_admission_turn"
+              },
+              "fact_gate": {
+                "clean": true,
+                "violations": [],
+                "replaced": false,
+                "original_text": null,
+                "scholarship_eligibility": {
+                  "repaired": false,
+                  "reason": "no_applicable_rank_card"
+                }
+              },
+              "relevance": {
+                "repaired": false,
+                "reason": "relevant",
+                "answer_overlap": 5,
+                "card_overlap": 0,
+                "card_id": "department_faculty_labs_card"
+              },
+              "repetition": {
+                "repaired": false,
+                "reason": "distinct",
+                "similarity": 0.024
+              },
+              "fallback_ok": true,
+              "ok": true
+            },
+            "rag_topics": [
+              "faculty",
+              "labs",
+              "teaching_quality",
+              "technical_resources"
+            ]
+          },
+          {
+            "category": "Hocalar ve eğitim kalitesi",
+            "question": "Dersler çoğunlukla slayttan mı işleniyor?",
+            "answer": "Derslerimiz genellikle slayt destekli, ancak uygulamalı ve interaktif yöntemlerle de zenginleştiriliyor. Bu, teorik bilginin yanı sıra pratiği de ön planda tutmamıza olanak tanıyor. Örneğin, yazılım mühendisliği derslerinde projelerle öğrenme fırsatı buluyorsun.",
+            "elapsed_seconds": 7.33,
+            "argument_id": "itu_curriculum_flexibility",
+            "route": null,
+            "profile_rank": 35,
+            "academic": {
+              "risk_band": "safe",
+              "risk_bands": [
+                {
+                  "department": "bilgisayar",
+                  "band": "safe",
+                  "cutoff_2025": 1435
+                }
+              ],
+              "eligible_departments": [
+                {
+                  "department": "bilgisayar",
+                  "cutoff_2025": 1435,
+                  "band": "safe"
+                },
+                {
+                  "department": "yapay_zeka_veri",
+                  "cutoff_2025": 1947,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektronik_haberlesme",
+                  "cutoff_2025": 2126,
+                  "band": "safe"
+                },
+                {
+                  "department": "ucak",
+                  "cutoff_2025": 2235,
+                  "band": "safe"
+                },
+                {
+                  "department": "matematik",
+                  "cutoff_2025": 3495,
+                  "band": "safe"
+                },
+                {
+                  "department": "endustri",
+                  "cutoff_2025": 3723,
+                  "band": "safe"
+                },
+                {
+                  "department": "uzay",
+                  "cutoff_2025": 3988,
+                  "band": "safe"
+                },
+                {
+                  "department": "kontrol_otomasyon",
+                  "cutoff_2025": 4486,
+                  "band": "safe"
+                },
+                {
+                  "department": "makine",
+                  "cutoff_2025": 6106,
+                  "band": "safe"
+                },
+                {
+                  "department": "elektrik",
+                  "cutoff_2025": 6124,
+                  "band": "safe"
+                }
+              ]
+            },
+            "checks": {
+              "word_count": 31,
+              "over_limit": false,
+              "empty": false,
+              "generation_fallback": false,
+              "rag_fact_count": 6,
+              "rag_top_id": "curriculum_overview_card",
+              "rag_top_label": "",
+              "forbidden": [],
+              "sensitive_targeting": [],
+              "max_recent_similarity": 0.019,
+              "near_duplicate": false,
+              "admission_check": {
+                "repaired": false,
+                "reason": "not_an_admission_turn"
+              },
+              "fact_gate": {
+                "clean": true,
+                "violations": [],
+                "replaced": false,
+                "original_text": null,
+                "scholarship_eligibility": {
+                  "repaired": false,
+                  "reason": "no_applicable_rank_card"
+                }
+              },
+              "relevance": {
+                "repaired": false,
+                "reason": "relevant",
+                "answer_overlap": 2,
+                "card_overlap": 0,
+                "card_id": "curriculum_overview_card"
+              },
+              "repetition": {
+                "repaired": false,
+                "reason": "distinct",
+                "similarity": 0.0
+              },
+              "fallback_ok": true,
+              "ok": true
+            },
+            "rag_topics": [
+              "curriculum",
+              "double_major_transfer",
+              "graduation",
+              "specialization"
+            ]
+          }
+        ]
+      },
+      "error": null
+    }
+  ]
+}

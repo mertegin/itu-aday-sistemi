@@ -154,6 +154,20 @@ def check_fact_gate(text: str, rag: RagResult) -> FactGateResult:
         if "yüksek lisans" not in corpus and "lisans bölümü" not in corpus:
             violations.append({"category": "unsupported_degree_program", "claim": "oyun teknolojileri lisans/bölüm"})
 
+    # Kaynakta olmayan kulağa makul kulüp adlarını engelle.
+    for named_club in re.findall(
+        r"\b(?:İTÜ\s+)?[A-ZÇĞİÖŞÜ][\wÇĞİÖŞÜçğıöşü-]*(?:\s+[A-ZÇĞİÖŞÜ][\wÇĞİÖŞÜçğıöşü-]*){0,3}\s+Kulübü\b",
+        text,
+    ):
+        if named_club.casefold() not in corpus.casefold():
+            violations.append({"category": "unsupported_named_club", "claim": named_club})
+
+    if re.search(r"2025(?:'te| yılında).{0,45}5[.]?000", text, flags=re.IGNORECASE) and "14 yılda" in corpus:
+        violations.append({
+            "category": "entrepreneurship_period_collapse",
+            "claim": "14 yıllık toplamı yalnız 2025'te gerçekleşmiş gibi sunma",
+        })
+
     return FactGateResult(clean=len(violations) == 0, violations=violations)
 
 
@@ -171,7 +185,7 @@ def _is_instructional(text: str) -> bool:
     return any(m in low for m in _INSTRUCTIONAL_MARKERS)
 
 
-_TR_FOLD_GATE = str.maketrans("çğıöşüÇĞİÖŞÜ", "cgiosucgiosu")
+_TR_FOLD_GATE = str.maketrans("çğıöşüâîûÇĞİÖŞÜÂÎÛ", "cgiosuaiucgiosuaiu")
 
 # Her fact'te geçen domain kelimeleri alaka sinyali DEĞİLDİR — bunlar yüzünden
 # "itü bilgisayar kaliteli mi" sorusuna hoca-eposta fact'i "alakalı" sayılmıştı.
@@ -361,8 +375,18 @@ def enforce_scholarship_eligibility(
     }.get(card.id, ())
     folded_text = text.lower().translate(_TR_FOLD_GATE)
     has_expected_amount = any(amount in text for amount in expected_amounts)
+    has_complete_tier = {
+        "scholarship_rank_1_10": (
+            "100.000" in text and text.count("10.000") >= 2 and "9 ay" in folded_text
+        ),
+        "scholarship_rank_11_100": text.count("10.000") >= 2 and "9 ay" in folded_text,
+        "scholarship_rank_101_500": "8.500" in text and "9 ay" in folded_text,
+        "scholarship_rank_501_1000": (
+            "6.750" in text and "9 ay" in folded_text and "ilk tercih" in folded_text
+        ),
+    }.get(card.id, has_expected_amount)
 
-    if direct_burs_question and expected_amounts and not has_expected_amount:
+    if direct_burs_question and expected_amounts and (not has_complete_tier or "sans" in folded_text):
         return card.text, {
             "repaired": True,
             "reason": "applicable_rank_tier",
@@ -381,6 +405,160 @@ def enforce_scholarship_eligibility(
         }
 
     return text, {"repaired": False, "reason": "eligible_tier_and_conditions_present", "card_id": card.id}
+
+
+def enforce_admission_reality(
+    text: str,
+    rag: RagResult,
+    question: str,
+    rank: int | None,
+) -> tuple[str, dict]:
+    """Make rank-sensitive admission claims deterministic."""
+    if rank is None:
+        return text, {"repaired": False, "reason": "rank_unknown"}
+
+    folded = question.lower().translate(_TR_FOLD_GATE)
+    rank_terms = (
+        "siralam", "taban", "puan", "gelir mi", "girer mi", "girebilir",
+        "yeter mi", "sansim", "tercih", "kac bin", "tutar mi", "olur mu",
+    )
+    competitor_terms = ("koc", "ytu", "yildiz teknik", "odtu", "bogazici", "bilkent", "sabanci")
+    has_rank_intent = any(term in folded for term in rank_terms)
+    has_comparison_intent = any(term in folded for term in competitor_terms)
+    financial_terms = ("burs", "basari odulu", "maddi destek", "aylik odul", "yurt destegi")
+    admission_predicates = ("taban", "gelir mi", "girer mi", "girebilir", "yeter mi", "sansim", "kabul", "olur mu")
+    if (
+        any(term in folded for term in financial_terms)
+        and not any(term in folded for term in admission_predicates)
+        and not has_comparison_intent
+    ):
+        return text, {"repaired": False, "reason": "financial_question_not_admission"}
+    if not has_rank_intent and not has_comparison_intent:
+        return text, {"repaired": False, "reason": "not_an_admission_turn"}
+
+    itu_compe = 1435
+    itu_ai = 1947
+    if "koc" in folded:
+        koc_full = 113
+        if rank <= koc_full:
+            prefix = (
+                f"2025'te Koç Bilgisayar %100 burslu 113, İTÜ Bilgisayar 1.435 ile kapattı; "
+                f"{_format_rank(rank)} sıralaman iki tabanın da önünde, fakat yeni yıl için ikisi de garanti değil. "
+                f"İTÜ devlet üniversitesi olduğu için eğitim ücretsiz; {_itu_merit_summary(rank)} "
+                "Koç'un net toplam teklifini bu paketle karşılaştırmak gerekir."
+            )
+        elif rank <= itu_compe:
+            prefix = (
+                "2025'te Koç Bilgisayar %100 burslu 113, İTÜ Bilgisayar 1.435 ile kapattı. "
+                f"{_format_rank(rank)} sıralamanla Koç'un %100 burslu kontenjanı geçen yıl gerçekçi değildi; "
+                "bizim İTÜ Bilgisayar tabanının ise önündesin. "
+                f"İTÜ'de eğitim ücretsiz; {_itu_merit_summary(rank)} Yeni yıl garantisi veremem."
+            )
+        else:
+            prefix = (
+                "2025'te Koç Bilgisayar %100 burslu 113, İTÜ Bilgisayar 1.435 ile kapattı. "
+                f"{_format_rank(rank)} sıralaman iki tabanın da gerisinde; ikisini de gelecek yıl kesin kabul gibi anlatamam."
+            )
+        return prefix, {
+            "repaired": prefix != text,
+            "reason": "koc_full_scholarship_rank_context",
+            "rank": rank,
+            "cutoffs": {"koc_compe_full": koc_full, "itu_compe": itu_compe},
+            "original_text": text,
+        }
+
+    if has_comparison_intent and not has_rank_intent:
+        return text, {"repaired": False, "reason": "comparison_without_admission_question"}
+
+    if rank <= itu_compe:
+        proximity = "çok yakın biçimde " if rank >= 1300 else ""
+        prefix = (
+            f"İTÜ Bilgisayar 2025'te 1.435 ile kapattı; {_format_rank(rank)} sıralaman "
+            f"geçen yılki tabanın {proximity}önünde. Bu güçlü bir konum, fakat yeni yılın tabanı oluşmadan garanti veremem."
+        )
+        reason = "ahead_of_itu_compe_2025"
+        alternative = None
+    elif rank <= itu_ai:
+        prefix = (
+            f"İTÜ Bilgisayar'ın 2025 tabanı 1.435'ti; {_format_rank(rank)} sıralaman bunun gerisinde, "
+            "bu yüzden Bilgisayar'ı gerçekçi ana seçenek gibi gösteremem. İTÜ Yapay Zekâ ve Veri 1.947'de "
+            "kapattığı için geçen yılki veride daha gerçekçi İTÜ seçeneğiydi; gelecek yıl yine garanti değil."
+        )
+        reason = "behind_compe_ahead_of_ai_2025"
+        alternative = "yapay_zeka_veri"
+    else:
+        alternative, cutoff = _strict_itu_alternative(rank)
+        if alternative:
+            prefix = (
+                f"{_format_rank(rank)} sıralaman, 2025'te İTÜ Bilgisayar'ın 1.435 ve Yapay Zekâ-Veri'nin "
+                f"1.947 tabanının gerisinde; ikisini de gerçekçi ana seçenek gibi satmam doğru olmaz. "
+                f"İTÜ içinde {_department_label(alternative)} {_format_rank(cutoff)} ile kapattığı için "
+                "geçen yılki tabloya göre daha gerçekçi bir yoldu."
+            )
+        else:
+            prefix = (
+                f"{_format_rank(rank)} sıralaman, 2025'te İTÜ Bilgisayar'ın 1.435 ve Yapay Zekâ-Veri'nin "
+                "1.947 tabanının gerisinde; bu iki programı gerçekçi ana seçenek gibi satmam doğru olmaz."
+            )
+        reason = "behind_compe_and_ai_2025"
+
+    return prefix, {
+        "repaired": prefix != text,
+        "reason": reason,
+        "rank": rank,
+        "cutoffs": {"itu_compe": itu_compe, "itu_ai_data": itu_ai},
+        "alternative": alternative,
+        "original_text": text,
+    }
+
+
+def _strict_itu_alternative(rank: int) -> tuple[str | None, int | None]:
+    from ..profile.academic import DEPT_CUTOFFS_2025
+
+    excluded = {"bilgisayar", "yapay_zeka_veri"}
+    for department, cutoff in sorted(DEPT_CUTOFFS_2025.items(), key=lambda item: item[1]):
+        if department not in excluded and rank <= cutoff:
+            return department, cutoff
+    return None, None
+
+
+def _department_label(department: str) -> str:
+    return {
+        "elektronik_haberlesme": "Elektronik-Haberleşme",
+        "ucak": "Uçak Mühendisliği",
+        "matematik": "Matematik Mühendisliği",
+        "endustri": "Endüstri Mühendisliği",
+        "uzay": "Uzay Mühendisliği",
+        "kontrol_otomasyon": "Kontrol ve Otomasyon Mühendisliği",
+        "makine": "Makine Mühendisliği",
+        "elektrik": "Elektrik Mühendisliği",
+    }.get(department, department.replace("_", " ").title())
+
+
+def _format_rank(value: int | None) -> str:
+    if value is None:
+        return ""
+    return f"{value:,}".replace(",", ".")
+
+
+def _itu_merit_summary(rank: int) -> str:
+    if rank <= 10:
+        return "ilk-10 paketinde tek seferlik 100.000 TL ve başarı koşullarına bağlı düzenli ödül var."
+    if rank <= 100:
+        return "11-100 paketinde başarı koşullarına bağlı, yılda 9 ay düzenli ödül var."
+    if rank <= 500:
+        return "101-500 paketinde yılda 9 ay aylık 8.500 TL başarı ödülü var."
+    if rank <= 1000:
+        return "501-1000 paketinde ilk tercih koşuluyla yılda 9 ay aylık 6.750 TL başarı ödülü var."
+    return "başarı ödülü dilimi yerine ihtiyaç ve ilk tercih destekleri ayrıca incelenmeli."
+
+
+def _prepend_without_duplicate(prefix: str, text: str) -> str:
+    prefix_tokens = _q_tokens(prefix)
+    text_tokens = _q_tokens(text)
+    if prefix_tokens and len(prefix_tokens & text_tokens) / len(prefix_tokens) >= 0.72:
+        return prefix
+    return f"{prefix} {text}".strip()
 
 
 def _token_similarity(left: str, right: str) -> float:

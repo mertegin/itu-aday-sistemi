@@ -42,3 +42,53 @@ facts:
     examples: ["Selfish", "Med Çim", "tenis kortları", "Oyun Tasarlama ve Geliştirme", "İTÜ ACM", "5 kulüp", "3 öğrenci takımı"]
     topics: ["student_experience", "student_social", "campus_life", "dining"]
     tags: ["sosyalleşme", "çim", "kafe", "tatlı", "market", "kampüste yemek"]
+
+  - id: "campus_official_daily_life_card"
+    label: "Ayazağa'da somut sosyal ve günlük yaşam örnekleri"
+    text: "Ayazağa Yerleşkesi 1.600.000 m² alanda 5.100 kişilik stadyum, olimpik havuz, yapay gölet, çeşitli kafeler, 7/24 Mustafa İnan Kütüphanesi ve kampüs içindeki İTÜ metro durağını bir arada sunuyor. Kampüs yalnız ders binalarından oluşmuyor; spor, açık alan ve şehir bağlantısı aynı yerleşkede."
+    answer_card: true
+    source: "İTÜ Tanıtım - Yerleşkelerimiz"
+    source_url: "https://tanitim.itu.edu.tr/kesfet/yerleskelerimiz"
+    year: 2026
+    confidence: high
+    examples: ["yapay gölet", "5.100 kişilik stadyum", "olimpik havuz", "İTÜ metro durağı"]
+    topics: ["campus_life", "student_social"]
+    tags: ["gölet", "stadyum", "havuz", "metro", "açık alan", "kampüste ne var"]
+
+  - id: "campus_food_shopping_official_card"
+    label: "Ayazağa'da yemek, pizza ve market seçenekleri"
+    text: "İTÜ'nün resmî yaşam sayfasında Ayazağa için Big Slice Pizza, Selfiş, Tarihi Unkapanı Pilavcısı, Küçük Ev, Tost Akademisi, EspressoLab ve başka yeme-içme noktaları listeleniyor; kampüs içinde Migros, A101 ve Şok da var. Bu çeşitlilik günlük yemeği yalnız yemekhaneye bağlı bırakmıyor."
+    answer_card: true
+    source: "İTÜ Tanıtım - Yeme/İçme ve Alışveriş"
+    source_url: "https://tanitim.itu.edu.tr/itude-yasam/yeme-icme-alisveris"
+    year: 2026
+    confidence: high
+    examples: ["Big Slice Pizza", "Selfiş", "Tarihi Unkapanı Pilavcısı", "Migros", "A101", "Şok"]
+    topics: ["campus_life", "dining", "student_social"]
+    tags: ["pizza", "market", "kafe", "yemek", "alışveriş", "selfish", "unkapanı"]
+
+  - id: "campus_cinema_match_viewing_card"
+    label: "Sinema ve toplu maç izleme deneyimi"
+    text: "İTÜ Sinema Kulübü çevrim içi olarak varlığını sürdürüyor. Kullanıcı tarafından sağlanan öğrenci deneyiminde, Dünya Kupası döneminde maçların kampüste topluca izlendiği ve Bestra'daki TV ekranının bu buluşmalar için kullanıldığı belirtiliyor; etkinlik takvimi dönemden döneme değişebilir."
+    answer_card: true
+    source: "İTÜ Sinema Kulübü bağlantı sayfası + öğrenci geri bildirimi"
+    source_urls:
+      - "https://heylink.me/itusinemakulubu/"
+    year: 2026
+    confidence: medium
+    examples: ["İTÜ Sinema Kulübü", "Bestra", "Dünya Kupası maçları"]
+    topics: ["student_social", "clubs_teams", "campus_life"]
+    tags: ["sinema", "film", "maç izleme", "dünya kupası", "bestra", "televizyon"]
+
+  - id: "campus_worship_facilities_card"
+    label: "Ayazağa'da cami ve fakültede mescit"
+    text: "İTÜ'nün resmî Ayazağa kampüs haritasında İTÜ Abdülhakim Sancak Camii yer alıyor. Kullanıcı tarafından sağlanan öğrenci deneyimine göre Bilgisayar ve Bilişim Fakültesi içinde de mescit bulunuyor; fakülte mescidinin güncel erişim ayrıntıları bina görevlilerinden doğrulanmalıdır."
+    answer_card: true
+    source: "İTÜ resmî kampüs haritası + öğrenci geri bildirimi"
+    source_urls:
+      - "https://erasmus.itu.edu.tr/docs/librariesprovider15/gelen-%C3%B6%C4%9Frenci/ka131/itu-campus-map-erasmus-office.pdf?sfvrsn=35ea67bb_2"
+    year: 2026
+    confidence: medium
+    examples: ["İTÜ Abdülhakim Sancak Camii", "Bilgisayar ve Bilişim Fakültesi mescidi"]
+    topics: ["worship_facilities"]
+    tags: ["cami", "mescit", "namaz", "ibadet", "fakültede mescit"]

@@ -31,11 +31,19 @@ JUDGMENTAL_PATTERNS = [
     r"\byapamazsın\b",
 ]
 
+# Hassas özellik çıkarımı veya bu özelliklere göre hedefli ikna.
+SENSITIVE_TARGETING_PATTERNS = [
+    r"(muhafazak[aâ]r|dindar|müslüman).{0,35}(görün|olduğun|olduğunu)",
+    r"(görünüş|kıyafet|ismin|adın).{0,40}(din|inanç|mezhep|muhafazak[aâ]r)",
+    r"sana\s+bakınca.{0,40}(cami|mescit|namaz|dindar|muhafazak[aâ]r)",
+]
+
 
 ALL_PATTERNS = [
     ("disparaging", DISPARAGING_PATTERNS),
     ("absolutist", ABSOLUTIST_PATTERNS),
     ("judgmental", JUDGMENTAL_PATTERNS),
+    ("sensitive_targeting", SENSITIVE_TARGETING_PATTERNS),
 ]
 
 
@@ -52,6 +60,10 @@ SAFE_REPLACEMENTS = {
     "judgmental": (
         "Bizim bölümümüzde zorlayıcı dönemler olabilir; danışmanlık, düzenli çalışma ve "
         "öğrencinin ilgisiyle ilerlemek mümkün."
+    ),
+    "sensitive_targeting": (
+        "Kampüsteki cami ve mescit gibi imkânları yalnızca açıkça sorulduğunda, "
+        "kişisel özellik çıkarmadan ve tarafsız biçimde anlatırım."
     ),
 }
 DEFAULT_SAFE_TEXT = (

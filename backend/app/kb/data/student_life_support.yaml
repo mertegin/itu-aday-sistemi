@@ -21,7 +21,7 @@ facts:
 
   - id: "housing_application_path_card"
     label: "Yeni öğrenciler için yurt başvurusu"
-    text: "Yeni kayıtlı öğrenci, yerleştirmeden sonra İTÜ Yurt ve Burslar Ofisinin ilan ettiği tarihlerde çevrimiçi yurt sisteminden belgelerini yükleyerek başvurur; sonucu İTÜ Portal/yurt sistemi üzerinden izler. Yerleştirme tercih ve kontenjana bağlıdır, sonuç açıklanmadan garanti değildir. 2026 yeni kayıt takvimi yayımlandığında güncel tarih ayrıca kontrol edilmelidir."
+    text: "Kalacak yer için izleyeceğin yol şu: İTÜ'ye yerleştikten sonra Yurt ve Burslar Ofisinin ilan ettiği tarihlerde çevrimiçi sistemden belgelerini yükleyip başvuruyorsun; sonucu İTÜ Portal üzerinden izliyorsun. Yerleştirme tercih ve kontenjana bağlı, sonuç açıklanmadan garanti değil. 2026 yeni kayıt takvimi yayımlandığında güncel tarihi ayrıca kontrol etmek gerekiyor."
     answer_card: true
     topics: ["housing_details", "housing", "financial_concern"]
     examples: ["çevrimiçi başvuru", "İTÜ Portal", "tercih ve kontenjan"]

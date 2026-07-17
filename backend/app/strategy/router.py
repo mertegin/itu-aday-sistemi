@@ -5,15 +5,33 @@ message tells us what must be answered now. Explicit questions therefore get
 priority over bandit exploration; softer signals become bandit preferences.
 """
 from dataclasses import dataclass, field
+import re
 
 from ..profile.schema import CandidateProfile
 
 
-_TR_FOLD = str.maketrans("çğıöşüÇĞİÖŞÜ", "cgiosucgiosu")
+_TR_FOLD = str.maketrans("çğıöşüâîûÇĞİÖŞÜÂÎÛ", "cgiosuaiucgiosuaiu")
 
 
 def _fold(text: str) -> str:
-    return " ".join(text.translate(_TR_FOLD).lower().split())
+    normalized = text.replace("’", "'").replace("‘", "'")
+    return " ".join(normalized.translate(_TR_FOLD).lower().split())
+
+
+def _keyword_matches(keyword: str, folded_text: str) -> bool:
+    """Match at a word start so `taban` cannot fire inside `veritabani`.
+
+    Many router entries are intentional Turkish stems (for example `uzmanlas`),
+    so only short standalone tokens require an end boundary.
+    """
+    needle = _fold(keyword).strip()
+    if not needle:
+        return False
+    end = r"(?![a-z0-9])" if len(needle) <= 3 else ""
+    return bool(re.search(
+        rf"(?<![a-z0-9]){re.escape(needle)}{end}",
+        folded_text,
+    ))
 
 
 @dataclass
@@ -37,6 +55,24 @@ class RouteDecision:
 
 
 _TOPIC_RULES: list[tuple[str, tuple[str, ...], str, float]] = [
+    (
+        "database_course",
+        ("veritabani", "veri tabani", "database", "sql"),
+        "itu_curriculum_details",
+        0.99,
+    ),
+    (
+        "cloud_technologies",
+        ("bulut teknoloji", "bulut bilisim", "cloud computing", "aws", "azure", "google cloud"),
+        "itu_specialization",
+        0.99,
+    ),
+    (
+        "student_social",
+        ("genel olarak ortam", "bolum ortami", "fakulte ortami", "ogrenci ortami", "ortam nasil"),
+        "itu_clubs_teams",
+        0.99,
+    ),
     (
         "comparison_financial_offer",
         ("para teklif", "maddi teklif", "burs teklif", "aylik odeme teklif", "nakit teklif"),
@@ -63,6 +99,39 @@ _TOPIC_RULES: list[tuple[str, tuple[str, ...], str, float]] = [
         0.99,
     ),
     (
+        "teaching_quality",
+        (
+            "hocalar dersleri anlasilir", "dersleri anlasilir anlat", "anlasilir anlatiyor",
+            "ders anlatimi", "hocalarin ingilizcesi", "hocalar ingilizce",
+            "sektorel deneyim", "sektor deneyimi", "hocalar sektorden",
+            "dersler slayttan", "slayttan islen", "slayttan mi islen",
+            "cogunlukla slayt", "slayt agirlikli",
+        ),
+        "itu_faculty_research",
+        0.99,
+    ),
+    (
+        "curriculum_details",
+        (
+            "ders icerikleri guncel", "mufredat guncel", "guncel teknoloji",
+            "eski teknoloji", "modern ders", "mufredat ne siklikla",
+            "mufredati ne siklikla", "mufredat ne zaman guncellen",
+            "mufredati ne zaman guncellen", "ders plani guncellenme",
+        ),
+        "itu_curriculum_details",
+        0.99,
+    ),
+    (
+        "global_exchange",
+        (
+            "amerika'da degisim", "amerikada degisim", "amerika degisim",
+            "abd'de degisim", "abd de degisim", "abd degisim", "global exchange",
+            "amerika cift diploma", "abd cift diploma",
+        ),
+        "itu_global_opportunities",
+        0.99,
+    ),
+    (
         "double_major_transfer",
         ("cift anadal", "cap yap", "cap sart", "yandal", "yatay gecis", "bolum degistir", "ikinci diploma"),
         "itu_double_major_transfer",
@@ -70,7 +139,11 @@ _TOPIC_RULES: list[tuple[str, tuple[str, ...], str, float]] = [
     ),
     (
         "erasmus",
-        ("erasmus", "degisim program", "yurt disinda donem", "yurt disinda staj", "hangi ulke", "hangi universiteyle anlasma"),
+        (
+            "erasmus", "degisim program", "yurt disinda donem", "yurt disinda staj",
+            "hangi ulke", "hangi universiteyle anlasma", "hangi universitelere gid",
+            "erasmus dil sinavi", "erasmus ingilizce", "dil sinavi zor",
+        ),
         "itu_erasmus_mobility",
         0.99,
     ),
@@ -88,7 +161,7 @@ _TOPIC_RULES: list[tuple[str, tuple[str, ...], str, float]] = [
     ),
     (
         "research_projects",
-        ("arastirma projes", "hocayla proje", "hocayla arastirma", "lisans arastirma", "lisans ogrencisi", "tubitak", "yayin yap", "laboratuvara katil", "projelere katil", "proje gelistir"),
+        ("arastirma projes", "hocayla proje", "hocayla arastirma", "lisans arastirma", "lisans ogrencisi", "tubitak", "yayin yap", "laboratuvara katil", "projelere katil", "proje gelistir", "proje yarism", "projeler yarism", "yarismalara gonder", "akademisyen olmak", "akademik kariyer", "arastirmaci olmak"),
         "itu_research_projects",
         0.97,
     ),
@@ -112,15 +185,42 @@ _TOPIC_RULES: list[tuple[str, tuple[str, ...], str, float]] = [
     ),
     (
         "technical_resources",
-        ("bilgisayar laboratuvar", "laboratuvara ders disinda", "laboratuvarlara ders disinda", "lab eris", "hoca izni", "teknik imkan", "sunucu", "gpu", "ekipman", "laboratuvar eris", "kutuphane kac", "calisma alani"),
+        (
+            "bilgisayar laboratuvar", "robotik laboratuvar", "robotik lab",
+            "laboratuvarlardaki bilgisayar", "bilgisayarlar guncel",
+            "laboratuvara ders disinda", "laboratuvarlara ders disinda", "lab eris",
+            "hoca izni", "teknik imkan", "sunucu", "gpu", "ekipman",
+            "laboratuvar eris", "kutuphane kac", "calisma alani",
+            "ekipman odunc", "cihaz odunc", "proje ekipmani",
+            "ucretsiz yazilim lisans", "yazilim lisansi", "github student",
+            "office 365", "matlab lisans",
+        ),
         "itu_technical_resources",
         0.96,
+    ),
+    (
+        "social_events",
+        ("sinema kulubu", "mac izle", "dunya kupasi", "bestra", "televizyon ekrani"),
+        "itu_social_venues",
+        0.98,
+    ),
+    (
+        "campus_food_shopping",
+        ("pizza", "kampuste market", "migros", "a101", "sok market", "selfish", "unkapani pilavcisi"),
+        "itu_social_venues",
+        0.98,
     ),
     (
         "clubs_teams",
         ("hangi kulup", "ogrenci kulup", "ogrenci takimi", "proje takimi", "iha takimi", "uydu takimi", "teknofest", "uzaytek", "spor takimi", "hackathon", "acm", "gdg", "datathon"),
         "itu_clubs_teams",
         0.97,
+    ),
+    (
+        "worship_facilities",
+        ("cami", "mescit", "namaz", "ibadet", "ibadethane"),
+        "itu_worship_facilities",
+        0.99,
     ),
     (
         "gamedev",
@@ -148,13 +248,13 @@ _TOPIC_RULES: list[tuple[str, tuple[str, ...], str, float]] = [
     ),
     (
         "student_wellbeing",
-        ("yalniz kal", "yalniz hiss", "uyum sagla", "psikolojik", "kaygi", "stres", "bunal", "pisman olur", "destek al", "danismanlik"),
+        ("yalniz kal", "yalniz hiss", "uyum sagla", "psikolojik", "kaygi", "stres", "bunal", "pisman olur", "psikolojik destek", "danismanlik"),
         "itu_student_wellbeing",
         0.97,
     ),
     (
         "future_of_field",
-        ("isimizi al", "issiz kal", "meslek olur mu", "meslek biter", "gelecegi var", "ai gelis", "otomasyon"),
+        ("isimizi al", "issiz kal", "meslek olur mu", "meslek biter", "gelecegi var", "ai gelis", "otomasyon", "maaslar gelecekte", "gelecekte duser", "maas duser"),
         "future_of_compe",
         0.96,
     ),
@@ -233,7 +333,8 @@ _TOPIC_RULES: list[tuple[str, tuple[str, ...], str, float]] = [
         (
             "diger universitelerden fark", "universitelerden farki", "farki nedir",
             "ne kazanirim", "essiz yapan", "en buyuk avantaj", "neden itu",
-            "neden tercih", "tum okullar", "her okul", "her universite",
+            "neden tercih", "tum okullar", "her okul", "her universite", "diger universitelere gore",
+            "diger guclu okul", "guclu okullardan", "ayiran sey",
         ),
         "itu_compe_differentiators",
         0.97,
@@ -348,7 +449,11 @@ _FALLBACK_TOPIC_ARGUMENTS: list[tuple[str, str]] = [
     ("specialization", "itu_specialization"),
     ("double_major_transfer", "itu_double_major_transfer"),
     ("erasmus", "itu_erasmus_mobility"),
+    ("global_exchange", "itu_global_opportunities"),
     ("clubs_teams", "itu_clubs_teams"),
+    ("social_events", "itu_social_venues"),
+    ("campus_food_shopping", "itu_social_venues"),
+    ("worship_facilities", "itu_worship_facilities"),
     ("housing_details", "itu_housing_details"),
     ("istanbul_life", "itu_istanbul_life"),
     ("student_social", "itu_clubs_teams"),
@@ -395,10 +500,10 @@ def route_current_turn(
     profile: CandidateProfile,
     previous_route: dict | None = None,
 ) -> RouteDecision:
-    low = f" {_fold(text)} "
+    low = _fold(text)
     matches: list[tuple[str, str, float]] = []
     for topic, needles, argument_id, confidence in _TOPIC_RULES:
-        if any(needle in low for needle in needles):
+        if any(_keyword_matches(needle, low) for needle in needles):
             matches.append((topic, argument_id, confidence))
 
     # Analyzer concerns are useful when the wording is indirect.
@@ -468,8 +573,12 @@ def route_current_turn(
     # not housing merely because it contains the token "yurt".
     topic_priority = {
         "comparison_financial_offer": 0,
+        "database_course": 0,
+        "cloud_technologies": 0,
         "curriculum_year1": 0,
         "curriculum_beginner": 0,
+        "teaching_quality": 0,
+        "global_exchange": 0,
         "double_major_transfer": 0,
         "erasmus": 0,
         "graduation": 0,
@@ -480,6 +589,9 @@ def route_current_turn(
         "academic_workload": 0,
         "technical_resources": 0,
         "clubs_teams": 0,
+        "social_events": 0,
+        "campus_food_shopping": 0,
+        "worship_facilities": 0,
         "housing_details": 0,
         "istanbul_life": 0,
         "student_social": 0,
@@ -506,9 +618,9 @@ def route_current_turn(
         "software_vs_compe": 8,
         "ai_vs_compe": 8,
         "electronics": 8,
-        "entrepreneurship": 9,
+        "entrepreneurship": -1,
         "career": 10,
-        "comparison": 11,
+        "comparison": 3,
         "ranking": 12,
         "healthtech": 13,
         "clubs_projects": 14,

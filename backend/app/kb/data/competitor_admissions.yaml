@@ -1,0 +1,57 @@
+meta:
+  section: "2025 YKS bilgisayar ve yakın program karşılaştırması"
+  source: "İTÜ program sayfaları, Koç aday broşürü ve YÖK Atlas"
+  year: 2025
+  last_verified: "2026-07-17"
+  confidence: high
+  topics: ["ranking", "admission", "comparison"]
+  tags: ["taban sıra", "başarı sırası", "gelir mi", "girer miyim", "tercih"]
+
+facts:
+  - id: "admission_itu_compe_2025_direct"
+    label: "İTÜ Bilgisayar 2025 kabul gerçekliği"
+    text: "İTÜ Bilgisayar Mühendisliği 2025'te 1.435 en düşük, 19 en yüksek ve 733 ortalama SAY başarı sırasıyla öğrenci aldı. Aday 1.435'in gerisindeyse geçen yılın tabanına göre bölüm gelmiyordu; yeni yıl için yine de kesin sonuç söylenemez."
+    answer_card: true
+    source: "İTÜ TYÇÇ Bilgisayar Mühendisliği program sayfası"
+    source_url: "https://www.tyyc.itu.edu.tr/ProgramHakkinda.php?Program=BLG_LS"
+    examples: ["İTÜ Bilgisayar", "1.435", "733 ortalama sıra"]
+    tags: ["bilgisayar mühendisliği", "1435", "1.435", "gerisinde", "önünde"]
+
+  - id: "admission_itu_ai_data_2025_direct"
+    label: "İTÜ Yapay Zekâ ve Veri 2025 kabul gerçekliği"
+    text: "İTÜ Yapay Zekâ ve Veri Mühendisliği 2025'te 1.947 en düşük, 102 en yüksek ve 1.438 ortalama SAY başarı sırasıyla öğrenci aldı; genel kontenjanı 30'du. 2.000 ve üzerindeki bir sıra, geçen yılın 1.947 tabanının gerisindedir ve garanti gibi anlatılamaz."
+    answer_card: true
+    source: "İTÜ TYÇÇ Yapay Zekâ ve Veri Mühendisliği program sayfası"
+    source_url: "https://www.tyyc.itu.edu.tr/ProgramHakkinda.php?Program=YZV_LS"
+    examples: ["İTÜ Yapay Zekâ ve Veri Mühendisliği", "1.947", "30 kontenjan"]
+    tags: ["yapay zeka", "veri mühendisliği", "1947", "1.947", "2000"]
+
+  - id: "admission_koc_compe_full_2025_direct"
+    label: "Koç Bilgisayar %100 burslu 2025 kabul gerçekliği"
+    text: "Koç Bilgisayar Mühendisliği %100 burslu genel kontenjanı 2025'te 18, taban SAY başarı sırası 113'tü. Örneğin 435 sıralama, geçen yılın %100 burslu tabanının gerisindedir; ücretli veya %50 indirimli kontenjanlar ayrı değerlendirilmelidir."
+    answer_card: true
+    source: "Koç Üniversitesi 2025-2026 aday broşürü + YÖK Atlas"
+    source_urls:
+      - "https://cdn.ku.edu.tr/cdn/files/mailing/ADAYLAR/flipbook-2025-26/files/basic-html/page9.html"
+      - "https://yokatlas.yok.gov.tr/"
+    examples: ["Koç Bilgisayar %100 burslu", "18 kontenjan", "113 taban sıra"]
+    topics: ["ranking", "admission", "comparison", "scholarship"]
+    tags: ["koç", "tam burs", "%100 burs", "113", "435", "bilgisayar"]
+
+  - id: "admission_ytu_compe_2025_direct"
+    label: "YTÜ Bilgisayar 2025 kabul gerçekliği"
+    text: "YTÜ Bilgisayar Mühendisliği 2025'te 7.395 SAY başarı sırasıyla kapattı; genel kontenjanı 100'dü. Bu sayı yalnız kabul erişilebilirliğini gösterir, eğitim ve kampüs kalitesinin tek başına ölçüsü değildir."
+    answer_card: true
+    source: "YÖK Atlas"
+    source_url: "https://yokatlas.yok.gov.tr/"
+    examples: ["YTÜ Bilgisayar", "7.395", "100 kontenjan"]
+    tags: ["ytu", "yıldız teknik", "7395", "7.395", "bilgisayar"]
+
+  - id: "admission_itu_alternatives_2025_direct"
+    label: "İTÜ içinde sıralamaya göre gerçekçi alternatifler"
+    text: "2025 tabanları İTÜ Elektronik-Haberleşme için 2.126, Uçak için 2.235, Matematik Mühendisliği için 3.495, Endüstri için 3.723 ve Kontrol-Otomasyon için 4.486 idi. Bilgisayar gerçekçi değilse adayın ilgisine uyan İTÜ alternatifi bu tabanlarla dürüstçe eşleştirilmelidir."
+    answer_card: true
+    source: "YÖK Atlas"
+    source_url: "https://yokatlas.yok.gov.tr/"
+    examples: ["Elektronik-Haberleşme", "Matematik Mühendisliği", "Kontrol-Otomasyon"]
+    tags: ["2126", "2235", "3495", "3723", "4486", "alternatif bölüm"]

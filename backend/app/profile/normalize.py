@@ -10,7 +10,7 @@ Canonical bölüm slug'ları academic.DEPT_CUTOFFS_2025 anahtarlarıyla uyumludu
 böylece her alternatif için risk bandı hesaplanabilir.
 """
 
-_TR_FOLD = str.maketrans("çğıöşüÇĞİÖŞÜ", "cgiosucgiosu")
+_TR_FOLD = str.maketrans("çğıöşüâîûÇĞİÖŞÜÂÎÛ", "cgiosuaiucgiosuaiu")
 
 
 def _fold(raw: str) -> str:

@@ -70,9 +70,9 @@ sections:
         source: "İTÜ müfredat"
         year: 2025
         confidence: high
-      - text: "ABD üniversiteleriyle çift diploma (SUNY Bilişim Sistemleri) + Erasmus imkânı."
-        source: "İTÜ resmi"
-        year: 2025
+      - text: "ABD'deki SUNY ortaklığı Bilişim Sistemleri Mühendisliği adlı ayrı ve ücretli bir çift diploma programıdır; güncel Bilgisayar Mühendisliği çift diploma programı Uluslararası Saraybosna Üniversitesi ile yürütülür. Normal Bilgisayar Mühendisliği öğrencisi için ABD değişimi garanti edilmemelidir."
+        source: "İTÜ Çift Diploma Ofisi"
+        year: 2026
         confidence: high
       - text: "İki yarıyıllık capstone: Computer Engineering Design I & II (BLG 4901E + 4902E)."
         source: "İTÜ müfredat"

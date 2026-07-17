@@ -23,6 +23,19 @@ facts:
     examples: ["NLP", "Robotik", "Siber Güvenlik", "Sağlık Bilişimi"]
     tags: ["hangi laboratuvar", "uzmanlaşma", "araştırma alanı", "bulut", "iot"]
 
+  - id: "cloud_technologies_honesty_card"
+    label: "Bulut teknolojilerine yönelme"
+    text: "Bulut tarafında fakültemizdeki 18 araştırma laboratuvarının alanları arasında HPC-Bulut açıkça yer alıyor. Güncel zorunlu planda adı doğrudan 'Bulut Bilişim' olan bir çekirdek ders görünmediği için bunu hazır bir uzmanlık paketi gibi anlatmayız; yönelim laboratuvar, proje ve dönemsel seçmeli derslerle kurulabilir."
+    answer_card: true
+    topics: ["cloud_technologies", "labs", "specialization", "technical_resources", "research_projects"]
+    examples: ["18 araştırma laboratuvarı", "HPC-Bulut", "proje"]
+    source: "İTÜ BBF Aday Öğrenciler sayfası ve güncel lisans ders planı"
+    source_urls:
+      - "https://bbf.itu.edu.tr/ogrenciler/aday-ogrenciler"
+      - "https://obs.itu.edu.tr/public/DersPlan/DersPlanDetay/2340"
+    year: 2026
+    tags: ["bulut teknolojileri", "bulut bilişim", "cloud computing", "hpc", "aws", "azure"]
+
   - id: "department_employment_card"
     text: "BBF aday sayfasındaki mezun araştırmasına göre öğrencilerin %54'ü mezun olmadan, %20'si mezuniyetten sonraki 6 ay içinde işe başlamıştır. Araştırmanın yılı sayfada belirtilmediği için oran bireysel iş garantisi değil, bölümün geçmiş sonucudur."
     answer_card: true

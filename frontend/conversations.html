@@ -4,157 +4,170 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geçmiş Sohbetler — İTÜ Aday Sistemi</title>
-    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="stylesheet" href="style.css?v=10">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <style>
-        body { background: var(--gray-100); }
         .conv-app {
             display: grid;
-            grid-template-columns: 380px 1fr;
-            height: 100vh;
+            grid-template-columns: 360px 1fr;
+            height: calc(100vh - 60px);
+            gap: 20px;
+            padding: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
-        /* SOL: SESSION LİSTESİ */
+        /* SOL: LİSTE */
         .conv-list-pane {
-            background: white;
-            border-right: 1px solid var(--gray-200);
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-md);
             display: flex;
             flex-direction: column;
             overflow: hidden;
         }
         .conv-list-header {
-            padding: 18px 20px;
-            border-bottom: 1px solid var(--gray-200);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            padding: 16px 20px 12px;
+            border-bottom: 1px solid var(--border);
         }
-        .conv-list-header h2 { font-size: 16px; font-weight: 700; color: var(--gray-900); }
-        .conv-list-header a { font-size: 12.5px; color: var(--itu-blue); text-decoration: none; }
-        .conv-list-header a:hover { text-decoration: underline; }
-        .conv-count { font-size: 12px; color: var(--gray-500); padding: 8px 20px; background: var(--gray-50); border-bottom: 1px solid var(--gray-100); }
-        .conv-list { flex: 1; overflow-y: auto; }
+        .conv-list-header h2 { font-size: 15px; font-weight: 700; }
+        .conv-list-header .count { font-size: 12px; color: var(--text-3); margin-top: 3px; }
+        .conv-list { flex: 1; overflow-y: auto; padding: 8px; }
         .conv-item {
-            padding: 14px 20px;
-            border-bottom: 1px solid var(--gray-100);
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
             cursor: pointer;
-            transition: background 0.1s ease;
+            transition: background 0.12s ease;
+            border: 1px solid transparent;
         }
-        .conv-item:hover { background: var(--gray-50); }
-        .conv-item.active { background: var(--itu-blue-soft); border-left: 3px solid var(--itu-blue); padding-left: 17px; }
+        .conv-item:hover { background: var(--surface-2); }
+        .conv-item.active {
+            background: var(--primary-soft);
+            border-color: #cfdffc;
+        }
         .conv-item .top-row {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 4px;
+            margin-bottom: 3px;
         }
-        .conv-item .name { font-weight: 600; font-size: 13.5px; color: var(--gray-900); }
-        .conv-item .sid { font-family: ui-monospace, monospace; font-size: 10px; color: var(--gray-400); }
+        .conv-item .name { font-weight: 700; font-size: 13.5px; }
+        .conv-item .sid { font-family: var(--mono); font-size: 10px; color: var(--text-3); }
         .conv-item .preview {
             font-size: 12px;
-            color: var(--gray-500);
+            color: var(--text-2);
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            margin-bottom: 6px;
+            margin-bottom: 7px;
         }
-        .conv-item .meta-row { display: flex; gap: 6px; flex-wrap: wrap; }
-        .conv-item .tag {
-            font-size: 10px;
-            padding: 2px 7px;
-            border-radius: 4px;
-            background: var(--gray-100);
-            color: var(--gray-600);
-            font-family: ui-monospace, monospace;
-        }
-        .conv-item .tag.rank { background: #fef3c7; color: #92400e; }
-        .conv-item .tag.state { background: #ecfeff; color: #0e7490; }
+        .conv-item .meta-row { display: flex; gap: 5px; flex-wrap: wrap; }
 
-        /* SAĞ: SOHBET DETAYI */
+        /* SAĞ: DETAY */
         .conv-detail {
             overflow-y: auto;
-            padding: 24px 32px;
+            padding-right: 4px;
         }
         .conv-detail .placeholder {
+            height: 100%;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100%;
-            color: var(--gray-400);
+            gap: 12px;
+            color: var(--text-3);
             font-size: 14px;
         }
-        .detail-header {
-            background: white;
-            border: 1px solid var(--gray-200);
-            border-radius: var(--radius);
-            padding: 16px 20px;
-            margin-bottom: 18px;
-            box-shadow: var(--shadow-sm);
-        }
-        .detail-header h3 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
-        .detail-header .info-row { display: flex; gap: 16px; flex-wrap: wrap; font-size: 12px; color: var(--gray-600); }
-        .detail-header .info-row b { color: var(--gray-900); }
-        .detail-header .actions-row { margin-top: 10px; display: flex; gap: 8px; }
-        .detail-header .actions-row a, .detail-header .actions-row button {
-            font-size: 12px; padding: 6px 12px; border-radius: 6px;
-            border: 1px solid var(--gray-200); background: white;
-            color: var(--itu-blue); text-decoration: none; cursor: pointer; font-family: inherit;
-        }
-        .detail-header .actions-row a:hover, .detail-header .actions-row button:hover { background: var(--gray-50); }
+        .conv-detail .placeholder .big { font-size: 40px; }
 
-        .turn-block { margin-bottom: 4px; }
+        .detail-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            padding: 18px 22px;
+            margin-bottom: 16px;
+        }
+        .detail-card h3 { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+        .detail-card h3 .sid { font-family: var(--mono); font-size: 11px; color: var(--text-3); font-weight: 500; }
+        .detail-card .info-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+        .detail-card .actions-row { margin-top: 12px; display: flex; gap: 8px; }
+        .detail-card .actions-row a { text-decoration: none; display: inline-block; }
+
+        .fsm-card-title {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--text-2);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 12px;
+        }
+
+        /* Transcript */
+        .transcript {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 4px 2px 24px;
+        }
         .conv-msg {
             max-width: 72%;
-            padding: 10px 14px;
-            border-radius: var(--radius-lg);
+            padding: 11px 15px;
+            border-radius: 18px;
             font-size: 13.5px;
-            line-height: 1.55;
-            margin-bottom: 6px;
-            box-shadow: var(--shadow-sm);
+            line-height: 1.6;
         }
         .conv-msg.user {
-            margin-left: auto;
-            background: var(--itu-navy);
-            color: white;
+            align-self: flex-end;
+            background: var(--primary-grad);
+            color: #fff;
             border-bottom-right-radius: 6px;
+            box-shadow: 0 3px 10px rgba(29, 91, 216, 0.22);
         }
         .conv-msg.assistant {
-            background: white;
-            border: 1px solid var(--gray-200);
+            align-self: flex-start;
+            background: var(--surface);
+            border: 1px solid var(--border);
             border-bottom-left-radius: 6px;
+            box-shadow: var(--shadow-sm);
         }
-        .turn-meta {
-            font-size: 10.5px;
-            color: var(--gray-400);
-            font-family: ui-monospace, monospace;
-            margin: 2px 0 14px 4px;
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
+        .turn-label {
+            align-self: flex-end;
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--text-3);
+            margin-bottom: -6px;
         }
-        .turn-meta .tm {
-            background: var(--gray-100);
-            padding: 2px 7px;
-            border-radius: 4px;
-        }
-        .turn-meta .tm.arg { background: #f5f3ff; color: #6d28d9; }
-        .turn-meta .tm.fsm { background: #ecfeff; color: #0e7490; }
-        .turn-meta .tm.reward { background: #f0fdf4; color: #15803d; }
     </style>
 </head>
 <body>
+    <nav class="topbar">
+        <a class="brand" href="/">
+            <span class="brand-badge">N</span>
+            İTÜ Aday Sistemi
+        </a>
+        <div class="nav-links">
+            <a href="/">Sohbet</a>
+            <a href="/conversations.html" class="active">Geçmiş Sohbetler</a>
+            <a href="/fsm.html">FSM Haritası</a>
+        </div>
+    </nav>
+
     <div class="conv-app">
         <aside class="conv-list-pane">
             <div class="conv-list-header">
                 <h2>Geçmiş Sohbetler</h2>
-                <a href="/">← Chat'e dön</a>
+                <div class="count" id="convCount">Yükleniyor…</div>
             </div>
-            <div class="conv-count" id="convCount">Yükleniyor…</div>
             <div class="conv-list" id="convList"></div>
         </aside>
 
         <main class="conv-detail" id="convDetail">
-            <div class="placeholder">Soldan bir sohbet seç — mesajlar ve her turnun kararları burada görünecek.</div>
+            <div class="placeholder">
+                <div class="big">💬</div>
+                <div>Soldan bir sohbet seç — konuşma ve FSM yolu burada görünecek.</div>
+            </div>
         </main>
     </div>
 
@@ -164,10 +177,11 @@
 
         const STAGE_TR = {
             S0_FALLBACK: "Toparlanma", S1_GREETING: "Karşılama",
-            S2_INDECISION_PROBE: "Tanıma", S2R_PROFILE_UPDATE: "Profil güncelleme",
-            S3_ARGUMENT_SELECTION: "Strateji", S4_ARGUMENT_DELIVERY: "Öneri",
-            S5_RECEPTION_EVAL: "Tepki değ.", S6_RAG_DEEP_DIVE: "Detay",
-            S7_CONCERN_HANDLING: "Endişe", S8_IDEAL_MATCH_SUMMARY: "Özet", S9_CLOSING: "Kapanış",
+            S2_INDECISION_PROBE: "Adayı tanıma", S2R_PROFILE_UPDATE: "Profil güncelleme",
+            S3_ARGUMENT_SELECTION: "Strateji seçimi", S4_ARGUMENT_DELIVERY: "Öneri sunumu",
+            S5_RECEPTION_EVAL: "Tepki değerlendirme", S6_RAG_DEEP_DIVE: "Detay bilgi",
+            S7_CONCERN_HANDLING: "Endişe yönetimi", S8_IDEAL_MATCH_SUMMARY: "İdeal tercih özeti",
+            S9_CLOSING: "Kapanış",
         };
 
         function esc(s) {
@@ -176,11 +190,13 @@
             }[c]));
         }
 
+        function stageTr(s) { return STAGE_TR[s] || s; }
+
         async function loadList() {
             const res = await fetch(`${API_BASE}/sessions`);
             const data = await res.json();
             document.getElementById("convCount").textContent =
-                `${data.total} sohbet (en yeni üstte)`;
+                `${data.total} sohbet · en yeni üstte`;
             const list = document.getElementById("convList");
             list.innerHTML = data.sessions.map(s => `
                 <div class="conv-item" data-sid="${esc(s.session_id)}">
@@ -192,11 +208,37 @@
                     <div class="meta-row">
                         <span class="tag">${s.turn_count} tur</span>
                         ${s.yks_rank ? `<span class="tag rank">sıra ${s.yks_rank}</span>` : ""}
-                        <span class="tag state">${esc(STAGE_TR[s.fsm_state] || s.fsm_state)}</span>
+                        <span class="tag state">${esc(stageTr(s.fsm_state))}</span>
                         ${s.created_at ? `<span class="tag">${new Date(s.created_at).toLocaleString("tr-TR", {day:"2-digit", month:"2-digit", hour:"2-digit", minute:"2-digit"})}</span>` : ""}
                     </div>
                 </div>
-            `).join("") || '<div style="padding:20px;color:var(--gray-400);font-size:13px">Henüz sohbet yok.</div>';
+            `).join("") || '<div style="padding:20px;color:var(--text-3);font-size:13px">Henüz sohbet yok.</div>';
+
+            // Aktifse işaretle (geri dönüşlerde)
+            if (activeSid) {
+                document.querySelectorAll(".conv-item").forEach(el =>
+                    el.classList.toggle("active", el.dataset.sid === activeSid));
+            }
+        }
+
+        // Konuşmanın FSM yolunu üstte yatay şerit olarak çiz
+        function renderFsmPath(logs) {
+            if (!logs || logs.length === 0) return "";
+            const parts = [];
+            parts.push(`<span class="node start">${esc(stageTr(logs[0].fsm_from))}</span>`);
+            logs.forEach((l, i) => {
+                const isLast = i === logs.length - 1;
+                parts.push(`<span class="arrow">→</span>`);
+                parts.push(
+                    `<span class="node ${isLast ? "last" : ""}" title="${esc(l.fsm_from)} → ${esc(l.fsm_to)}">` +
+                    `<em>T${l.turn}</em> ${esc(stageTr(l.fsm_to))}</span>`
+                );
+            });
+            return `
+                <div class="detail-card">
+                    <div class="fsm-card-title">Bu konuşmanın FSM yolu</div>
+                    <div class="fsm-path">${parts.join("")}</div>
+                </div>`;
         }
 
         async function loadDetail(sid) {
@@ -208,55 +250,44 @@
             if (!res.ok) return;
             const data = await res.json();
 
-            // Mesajları turn'lere grupla: user+assistant çiftleri, log'larla eşleştir
-            const logByTurn = {};
-            (data.strategy_logs || []).forEach(l => logByTurn[l.turn] = l);
-
-            let turnNo = 0;
-            let html = "";
             const p = data.profile || {};
             const ind = p.indecision || {};
 
-            html += `
-            <div class="detail-header">
-                <h3>${esc(data.display_name || "(isimsiz aday)")} · <span style="font-family:monospace;font-size:12px;color:var(--gray-400)">${esc(sid)}</span></h3>
+            let html = `
+            <div class="detail-card">
+                <h3>${esc(data.display_name || "(isimsiz aday)")} <span class="sid">${esc(sid)}</span></h3>
                 <div class="info-row">
-                    <span>Tur: <b>${data.turn_count}</b></span>
-                    <span>Aşama: <b>${esc(STAGE_TR[data.fsm_state] || data.fsm_state)}</b></span>
-                    ${p.yks_rank ? `<span>YKS: <b>${p.yks_rank}</b></span>` : ""}
-                    ${ind.target_department ? `<span>Hedef: <b>${esc(ind.target_department)}</b></span>` : ""}
-                    ${(ind.department_alternatives || []).length ? `<span>Bölüm alt: <b>${esc(ind.department_alternatives.join(", "))}</b></span>` : ""}
-                    ${(ind.university_alternatives || []).length ? `<span>Üniv alt: <b>${esc(ind.university_alternatives.join(", "))}</b></span>` : ""}
-                    ${(p.concerns || []).length ? `<span>Kaygılar: <b>${esc(p.concerns.join(", "))}</b></span>` : ""}
+                    <span class="tag">${data.turn_count} tur</span>
+                    <span class="tag state">${esc(stageTr(data.fsm_state))}</span>
+                    ${p.yks_rank ? `<span class="tag rank">YKS ${p.yks_rank}</span>` : ""}
+                    ${ind.target_department ? `<span class="tag">hedef: ${esc(ind.target_department)}</span>` : ""}
+                    ${(ind.university_alternatives || []).length ? `<span class="tag">alternatif: ${esc(ind.university_alternatives.join(", "))}</span>` : ""}
                 </div>
                 <div class="actions-row">
-                    <a href="/fsm.html?session=${esc(sid)}" target="_blank">FSM yolunu gör →</a>
-                    <button onclick="exportMd()">↓ Markdown indir</button>
+                    <a class="btn btn-ghost" href="/fsm.html?session=${esc(sid)}">Haritada gör</a>
+                    <button class="btn btn-ghost" onclick="exportMd()">↓ İndir (.md)</button>
                 </div>
             </div>`;
 
+            html += renderFsmPath(data.strategy_logs || []);
+
+            html += '<div class="transcript">';
+            let turnNo = 0;
             (data.messages || []).forEach(m => {
                 if (m.role === "user") {
                     turnNo += 1;
-                    html += `<div class="turn-block"><div class="conv-msg user">${esc(m.text)}</div>`;
+                    html += `<div class="turn-label">T${turnNo}</div>`;
+                    html += `<div class="conv-msg user">${esc(m.text)}</div>`;
                 } else {
                     html += `<div class="conv-msg assistant">${esc(m.text)}</div>`;
-                    const log = logByTurn[turnNo];
-                    if (log) {
-                        html += `<div class="turn-meta">
-                            <span class="tm">T${turnNo}</span>
-                            <span class="tm arg">${esc(log.argument_id || "-")}</span>
-                            <span class="tm fsm">${esc(log.fsm_from)} → ${esc(log.fsm_to)}</span>
-                            ${log.reward != null ? `<span class="tm reward">önceki tur ödülü ${log.reward.toFixed(2)}</span>` : ""}
-                        </div>`;
-                    }
-                    html += `</div>`;
                 }
             });
+            html += "</div>";
 
             window._detailData = data;
-            document.getElementById("convDetail").innerHTML = html;
-            document.getElementById("convDetail").scrollTop = 0;
+            const detail = document.getElementById("convDetail");
+            detail.innerHTML = html;
+            detail.scrollTop = 0;
         }
 
         function exportMd() {
@@ -266,16 +297,10 @@
             lines.push(`- Aday: ${data.display_name || "(isimsiz)"}`);
             lines.push(`- Tur: ${data.turn_count} · Aşama: ${data.fsm_state}`);
             lines.push("");
-            const logByTurn = {};
-            (data.strategy_logs || []).forEach(l => logByTurn[l.turn] = l);
             let t = 0;
             (data.messages || []).forEach(m => {
-                if (m.role === "user") { t += 1; lines.push(`**🧑 Aday (T${t}):** ${m.text}`); }
-                else {
-                    lines.push(`**🤖 Neco:** ${m.text}`);
-                    const log = logByTurn[t];
-                    if (log) lines.push(`> arg: \`${log.argument_id}\` · fsm: \`${log.fsm_from} → ${log.fsm_to}\`` + (log.reward != null ? ` · ödül: ${log.reward.toFixed(2)}` : ""));
-                }
+                if (m.role === "user") { t += 1; lines.push(`**Aday (T${t}):** ${m.text}`); }
+                else lines.push(`**Neco:** ${m.text}`);
                 lines.push("");
             });
             const blob = new Blob([lines.join("\n")], { type: "text/markdown;charset=utf-8" });

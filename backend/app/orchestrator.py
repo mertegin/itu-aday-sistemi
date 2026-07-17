@@ -25,12 +25,9 @@ from .fsm.states import FSMState
 from .guardrails.ethics import EthicsFilter, enforce_conversation_voice, enforce_spoken_length
 from .kb.fact_gate import (
     build_safe_response,
-    enforce_answer_relevance,
     enforce_fact_gate,
-    enforce_non_repetition,
-    enforce_scholarship_eligibility,
 )
-from .kb.evidence_gate import enforce_evidence_contract
+from .kb.response_review import choose_last_resort, review_response
 from .kb.retriever import retrieve_facts
 from .llm.client import LLMClient
 from .models.db import Conversation, Message, StrategyLog
@@ -180,7 +177,7 @@ class Orchestrator:
         )
 
         # 10. LLM generate response
-        response_text = await self.llm.generate_response(
+        raw_response_text = await self.llm.generate_response(
             argument_id=argument.id,
             argument_label=argument.label,
             argument_technique=argument.technique,
@@ -200,6 +197,7 @@ class Orchestrator:
             "used": False,
             "reason": None,
         }
+        response_text = raw_response_text
         if response_text.lstrip().startswith("(Sistem hatası"):
             generation_fallback = {
                 "used": True,
@@ -207,24 +205,79 @@ class Orchestrator:
             }
             response_text = build_safe_response(rag_result, question=text, compact=True)
 
-        # 11. Ethics guardrail — sanitize + check + gerekirse güvenli metinle değiştir
+        # 11. Review the LLM draft without overwriting it. The model remains the
+        # writer; deterministic gates produce correction notes and one rewrite.
+        response_text, draft_ethics_result = self.ethics.enforce(response_text)
+        initial_review = review_response(
+            response_text,
+            question=text,
+            rag=rag_result,
+            argument_id=argument.id,
+            rank=profile.yks_rank,
+            history=history,
+        )
+        rewrite_meta = {
+            "attempted": False,
+            "succeeded": False,
+            "corrections": initial_review.corrections,
+            "response": None,
+            "error": None,
+        }
+        rewrite_fn = getattr(self.llm, "rewrite_response", None)
+        if (
+            not generation_fallback["used"]
+            and not initial_review.clean
+            and callable(rewrite_fn)
+        ):
+            rewrite_meta["attempted"] = True
+            rewritten = await rewrite_fn(
+                question=text,
+                draft=response_text,
+                corrections=initial_review.corrections,
+                rag_context=rag_result.prompt_block(),
+            )
+            if rewritten and not rewritten.lstrip().startswith("(Sistem hatası"):
+                response_text = rewritten
+                rewrite_meta["succeeded"] = True
+                rewrite_meta["response"] = rewritten
+            else:
+                rewrite_meta["error"] = rewritten or "empty_rewrite"
+
+        post_rewrite_review = review_response(
+            response_text,
+            question=text,
+            rag=rag_result,
+            argument_id=argument.id,
+            rank=profile.yks_rank,
+            history=history,
+        )
+        last_resort_meta = {"used": False, "reason": None}
+        if not post_rewrite_review.clean:
+            fallback_text, fallback_reason = choose_last_resort(post_rewrite_review)
+            if fallback_text:
+                response_text = fallback_text
+                last_resort_meta = {"used": True, "reason": fallback_reason}
+            elif not post_rewrite_review.checks["fact_gate"]["clean"]:
+                response_text, _ = enforce_fact_gate(response_text, rag_result, question=text)
+                last_resort_meta = {"used": True, "reason": "fact_gate"}
+
+        # Recheck the actual final body so the UI/logs describe what the student saw.
         response_text, ethics_result = self.ethics.enforce(response_text)
-        response_text, fact_gate_result = enforce_fact_gate(response_text, rag_result, question=text)
-        response_text, relevance_result = enforce_answer_relevance(response_text, rag_result, text)
-        response_text, scholarship_result = enforce_scholarship_eligibility(response_text, rag_result, text)
+        final_review = review_response(
+            response_text,
+            question=text,
+            rag=rag_result,
+            argument_id=argument.id,
+            rank=profile.yks_rank,
+            history=history,
+        )
+        fact_gate_result = final_review.checks["fact_gate"]
+        scholarship_result = final_review.checks["scholarship"]
         fact_gate_result["scholarship_eligibility"] = scholarship_result
-        response_text, pre_evidence_speech = enforce_spoken_length(response_text, max_words=65)
-        response_text, evidence_result = enforce_evidence_contract(
-            response_text,
-            rag_result,
-            argument.id,
-        )
-        response_text, repetition_result = enforce_non_repetition(
-            response_text,
-            rag_result,
-            text,
-            history,
-        )
+        relevance_result = final_review.checks["answer_relevance"]
+        evidence_result = final_review.checks["evidence"]
+        admission_result = final_review.checks["admission"]
+        repetition_result = final_review.checks["repetition"]
         allow_followup = self._should_ask_followup(history, analysis, argument.id)
         response_text, followup_result = self._append_contextual_followup(
             response_text,
@@ -242,7 +295,17 @@ class Orchestrator:
             allow_followup=allow_followup,
         )
         response_text, speech_result = enforce_spoken_length(response_text, max_words=65)
-        evidence_result["pre_evidence_speech"] = pre_evidence_speech
+        response_pipeline = {
+            "mode": "llm_writer_with_evidence",
+            "raw_draft": raw_response_text,
+            "selected_evidence_ids": [fact.id for fact in rag_result.facts if fact.applicable],
+            "initial_review": initial_review.to_dict(),
+            "rewrite": rewrite_meta,
+            "post_rewrite_review": post_rewrite_review.to_dict(),
+            "last_resort": last_resort_meta,
+            "draft_ethics": draft_ethics_result,
+            "final_response": response_text,
+        }
 
         # 12. Update profile with newly revealed argument
         profile.revealed_arguments.append(argument.id)
@@ -262,7 +325,10 @@ class Orchestrator:
             argument_id=argument.id,
             reward=reward_computed,
             xai_reason=explanation.reason_tr,
-            decision_factors=explanation.decision_factors,
+            decision_factors={
+                **explanation.decision_factors,
+                "response_pipeline": response_pipeline,
+            },
         )
         db.add(strat_log)
 
@@ -306,11 +372,13 @@ class Orchestrator:
             "ethics_check": ethics_result,
             "voice_check": voice_result,
             "fact_gate": fact_gate_result,
+            "admission_check": admission_result,
             "answer_relevance": relevance_result,
             "repetition_check": repetition_result,
             "followup_check": followup_result,
             "evidence_check": evidence_result,
             "generation_fallback": generation_fallback,
+            "response_pipeline": response_pipeline,
             "speech_check": speech_result,
             "rag": rag_result.to_dict(),
             "analysis": analysis,
@@ -461,7 +529,7 @@ class Orchestrator:
                                       turn: int, user_text: str = ""):
         from .profile.schema import MOTIVATION_KEYS
         evidence = user_text[:100]
-        folded_user = user_text.lower().translate(str.maketrans("çğıöşüÇĞİÖŞÜ", "cgiosuCGIOSU"))
+        folded_user = user_text.lower().translate(str.maketrans("çğıöşüâîûÇĞİÖŞÜÂÎÛ", "cgiosuaiucgiosuaiu"))
 
         # İsim ("ben Deniz", "adım Zeynep"...)
         explicit_name = LLMClient._extract_display_name(user_text)
@@ -697,7 +765,7 @@ class Orchestrator:
     def _apply_text_retractions(self, profile: CandidateProfile, text: str, turn: int):
         if not text:
             return
-        folded = text.lower().translate(str.maketrans("çğıöşüÇĞİÖŞÜ", "cgiosucgiosu"))
+        folded = text.lower().translate(str.maketrans("çğıöşüâîûÇĞİÖŞÜÂÎÛ", "cgiosuaiucgiosuaiu"))
         markers = (
             "vazgectim", "dusunmuyorum", "istemiyorum", "eledim",
             "listemden cikardim", "artik secenek degil",

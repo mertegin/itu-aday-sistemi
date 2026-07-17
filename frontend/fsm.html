@@ -3,207 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FSM Diyagramı — İTÜ Aday Sistemi</title>
-    <link rel="stylesheet" href="style.css">
+    <title>FSM Haritası — İTÜ Aday Sistemi</title>
+    <link rel="stylesheet" href="style.css?v=10">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <style>
-        body { background: #f5f6f8; }
         .fsm-app {
             display: grid;
-            grid-template-columns: 260px 1fr 320px;
-            height: 100vh;
-        }
-        .fsm-header {
+            grid-template-columns: 270px 1fr 320px;
+            height: calc(100vh - 60px);
+            gap: 20px;
             padding: 20px;
-            background: #1e2939;
-            color: #e5e7eb;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .panel {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
             overflow-y: auto;
         }
-        .fsm-header h2 { font-size: 18px; margin-bottom: 8px; color: #60a5fa; }
-        .fsm-header p { font-size: 13px; color: #9ca3af; margin-bottom: 16px; }
-        .fsm-header .nav-back {
-            display: inline-block;
-            color: #60a5fa;
-            text-decoration: none;
-            font-size: 13px;
-            margin-bottom: 16px;
-        }
-        .fsm-header .nav-back:hover { text-decoration: underline; }
 
-        .session-input {
-            margin-top: 12px;
-            padding: 12px;
-            background: rgba(255,255,255,0.05);
-            border-radius: 6px;
+        /* SOL: KONTROLLER */
+        .fsm-controls { padding: 20px; }
+        .fsm-controls h2 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+        .fsm-controls .sub { font-size: 12px; color: var(--text-2); margin-bottom: 18px; line-height: 1.5; }
+
+        .session-input label {
+            display: block;
+            font-size: 11.5px;
+            font-weight: 600;
+            color: var(--text-2);
+            margin-bottom: 6px;
         }
-        .session-input label { display: block; font-size: 12px; color: #9ca3af; margin-bottom: 4px; }
         .session-input input {
             width: 100%;
-            padding: 6px 8px;
-            background: #0f172a;
-            border: 1px solid #334155;
-            border-radius: 4px;
-            color: #e5e7eb;
+            font-family: var(--mono);
             font-size: 12px;
-            font-family: "SF Mono", Monaco, monospace;
+            color: var(--text);
+            background: var(--surface-2);
+            border: 1.5px solid var(--border-strong);
+            border-radius: var(--radius-sm);
+            padding: 9px 12px;
+            outline: none;
+            transition: all 0.15s ease;
+        }
+        .session-input input:focus {
+            border-color: var(--primary);
+            background: #fff;
+            box-shadow: 0 0 0 4px rgba(29, 91, 216, 0.1);
         }
         .session-input button {
             width: 100%;
-            margin-top: 8px;
-            padding: 8px;
-            background: #3b82f6;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            font-size: 12px;
-            cursor: pointer;
+            margin-top: 10px;
         }
-        .session-input button:hover { background: #2563eb; }
 
-        .legend {
-            margin-top: 16px;
-            font-size: 12px;
+        .legend { margin-top: 22px; }
+        .legend h3 {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--text-2);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 10px;
         }
         .legend .lg-item {
             display: flex;
             align-items: center;
+            gap: 9px;
             padding: 4px 0;
-            gap: 8px;
+            font-size: 12.5px;
+            color: var(--text-2);
         }
         .legend .swatch {
-            width: 12px;
-            height: 12px;
-            border-radius: 3px;
+            width: 14px;
+            height: 14px;
+            border-radius: 4px;
+            flex-shrink: 0;
         }
 
-        .fsm-diagram {
-            background: white;
-            border-left: 1px solid #e5e7eb;
-            border-right: 1px solid #e5e7eb;
-            overflow: auto;
-            position: relative;
-        }
-        .fsm-diagram svg {
-            display: block;
-            margin: 0 auto;
+        .info-panel {
+            font-size: 11.5px;
+            color: var(--text-2);
+            line-height: 1.6;
+            margin-top: 20px;
+            padding: 12px 14px;
+            background: var(--surface-2);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
         }
 
-        .fsm-side {
-            padding: 20px;
-            background: #fafafa;
-            overflow-y: auto;
-            font-size: 12px;
-        }
-        .fsm-side h3 {
-            font-size: 14px;
-            margin-bottom: 12px;
-            color: #374151;
-        }
+        /* ORTA: DİYAGRAM */
+        .fsm-diagram { overflow: auto; }
+        .fsm-diagram svg { display: block; margin: 0 auto; }
+
+        /* SAĞ: YOL LİSTESİ */
+        .fsm-side { padding: 20px; }
+        .fsm-side h3 { font-size: 14px; font-weight: 700; margin-bottom: 12px; }
         .path-entry {
-            background: white;
-            border: 1px solid #e5e7eb;
-            border-radius: 6px;
-            padding: 10px;
+            background: var(--surface-2);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 10px 13px;
             margin-bottom: 8px;
         }
         .path-entry .turn-badge {
             display: inline-block;
-            background: #dbeafe;
-            color: #1e40af;
-            padding: 2px 6px;
-            border-radius: 3px;
+            background: var(--primary-soft);
+            color: var(--primary-dark);
+            padding: 2px 8px;
+            border-radius: 999px;
             font-size: 10px;
             font-weight: 700;
-            margin-bottom: 4px;
+            margin-bottom: 5px;
         }
         .path-entry .transition {
-            font-family: "SF Mono", Monaco, monospace;
+            font-family: var(--mono);
             font-size: 11px;
-            color: #374151;
-            margin: 4px 0;
+            color: var(--text);
+            margin: 3px 0;
         }
-        .path-entry .trigger {
-            font-size: 11px;
-            color: #6b7280;
-            font-style: italic;
-        }
-        .path-entry .argument {
-            font-size: 11px;
-            color: #9333ea;
-            margin-top: 4px;
-        }
+        .path-entry .trigger { font-size: 11px; color: var(--text-2); font-style: italic; }
+        .path-entry .argument { font-size: 11px; color: var(--primary-dark); margin-top: 3px; }
 
-        .state-node rect { stroke: #64748b; stroke-width: 1.5; fill: white; transition: all 0.2s; }
-        .state-node text { font-family: -apple-system, sans-serif; font-size: 11px; fill: #1e293b; pointer-events: none; }
-        .state-node.current rect { fill: #dbeafe; stroke: #2563eb; stroke-width: 3; }
-        .state-node.visited rect { fill: #fef3c7; stroke: #d97706; stroke-width: 2; }
-        .state-node.terminal rect { fill: #dcfce7; stroke: #16a34a; }
-        .state-node.safety rect { fill: #fee2e2; stroke: #dc2626; }
-        .state-node:hover rect { fill: #f1f5f9; stroke: #3b82f6; cursor: pointer; }
+        /* DİYAGRAM SVG STİLLERİ (fsm.js bu sınıfları kullanıyor) */
+        .state-node rect { stroke: var(--border-strong); stroke-width: 1.5; fill: var(--surface); transition: all 0.2s; }
+        .state-node text { font-family: var(--font); font-size: 11px; fill: var(--text); pointer-events: none; }
+        .state-node.current rect { fill: var(--primary-soft); stroke: var(--primary); stroke-width: 3; }
+        .state-node.visited rect { fill: var(--amber-soft); stroke: #d97706; stroke-width: 2; }
+        .state-node.terminal rect { fill: var(--green-soft); stroke: #16a34a; }
+        .state-node.safety rect { fill: var(--red-soft); stroke: #dc2626; }
+        .state-node:hover rect { fill: var(--surface-2); stroke: var(--primary); cursor: pointer; }
 
-        .edge { stroke: #cbd5e1; stroke-width: 1.5; fill: none; }
+        .edge { stroke: var(--border-strong); stroke-width: 1.5; fill: none; }
         .edge.visited { stroke: #d97706; stroke-width: 2.5; }
-        .edge.forward { stroke-dasharray: none; }
-        .edge.self-loop { stroke: #94a3b8; stroke-dasharray: 4,3; }
+        .edge.self-loop { stroke: var(--text-3); stroke-dasharray: 4,3; }
 
         .edge-label {
-            font-family: "SF Mono", Monaco, monospace;
+            font-family: var(--mono);
             font-size: 8px;
-            fill: #64748b;
+            fill: var(--text-2);
             pointer-events: none;
         }
         .edge-label.visited { fill: #b45309; font-weight: 700; }
 
-        .arrowhead { fill: #cbd5e1; }
+        .arrowhead { fill: var(--border-strong); }
         .arrowhead.visited { fill: #d97706; }
-
-        .info-panel {
-            font-size: 11px;
-            color: #6b7280;
-            margin-top: 12px;
-            padding: 10px;
-            background: #f9fafb;
-            border-radius: 4px;
-        }
     </style>
 </head>
 <body>
+    <nav class="topbar">
+        <a class="brand" href="/">
+            <span class="brand-badge">N</span>
+            İTÜ Aday Sistemi
+        </a>
+        <div class="nav-links">
+            <a href="/">Sohbet</a>
+            <a href="/conversations.html">Geçmiş Sohbetler</a>
+            <a href="/fsm.html" class="active">FSM Haritası</a>
+        </div>
+    </nav>
+
     <div class="fsm-app">
-        <div class="fsm-header">
-            <a href="/" class="nav-back">← Chat'e dön</a>
-            <h2>FSM Diyagramı</h2>
-            <p>11 state, priority-ordered transition table. Kenarlar üzerinde: trigger (weight).</p>
+        <aside class="panel fsm-controls">
+            <h2>FSM Haritası</h2>
+            <p class="sub">11 durum, öncelik sıralı geçiş tablosu. Kenar etiketleri geçişi tetikleyen koşulu gösterir.</p>
 
             <div class="session-input">
-                <label for="sidInput">Session ID (opsiyonel — path'i çizmek için)</label>
-                <input id="sidInput" type="text" placeholder="sess_...">
-                <button id="loadPathBtn">Session Path'ini Yükle</button>
+                <label for="sidInput">Oturum kimliği (yolu çizmek için)</label>
+                <input id="sidInput" type="text" placeholder="sess_…">
+                <button id="loadPathBtn" class="btn btn-primary">Yolu Göster</button>
             </div>
 
             <div class="legend">
-                <div class="lg-item"><span class="swatch" style="background:#dbeafe;border:2px solid #2563eb"></span> Şu anki state</div>
-                <div class="lg-item"><span class="swatch" style="background:#fef3c7;border:2px solid #d97706"></span> Ziyaret edilmiş</div>
-                <div class="lg-item"><span class="swatch" style="background:#dcfce7;border:1px solid #16a34a"></span> Kapanış</div>
-                <div class="lg-item"><span class="swatch" style="background:#fee2e2;border:1px solid #dc2626"></span> Fallback/Safety</div>
-                <div class="lg-item"><span class="swatch" style="background:white;border:1px solid #64748b"></span> Ziyaret edilmemiş</div>
+                <h3>Renkler</h3>
+                <div class="lg-item"><span class="swatch" style="background:var(--primary-soft);border:2px solid var(--primary)"></span> Şu anki durum</div>
+                <div class="lg-item"><span class="swatch" style="background:var(--amber-soft);border:2px solid #d97706"></span> Ziyaret edilmiş</div>
+                <div class="lg-item"><span class="swatch" style="background:var(--green-soft);border:1px solid #16a34a"></span> Kapanış</div>
+                <div class="lg-item"><span class="swatch" style="background:var(--red-soft);border:1px solid #dc2626"></span> Toparlanma</div>
+                <div class="lg-item"><span class="swatch" style="background:var(--surface);border:1px solid var(--border-strong)"></span> Ziyaret edilmemiş</div>
             </div>
 
             <div class="info-panel">
-                <strong>Nasıl okunur:</strong> Ok, transition yönünü gösterir. Aynı state'e dönen loop, dashed çizgi olarak "no_match" veya "stay_greeting" gibi kalma durumlarını temsil eder. Kalın turuncu kenar, session'ın gerçek geçtiği yolu gösterir.
+                <strong>Nasıl okunur:</strong> Ok, geçiş yönünü gösterir. Kesikli çizgi aynı durumda kalmayı temsil eder. Kalın turuncu kenar, seçilen sohbetin gerçekte izlediği yoldur.
             </div>
-        </div>
+        </aside>
 
-        <main class="fsm-diagram" id="diagramContainer">
-            <!-- SVG buraya inject edilecek -->
+        <main class="panel fsm-diagram" id="diagramContainer">
+            <!-- SVG buraya çizilir -->
         </main>
 
-        <aside class="fsm-side">
-            <h3>Session Geçiş Yolu</h3>
+        <aside class="panel fsm-side">
+            <h3>Sohbetin Geçiş Yolu</h3>
             <div id="pathList">
-                <p style="color:#9ca3af">Session ID gir ve yükle.</p>
+                <p style="color:var(--text-3);font-size:13px">Oturum kimliği girip yolu gösterebilir ya da Geçmiş Sohbetler'den "Haritada gör"e tıklayabilirsin.</p>
             </div>
         </aside>
     </div>
 
-    <script src="fsm.js"></script>
+    <script src="fsm.js?v=10"></script>
 </body>
 </html>

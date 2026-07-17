@@ -6,7 +6,7 @@ from openai import AsyncOpenAI
 from pydantic import ValidationError
 
 from ..config import settings
-from .prompts import ANALYZER_SYSTEM_PROMPT, RESPONSE_SYSTEM_TEMPLATE
+from .prompts import ANALYZER_SYSTEM_PROMPT, RESPONSE_SYSTEM_TEMPLATE, REWRITE_SYSTEM_TEMPLATE
 from .schema import MessageAnalysis
 
 
@@ -106,6 +106,32 @@ class LLMClient:
                 messages=messages,
                 temperature=0.7,
                 max_tokens=200,
+            )
+            return self._sanitize(resp.choices[0].message.content or "")
+        except Exception as e:
+            return f"(Sistem hatası — {type(e).__name__}) Bir saniye, tekrar dener misin?"
+
+    async def rewrite_response(
+        self,
+        *,
+        question: str,
+        draft: str,
+        corrections: list[str],
+        rag_context: str,
+    ) -> str:
+        """Perform one evidence-constrained rewrite after deterministic review."""
+        prompt = REWRITE_SYSTEM_TEMPLATE.format(
+            question=question,
+            draft=draft,
+            corrections="\n".join(f"- {item}" for item in corrections),
+            rag_context=rag_context,
+        )
+        try:
+            resp = await self.client.chat.completions.create(
+                model=self.model,
+                messages=[{"role": "system", "content": prompt}],
+                temperature=0.45,
+                max_tokens=220,
             )
             return self._sanitize(resp.choices[0].message.content or "")
         except Exception as e:

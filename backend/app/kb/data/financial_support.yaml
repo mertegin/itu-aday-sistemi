@@ -10,6 +10,7 @@ meta:
 
 facts:
   - id: "scholarship_rank_1_10"
+    label: "İlk 10 başarı ödülü"
     text: "2025 YKS'de Türkiye 1-10 derecesiyle bir İTÜ lisans programına kayıt yaptıranlara tek seferlik 100.000 TL başarı desteği; hazırlık dahil 1+4 yıl boyunca yılda 9 ay, resmi sayfada 'ayda 10.000 TL + 10.000 TL' olarak listelenen başarı ödülü verilir. Bursun sürmesi için yıl sonu GNO en az 2,50 olmalı ve hazırlık ilk yılda başarıyla tamamlanmalıdır."
     rank_min: 1
     rank_max: 10
@@ -19,6 +20,7 @@ facts:
     tags: ["100000", "100.000", "10000", "10.000", "ilk 10"]
 
   - id: "scholarship_rank_11_100"
+    label: "11-100 başarı ödülü"
     text: "2025 YKS'de Türkiye 11-100 derecesiyle bir İTÜ lisans programına kayıt yaptıranlara hazırlık dahil 1+4 yıl boyunca yılda 9 ay, resmi sayfada 'ayda 10.000 TL + 10.000 TL' olarak listelenen başarı ödülü verilir. Bursun sürmesi için yıl sonu GNO en az 2,50 olmalı ve hazırlık ilk yılda başarıyla tamamlanmalıdır."
     rank_min: 11
     rank_max: 100
@@ -28,6 +30,7 @@ facts:
     tags: ["10000", "10.000", "ilk 100"]
 
   - id: "scholarship_rank_101_500"
+    label: "101-500 başarı ödülü"
     text: "2025 YKS'de Türkiye 101-500 derecesiyle bir İTÜ lisans programına kayıt yaptıranlara hazırlık dahil 1+4 yıl boyunca yılda 9 ay aylık 8.500 TL başarı ödülü verilir. Bursun sürmesi için yıl sonu GNO en az 2,50 olmalı ve hazırlık ilk yılda başarıyla tamamlanmalıdır."
     rank_min: 101
     rank_max: 500
@@ -37,6 +40,7 @@ facts:
     tags: ["8500", "8.500", "ilk 500"]
 
   - id: "scholarship_rank_501_1000"
+    label: "501-1000 başarı ödülü"
     text: "2025 YKS'de Türkiye 501-1000 derecesinde olup bir İTÜ lisans programına 1. tercihiyle yerleşenlere hazırlık dahil 1+4 yıl boyunca yılda 9 ay aylık 6.750 TL, yani yılda toplam 60.750 TL başarı ödülü verilir. Bursun sürmesi için yıl sonu GNO en az 2,50 olmalı ve hazırlık ilk yılda başarıyla tamamlanmalıdır."
     rank_min: 501
     rank_max: 1000
@@ -47,6 +51,7 @@ facts:
     tags: ["6750", "6.750", "60750", "60.750", "ilk 1000", "birinci tercih"]
 
   - id: "scholarship_first_choice"
+    label: "İlk tercih bursu"
     text: "2025 ilk tercih bursunda, tercih listesinde İTÜ'yü ilk sıraya yazıp bu tercihindeki bölüme yerleşenlere hazırlık dahil 1+4 yıl boyunca yılda 9 ay aylık 4.000 TL, öğle yemeği ve spor tesislerinden ücretsiz yararlanma desteği verilir. UOLP ve KKTC ortak programları kapsam dışıdır; devam koşulu GNO 2,50 ve hazırlık başarısıdır."
     requires_first_choice: true
     support_type: "first_choice"
@@ -55,12 +60,14 @@ facts:
     tags: ["4000", "4.000", "ilk tercih bursu", "yemek bursu"]
 
   - id: "scholarship_need_based"
+    label: "İhtiyaç bursu"
     text: "İTÜ'nün resmi burs sayfasına göre ekonomik gereksinimi olan öğrenciler nakdi ihtiyaç burslarından yararlanabilir; bu destekler İTÜ vakıfları, mezunları, dernekleri ve başka kişi veya kuruluşlarca karşılanır. Resmi sayfa sabit bir tutar ya da herkese burs garantisi belirtmez."
     support_type: "need_based"
     topics: ["financial_concern"]
     tags: ["ihtiyaç bursu", "ekonomik gereksinim", "nakdi burs", "para sıkıntısı"]
 
   - id: "scholarship_meal"
+    label: "Yemek bursu"
     text: "İTÜ yemek bursu, üniversite yemekhanesinde günde bir öğün öğle yemeğini ücretsiz karşılar ve bir akademik yıl için geçerlidir."
     support_type: "meal"
     topics: ["financial_concern", "campus"]

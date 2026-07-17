@@ -65,6 +65,17 @@ facts:
     examples: ["Algoritmaların Analizi I", "Veritabanı Sistemleri", "Mikrobilgisayar Laboratuvarı"]
     tags: ["5. yarıyıl", "üçüncü sınıf", "laboratuvar"]
 
+  - id: "curriculum_database_practice_card"
+    label: "Veritabanı dersindeki uygulama"
+    text: "BLG 361E Veritabanı Yönetim Sistemleri 5 AKTS ve haftada 3 saat teoridir; katalogda ayrı laboratuvar saati 0 görünür. Buna rağmen içerikte uygulama geliştirme, SQL-sorgulama ve veritabanı tasarımı; öğrenme çıktılarında takım projesi ve sunum bulunur. Yani uygulama var, fakat bağımsız haftalık lab dersi biçiminde değil."
+    answer_card: true
+    topics: ["database_course", "curriculum_systems", "curriculum_projects"]
+    examples: ["BLG 361E", "5 AKTS", "SQL", "takım projesi"]
+    source: "İTÜ ÖBS BLG 361E ders kataloğu"
+    source_url: "https://obs.itu.edu.tr/public/DersKatalog/DersKatalogBilgiBransDersKodu?bransKodu=BLG&dersNo=361"
+    year: 2026
+    tags: ["veritabanı", "veri tabanı", "database", "sql", "uygulama", "proje"]
+
   - id: "curriculum_semester6"
     text: "6. yarıyıl: Algoritmaların Analizi II, Veriden Öğrenme, İşletim Sistemleri, Bilgisayar Mimarisi, Bilgisayar Mühendisleri için İşaret ve Sistemler ve bir TM seçmeli; toplam 30 AKTS."
     topics: ["curriculum_year3", "curriculum_systems", "curriculum_ai"]
@@ -95,6 +106,18 @@ facts:
     examples: ["Tasarım II", "12 AKTS", "1+8 saat"]
     tags: ["8. yarıyıl", "dördüncü sınıf", "bitirme projesi", "capstone"]
 
+  - id: "curriculum_capstone_process_card"
+    label: "Bitirme projesinin yapısı ve danışman süreci"
+    text: "Bitirme hattımız 7. yarıyıldaki BLG 4901E Tasarım I ile başlayıp 8. yarıyıldaki 12 AKTS'lik BLG 4902E Tasarım II ile sürer. Proje yazılım veya donanım olabilir, 2-3 kişilik grup kurulabilir; danışman düzenli toplantı yapar ve süreç analizden tamamlanma, rapor ve sunuma gider. Güncel konu-danışman eşleştirme yöntemi ders koordinatöründen teyit edilmelidir."
+    answer_card: true
+    topics: ["curriculum_projects", "research_projects", "graduation"]
+    examples: ["BLG 4901E", "BLG 4902E", "2-3 kişilik grup", "danışman toplantısı"]
+    source: "İTÜ ÖBS BLG 4901E ve BLG 4902E ders katalogları"
+    source_urls:
+      - "https://www.sis.itu.edu.tr/TR/ogrenci/lisans/ders-bilgileri/ders-bilgileri.php?numb=4901E&subj=BLG"
+      - "https://obs.itu.edu.tr/public/DersKatalog/DersKatalogBilgiBransDersKodu?bransKodu=BLG&dersNo=4902"
+    tags: ["bitirme projesi nasıl seçilir", "bitirme projesi", "proje danışmanı", "tasarım projesi", "proje grubu"]
+
   - id: "curriculum_ai_security_electives_card"
     text: "Güncel meslek seçmeli havuzunda Bilgisayarla Görme, Robotik, Bilgisayar Güvenliği, Güvenli Programlama, Ağ Güvenliği, AI Accelerators Lab ve AI Aided Computer Engineering var. Havuz 27 ders içerir; fiilî açılış dönem programına bağlıdır."
     answer_card: true
@@ -105,8 +128,10 @@ facts:
     tags: ["yapay zeka", "siber güvenlik", "seçmeli", "robotik", "bilgisayarlı görü"]
 
   - id: "curriculum_ai_aided_course"
+    label: "2026 Yapay Zekâ Destekli Bilgisayar Mühendisliği dersi"
     text: "2026'da eklenen BLG 483E, 14 haftada LLM ve prompt, üretken yapay zekâ, görsel/ses uygulamaları, AI destekli kodlama-test-hata ayıklama ve etiği kapsar; değerlendirme 4 ödev %40, ara sınav %20, final %40'tır."
-    topics: ["curriculum_ai", "curriculum_projects", "specialization"]
+    answer_card: true
+    topics: ["curriculum_ai", "curriculum_projects", "specialization", "teaching_quality"]
     examples: ["BLG 483E", "LLM", "4 ödev", "%40"]
     source: "İTÜ Bilgisayar Mühendisliği bölüm duyurusu"
     source_url: "https://bm.itu.edu.tr/haberdetay/2026/01/05/yeni-se%C3%A7meli-ders---yapay-zeka-destekli-bilgisayar-m%C3%BChendisli%C4%9Fi"

@@ -12,6 +12,8 @@ from ..profile.schema import CandidateProfile
 
 
 TOPIC_KEYWORDS: dict[str, list[str]] = {
+    "database_course": ["veritabanı", "veri tabanı", "database", "sql"],
+    "cloud_technologies": ["bulut teknoloji", "bulut bilişim", "cloud computing", "aws", "azure", "google cloud"],
     "curriculum_year1": ["ilk sınıf", "birinci sınıf", "1. sınıf", "ilk yıl", "birinci yıl", "1. yarıyıl", "2. yarıyıl"],
     "curriculum_beginner": ["sadece kod", "yalnızca kod", "kod yazmaktan", "hiç programlama", "hiç kod", "daha önce programlama", "programlama yapmadım", "kodlama bilmiyorum", "programlama bilmiyorum", "sıfırdan", "lisede yazılım", "yetenek işi", "çalışarak öğren", "diğer öğrenciler", "bilgisayarlarla", "bilgisayar başında olmak", "kodlama sınav", "üniversiteye gelmeden", "problem çözme", "zorlanır mıyım"],
     "curriculum_overview": ["ne öğretiliyor", "neler öğren", "tam olarak ne", "bölümde ne var", "hakkında bilgi", "tanıt"],
@@ -21,18 +23,20 @@ TOPIC_KEYWORDS: dict[str, list[str]] = {
     "curriculum_security": ["siber güvenlik", "bilgisayar güvenliği", "ağ güvenliği", "güvenli programlama", "kriptografi"],
     "curriculum_projects": ["bitirme projesi", "tasarım projesi", "grup projesi", "ders projesi", "uygulamalı proje", "ödevler proje"],
     "academic_workload": ["ders yükü", "haftada kaç saat", "kaç saat çalış", "sınav sistemi", "sınav hafta", "sınavlarda kod", "aynı haftada", "vize", "final", "çan eğrisi", "not ortalama", "geçmiş sınav", "ofis saat", "üst sınıflar", "öğrenciler birbirine", "en zor sınıf", "ödevler", "notlandırma", "kalma oranı", "çok teorik", "ezber", "ödev yoğun", "uyumaya vakit", "yorucu taraf"],
-    "teaching_quality": ["eğitim kalitesi", "hocalar iyi", "ders anlat", "hocaların ingilizcesi", "hocalar ingilizce", "ingilizce ders anlat", "dersleri anlayabilir", "dersi anlam", "güncel teknoloji", "eski teknoloji", "öğrenci geri bildirim", "sektör deneyimi", "sınıflar kalabalık"],
-    "technical_resources": ["bilgisayar laboratuvar", "teknik imkan", "sunucu", "gpu", "ekipman", "laboratuvar eriş", "kütüphane", "çalışma alanı", "sessiz alan", "uygun alan", "kendi bilgisayar", "güçlü bilgisayar", "bilgisayara ihtiyac", "bilgisayar başında çalış", "macbook", "linux", "github student", "internet hızlı"],
+    "teaching_quality": ["eğitim kalitesi", "hocalar iyi", "ders anlat", "hocaların ingilizcesi", "hocalar ingilizce", "ingilizce ders anlat", "dersleri anlayabilir", "dersi anlam", "ders içerikleri güncel", "müfredat güncel", "müfredat ne sıklıkla", "müfredatı ne sıklıkla", "güncel teknoloji", "eski teknoloji", "öğrenci geri bildirim", "sektör deneyimi", "sektörel deneyim", "sınıflar kalabalık", "dersler slayttan", "slayttan işlen", "slayttan mı işlen", "çoğunlukla slayt", "slayt ağırlıklı"],
+    "technical_resources": ["bilgisayar laboratuvar", "robotik laboratuvar", "robotik lab", "laboratuvarlardaki bilgisayar", "bilgisayarlar güncel", "teknik imkan", "sunucu", "gpu", "ekipman", "ekipman ödünç", "cihaz ödünç", "proje ekipmanı", "laboratuvar eriş", "kütüphane", "çalışma alanı", "sessiz alan", "uygun alan", "kendi bilgisayar", "güçlü bilgisayar", "bilgisayara ihtiyac", "bilgisayar başında çalış", "macbook", "linux", "github student", "ücretsiz yazılım lisans", "yazılım lisansı", "office 365", "matlab", "internet hızlı"],
     "internship": ["staj zorunlu", "staj kaç gün", "staj süresi", "stajda ne", "staj nasıl", "staj raporu", "online staj", "uzaktan staj"],
-    "research_projects": ["araştırma projesi", "hocayla proje", "hocayla araştırma", "lisans araştırma", "lisans öğrencisi", "tübitak", "yayın yap", "laboratuvara katıl", "proje geliştirmek"],
+    "research_projects": ["araştırma projesi", "hocayla proje", "hocayla araştırma", "lisans araştırma", "lisans öğrencisi", "tübitak", "yayın yap", "laboratuvara katıl", "proje geliştirmek", "proje yarışma", "projeler yarışma", "yarışmalara gönder", "akademisyen olmak", "akademik kariyer", "araştırmacı olmak"],
     "specialization": ["uzmanlaş", "seçmeli ders", "hangi alan", "alan seç", "robotik alan", "gömülü sistem", "bilgisayarlı görü", "görüntü işleme", "web geliştirme", "bulut teknoloji", "kuantum bilişim", "oyun geliştirme"],
     "double_major_transfer": ["çift anadal", "çap ", "çap yap", "yandal", "yatay geçiş", "bölüm değiştir", "başka bölüme geç", "ikinci diploma"],
-    "erasmus": ["erasmus", "değişim program", "erasmus staj", "hangi ülke", "hangi üniversite", "yurt dışında dönem"],
+    "erasmus": ["erasmus", "değişim program", "erasmus staj", "erasmus bursu", "erasmus hibesi", "hibe yeterli", "hangi ülke", "hangi üniversite", "hangi üniversitelere gid", "erasmus dil sınavı", "dil sınavı zor", "yurt dışında dönem"],
+    "global_exchange": ["global exchange", "amerika'da değişim", "amerikada değişim", "amerika değişim", "abd'de değişim", "abd de değişim", "abd değişim", "amerika çift diploma", "abd çift diploma"],
     "clubs_teams": ["kulüp", "kulübü", "öğrenci kulüb", "öğrenci takımı", "proje takımı", "yarışmalara katıl", "spor takımı", "teknik gezi", "konser", "festival", "bahar şenlik", "hackathon", "acm", "gdg", "datathon"],
+    "worship_facilities": ["cami", "mescit", "namaz", "ibadet", "ibadethane"],
     "housing_details": ["yurt fiyat", "yurt ücreti", "yurt kapasite", "kaç kişilik oda", "yurt internet", "yurtta internet", "yurtta mutfak", "yurt çıkar", "yurt çıkma", "yemek yapma", "ev kirala", "hangi semt", "ev arkadaşı", "özel yurt", "eve çık", "yurt başvuru"],
     "istanbul_life": ["istanbul'da", "istanbulda", "ankara'da", "ankarada", "ulaşım", "metro", "trafik", "şehir pahalı", "öğrenci olmak çok pahalı", "aylık ortalama", "şehir merkez", "hafta sonu", "hafta sonları", "deprem", "güvenli mi", "aileden uzakta", "başka şehirden", "taksim", "levent"],
-    "student_social": ["öğrenci profili", "arkadaş ortamı", "rekabetçi", "aşırı rekabet", "dayanışma", "sosyal çevre", "arkadaş edin", "bölüm öğrencilerine", "herkes çok çalışkan", "notlarını paylaş", "kız ve erkek", "öğrencileri sosyal", "öğrenciler mutlu", "inek öğrenci"],
-    "student_wellbeing": ["yalnız", "uyum sağlay", "psikolojik", "kaygı", "stres", "tükenmiş", "başarısız olduğumda", "toparlayabilir", "zorbalık", "dışlanma", "sunum yapmaktan", "grup çalışmalarında", "hem başarılı hem mutlu", "dâhi", "dahi olmak", "daha zeki", "bunal", "pişman", "destek al", "danışmanlık"],
+    "student_social": ["öğrenci profili", "arkadaş ortamı", "rekabetçi", "aşırı rekabet", "dayanışma", "sosyal çevre", "arkadaş edin", "bölüm öğrencilerine", "herkes çok çalışkan", "notlarını paylaş", "kız ve erkek", "öğrencileri sosyal", "öğrenciler mutlu", "inek öğrenci", "sinema kulüb", "maç izle", "dünya kupası", "bestra", "pizza", "genel olarak ortam", "bölüm ortamı", "fakülte ortamı", "öğrenci ortamı", "ortam nasıl"],
+    "student_wellbeing": ["yalnız", "uyum sağlay", "psikolojik", "kaygı", "stres", "tükenmiş", "başarısız olduğumda", "toparlayabilir", "zorbalık", "dışlanma", "sunum yapmaktan", "grup çalışmalarında", "hem başarılı hem mutlu", "dâhi", "dahi olmak", "daha zeki", "bunal", "pişman", "psikolojik destek", "danışmanlık"],
     "graduation": ["mezuniyet şart", "mezun olmak", "kaç kredi", "kaç akts", "erken mezun", "dört yılda", "4 yılda", "okulu uzat", "okulun uzaması", "üç buçuk yılda", "azami süre", "yaz okulu", "bütünleme"],
     "admission": ["kabul şart", "tercih süreci", "kontenjan", "yatay geçiş"],
     "ranking": ["sıra", "sıralama", "taban", "puan", "kaç gelir", "kaç bin", "girer", "risk",
@@ -42,7 +46,7 @@ TOPIC_KEYWORDS: dict[str, list[str]] = {
                    "hazırlık", "yeterlik", "atlama", "ingilizce"],
     "faculty": ["hoca", "hocala", "öğretim üyesi", "akademik kadro", "akademisyen", "kim çalışıyor", "bölümde kim", "profesör", "danışman", "e-posta", "mail", "iletişim", "ulaşılabilir"],
     "student_experience": ["öğrenci deneyimi", "öğrenciler nerede", "nerede sosyalleş", "güzel yemek", "doyurucu", "danışman hoca", "akademik danışman", "mail", "e-posta", "iletişim", "ulaşılabilir"],
-    "labs": ["lab", "laboratuvar", "araştırma", "çalışan hoca", "proje", "sağlık bilişimi", "biyoinformatik", "nlp", "doğal dil", "yapay zeka", "veri bilimi", "computer vision"],
+    "labs": ["lab", "laboratuvar", "araştırma", "çalışan hoca", "sağlık bilişimi", "biyoinformatik", "nlp", "doğal dil", "yapay zeka", "veri bilimi", "computer vision", "robotik"],
     "career": ["iş", "kariyer", "maaş", "mezun", "istihdam", "işsiz", "sektör", "part-time", "freelance", "para kazanmaya", "teknokentte öğrenci", "savunma sanayi", "işverenler"],
     "career_evidence": ["mezun olmadan", "mezuniyetten önce", "işe başla", "kariyer zirvesi", "şirket", "firma", "staj", "işveren ilgisi"],
     "entrepreneurship": ["çekirdek", "girişim", "startup", "yatırımcı", "demo day", "şirket", "kuluçka", "şirketleş", "fonlama"],
@@ -50,7 +54,7 @@ TOPIC_KEYWORDS: dict[str, list[str]] = {
     "campus_life": ["hangi kampüs", "ayazağa", "maslak", "kampüste ne var", "kampüste kaybol", "kampüs 24", "kampüste kafe", "spor salon", "kampüsü gez", "sosyal alan", "spor tesisi", "kütüphane", "stadyum", "yüzme havuzu", "gölet", "metro"],
     "dining": ["yemekhane", "yemek ücreti", "yemek fiyatı", "yemek fiyatları", "yemek seçenek", "menü", "öğle yemeği", "akşam yemeği", "vejetaryen", "ne yenir"],
     "english_prep": ["hazırlık", "hazırlığı bir dönemde", "yeterlik", "proficiency", "muafiyet", "atlama", "toefl", "pte"],
-    "differentiators": ["diğer üniversitelerden fark", "farkı", "ne kazanırım", "eşsiz", "neden itü", "neden başka", "en güçlü yön", "en büyük eksik", "kötü taraf", "dışarıdan görünmeyen", "en keyifli", "gerçekten mantıklı", "tekrar tercih", "avantaj", "her okul", "tüm okullar"],
+    "differentiators": ["diğer üniversitelerden fark", "farkı", "ne kazanırım", "eşsiz", "neden itü", "neden başka", "en güçlü yön", "en büyük eksik", "kötü taraf", "dışarıdan görünmeyen", "en keyifli", "gerçekten mantıklı", "tekrar tercih", "avantaj", "her okul", "tüm okullar", "diğer güçlü okul", "güçlü okullardan", "ayıran şey"],
     "candidate_fit": ["sevdiğimi nasıl", "sevip sevmediğimi", "nasıl biri olmak", "yaratıcı birine", "burada başarılı", "iyi bir yazılımcı olabilir", "gelmek gerçekten mantıklı", "kendimi okul dışında", "öğrenciler gerçekten mutlu", "sadece matematiği", "gelmeden önce bilmem", "gelir gelmez ne yap"],
     "housing": ["yurt", "barınma", "konaklama", "garanti"],
     "scholarship": ["burs", "ücret", "ücretsiz", "tam burs", "aylık", "maliyet", "para desteği", "başarı ödülü", "ilk tercih bursu"],
@@ -62,7 +66,7 @@ TOPIC_KEYWORDS: dict[str, list[str]] = {
     "healthtech": ["tıp", "doktor", "sağlık", "biyomedikal", "tıbbi"],
     "abroad": ["yurt dışı", "yurtdışı", "erasmus", "cern", "abd", "almanya", "çift diploma"],
     "software_vs_compe": ["yazılım mühendisliği", "yazılım müh", "software engineering", "yazılım bölümü", "yazılımcılık bölümü"],
-    "future_of_field": ["gelecek", "geleceği", "işimizi alacak", "işini elinden", "beş yıl sonra", "işsiz kalır", "işleri alacak", "yapay zeka gelişti", "otomasyonla", "meslek ölür", "bitecek mi"],
+    "future_of_field": ["gelecek", "geleceği", "işimizi alacak", "işini elinden", "beş yıl sonra", "işsiz kalır", "işleri alacak", "yapay zeka gelişti", "otomasyonla", "meslek ölür", "bitecek mi", "maaşlar gelecekte", "gelecekte düşer"],
 }
 
 ARGUMENT_TOPICS: dict[str, list[str]] = {
@@ -82,15 +86,17 @@ ARGUMENT_TOPICS: dict[str, list[str]] = {
     "itu_first_year_curriculum": ["curriculum_year1", "curriculum"],
     "itu_curriculum_beginner": ["curriculum_beginner", "curriculum_year1", "curriculum"],
     "itu_curriculum_overview": ["curriculum_overview", "curriculum"],
-    "itu_curriculum_details": ["programming_languages", "curriculum_systems", "curriculum_ai", "curriculum_security", "curriculum_projects", "curriculum"],
+    "itu_curriculum_details": ["database_course", "programming_languages", "curriculum_systems", "curriculum_ai", "curriculum_security", "curriculum_projects", "curriculum"],
     "itu_academic_workload": ["academic_workload", "curriculum", "student_wellbeing"],
     "itu_technical_resources": ["technical_resources", "labs", "campus_life"],
     "itu_internship_pathways": ["internship", "career_evidence", "curriculum_projects"],
     "itu_research_projects": ["research_projects", "labs", "faculty"],
-    "itu_specialization": ["specialization", "curriculum_ai", "curriculum_security", "labs"],
+    "itu_specialization": ["cloud_technologies", "specialization", "curriculum_ai", "curriculum_security", "labs"],
     "itu_double_major_transfer": ["double_major_transfer", "curriculum", "admission"],
     "itu_erasmus_mobility": ["erasmus", "abroad", "internship"],
     "itu_clubs_teams": ["clubs_teams", "student_social", "research_projects"],
+    "itu_social_venues": ["student_social", "campus_life", "dining", "clubs_teams"],
+    "itu_worship_facilities": ["worship_facilities"],
     "itu_housing_details": ["housing_details", "housing", "financial_concern"],
     "itu_istanbul_life": ["istanbul_life", "campus_life", "career"],
     "itu_student_wellbeing": ["student_wellbeing", "student_social", "campus_life"],
@@ -101,7 +107,7 @@ ARGUMENT_TOPICS: dict[str, list[str]] = {
     "itu_career_evidence": ["career_evidence", "career"],
     "itu_english_prep": ["english_prep", "curriculum"],
     "itu_compe_differentiators": ["differentiators", "comparison", "faculty", "career_evidence"],
-    "itu_global_opportunities": ["abroad", "erasmus", "research_projects", "curriculum", "career", "career_evidence"],
+    "itu_global_opportunities": ["abroad", "global_exchange", "erasmus", "research_projects", "curriculum", "career", "career_evidence"],
     "itu_clubs_projects": ["clubs_teams", "student_social", "research_projects", "campus_life", "campus", "gamedev", "labs"],
     "itu_admission_reality": ["ranking", "admission"],
     "concern_math_difficulty": ["academic_workload", "student_wellbeing", "curriculum"],
@@ -116,12 +122,13 @@ ARGUMENT_TOPICS: dict[str, list[str]] = {
 
 EVIDENCE_TOPICS = {
     "campus_life", "dining", "career_evidence", "english_prep", "differentiators",
+    "database_course", "cloud_technologies",
     "curriculum_year1", "curriculum_beginner", "curriculum_overview", "programming_languages",
     "curriculum_systems", "curriculum_ai", "curriculum_security", "curriculum_projects",
     "academic_workload", "teaching_quality", "technical_resources", "internship", "research_projects",
     "specialization", "double_major_transfer", "erasmus", "clubs_teams", "housing_details",
     "istanbul_life", "student_social", "student_wellbeing", "graduation", "ranking", "admission",
-    "abroad", "comparison", "career", "candidate_fit",
+    "abroad", "global_exchange", "comparison", "career", "candidate_fit", "worship_facilities",
 }
 
 
@@ -144,10 +151,23 @@ class RetrievedFact:
     score: float = 0.0
 
     def prompt_line(self) -> str:
-        source = f" [{self.source} {self.year}]".rstrip() if self.source else ""
-        note = " (yaklaşık/topluluk verisi olarak çerçevele)" if self.confidence == "low" else ""
-        card = " [KANIT KARTI]" if self.answer_card else ""
-        return f"-{card} ({self.id}) {self.text}{source}{note}"
+        source = f"{self.source} {self.year}".strip() or "kaynak belirtilmemiş"
+        note = "yaklaşık/topluluk verisi" if self.confidence == "low" else self.confidence
+        claims = self.claims()
+        lines = [f"KANIT {self.id} | güven={note} | kaynak={source}"]
+        lines.extend(f"  - iddia: {claim}" for claim in claims)
+        if self.examples:
+            lines.append(f"  - kullanılabilir örnekler: {', '.join(self.examples[:6])}")
+        return "\n".join(lines)
+
+    def claims(self) -> list[str]:
+        """Expose answer cards as evidence claims instead of ready-made replies."""
+        parts = [
+            part.strip()
+            for part in re.split(r"(?<=[.!?])\s+", self.text.strip())
+            if part.strip()
+        ]
+        return parts or [self.text.strip()]
 
     def to_dict(self) -> dict:
         return {
@@ -182,7 +202,8 @@ class RagResult:
                 "karar çerçevesi sun ve gerekirse resmi kaynaktan doğrulamayı öner."
             )
         lines = [
-            "Bu turda kullanabileceğin kaynaklı bilgiler aşağıdadır.",
+            "Aşağıdaki içerik bir KANIT PAKETİDİR; hazır cevap metni değildir.",
+            "Kartın tamamını veya art arda iki cümlesini aynen kopyalama. İlgili iddiaları seçip doğal bir cevap kur.",
             "Sayı/kontenjan/sıralama/program/garanti iddialarında SADECE bu maddeleri kullan.",
             "Bu maddelerde olmayan kesin bilgiyi uydurma; 'net kaynaklı bilgi yok' diye çerçevele.",
             "",
@@ -198,7 +219,7 @@ class RagResult:
             )
         if set(self.query_topics) & EVIDENCE_TOPICS:
             lines.append(
-                "Bu soru için genel sıfatlarla yetinme: KANIT KARTI'ndaki en az bir sayıyı ve adlandırılmış bir somut örneği kısa cevapta kullan."
+                "Bu soru için genel sıfatlarla yetinme: kanıt paketindeki en az bir sayıyı ve adlandırılmış bir somut örneği kısa cevapta kullan."
             )
         if any("öğrenci geri bildirimi" in f.source.lower() for f in self.facts):
             lines.append(
@@ -212,6 +233,18 @@ class RagResult:
             "topics": self.query_topics,
             "allowed_numbers": self.allowed_numbers,
             "facts": [f.to_dict() for f in self.facts],
+            "evidence_packet": [
+                {
+                    "id": fact.id,
+                    "claims": fact.claims(),
+                    "examples": fact.examples,
+                    "source": fact.source,
+                    "year": fact.year,
+                    "confidence": fact.confidence,
+                }
+                for fact in self.facts
+                if fact.applicable
+            ],
         }
 
 
@@ -228,7 +261,15 @@ def retrieve_facts(
         if any(_keyword_matches(word, folded_query) for word in words)
     }
     query_terms = _tokens(user_text)
-    focus_terms = _focus_terms(user_text, profile)
+    # Kalıcı AI/robotik ilgisi yalnız hoca-lab sorusunda kişiselleştirme sinyali
+    # olsun. Aksi halde önceki "AI ilgim var" bilgisi girişimcilik, kıyaslama ve
+    # kampüs sorularında faculty kartlarını haksız biçimde üste taşıyor.
+    explicit_focus_terms = _focus_terms(user_text, profile, include_profile=False)
+    focus_terms = explicit_focus_terms or _focus_terms(
+        user_text,
+        profile,
+        include_profile=bool(direct_topics & {"faculty", "labs"}),
+    )
     scored: list[RetrievedFact] = []
 
     for raw in flatten_facts():
@@ -247,7 +288,7 @@ def retrieve_facts(
         folded_text = _fold(text)
         raw_id = raw.get("id", "")
         if raw_id.startswith("admission_") and not direct_topics & {"ranking", "admission"}:
-            score -= 20.0
+            score -= 100.0
 
         support_type = raw.get("support_type")
         financial_query = bool(set(topics) & {"financial_support", "financial_concern", "scholarship"})
@@ -315,6 +356,22 @@ def retrieve_facts(
             score += 7.0
         if "campus_life" in topics and raw_id.startswith("campus_"):
             score += 6.0
+        if "worship_facilities" in direct_topics and raw_id == "campus_worship_facilities_card":
+            score += 90.0
+        if "worship_facilities" not in direct_topics and raw_id == "campus_worship_facilities_card":
+            score -= 100.0
+        if raw_id == "campus_cinema_match_viewing_card" and any(
+            _keyword_matches(phrase, folded_query) for phrase in ("sinema", "mac izle", "dunya kupasi", "bestra", "televizyon")
+        ):
+            score += 70.0
+        if raw_id == "campus_food_shopping_official_card" and any(
+            _keyword_matches(phrase, folded_query) for phrase in ("pizza", "market", "migros", "a101", "sok", "kampuste yemek")
+        ):
+            score += 70.0
+        if raw_id == "campus_official_daily_life_card" and any(
+            _keyword_matches(phrase, folded_query) for phrase in ("stadyum", "golet", "havuz", "metro", "kampuste ne var")
+        ):
+            score += 65.0
         if "dining" in topics and raw_id.startswith("dining_"):
             score += 6.0
         if "career_evidence" in topics and raw_id.startswith("career_"):
@@ -329,6 +386,8 @@ def retrieve_facts(
             score += 14.0
         if "gamedev" in direct_topics and raw_id == "department_clubs_teams_card":
             score += 32.0
+        if "gamedev" in direct_topics and raw_id == "game_interest_fit_card":
+            score += 70.0
         if raw_id == "campus_student_social_food_spots_2026" and any(
             phrase in folded_query for phrase in ("sosyal alan", "takilacak yer", "arkadas edin", "nerede sosyalles", "ornek verir")
         ):
@@ -339,9 +398,55 @@ def retrieve_facts(
             score += 45.0
         if raw_id == "insider_faculty_interest_card" and "hoca" in folded_query and "ilgili" in folded_query:
             score += 55.0
+        if raw_id == "ai_faculty_lab_answer_card" and any(
+            phrase in folded_query for phrase in ("yapay zeka", "ai ", "makine ogren")
+        ) and any(term in folded_query for term in ("hoca", "laboratuvar", "lab")):
+            score += 95.0
+        if raw_id == "comparison_bilkent_honesty_card" and "bilkent" in folded_query:
+            score += 90.0
+        if raw_id == "comparison_difficulty_honesty_card" and any(
+            phrase in folded_query for phrase in ("diger universitelere gore", "egitimi daha mi zor", "itu cok zor")
+        ):
+            score += 95.0
+        direct_priority_cards = {
+            "curriculum_database_practice_card": ("veritabani", "veri tabani", "database", "sql"),
+            "cloud_technologies_honesty_card": ("bulut teknoloji", "bulut bilisim", "cloud computing", "aws", "azure", "google cloud"),
+            "faculty_industry_experience_honesty_card": ("sektorel deneyim", "sektor deneyimi", "hocalar sektorden"),
+            "curriculum_modernity_answer_card": ("ders icerikleri guncel", "mufredat guncel", "guncel teknoloji", "eski teknoloji"),
+            "student_software_licenses_answer_card": ("ucretsiz yazilim lisans", "yazilim lisansi", "github student", "office 365", "matlab lisans"),
+            "robotics_lab_access_answer_card": ("robotik laboratuvar", "robotik lab"),
+            "erasmus_grant_sufficiency_answer_card": ("erasmus bursu yeterli", "erasmus hibesi yeterli", "hibe yeterli", "erasmus bursu ne kadar"),
+            "global_exchange_america_honesty_card": ("amerika'da degisim", "amerikada degisim", "amerika degisim", "abd'de degisim", "abd de degisim", "abd degisim", "amerika cift diploma", "abd cift diploma"),
+            "worship_exam_policy_honesty_card": ("ramazanda sinav", "sinavda namaz", "namaz izni", "oruc sinav"),
+            "lab_computer_currency_honesty_card": ("laboratuvarlardaki bilgisayar", "bilgisayarlar guncel", "son model bilgisayar"),
+            "ai_gpu_access_honesty_card": ("gpu destegi", "gpu erisimi", "yapay zeka gpu", "gpu sunucu"),
+            "erasmus_compe_partner_examples_card": ("hangi universitelere gid", "bilgisayar muhendisligi erasmus", "erasmus universiteleri"),
+            "erasmus_language_requirement_card": ("erasmus dil sinavi", "dil sinavi zor", "erasmus ingilizce"),
+            "curriculum_update_frequency_honesty_card": ("mufredat ne siklikla", "mufredati ne siklikla", "mufredat ne zaman guncellen", "mufredati ne zaman guncellen", "her yil yenilen"),
+            "equipment_loan_honesty_card": ("ekipman odunc", "cihaz odunc", "proje ekipmani"),
+            "academic_career_support_card": ("akademisyen olmak", "akademik kariyer", "arastirmaci olmak"),
+            "teaching_materials_honesty_card": ("dersler slayttan", "slayttan islen", "slayttan mi islen", "cogunlukla slayt", "slayt agirlikli"),
+            "differentiator_qs_abet_faculty_card": ("diger guclu okul", "guclu okullardan", "ayiran sey"),
+        }
+        if raw_id in direct_priority_cards and any(
+            _keyword_matches(phrase, folded_query) for phrase in direct_priority_cards[raw_id]
+        ):
+            score += 95.0
+        competitor_cards = {
+            "admission_koc_compe_full_2025_direct": ("koc", "tam burs", "%100 burs"),
+            "admission_ytu_compe_2025_direct": ("ytu", "yildiz teknik"),
+            "admission_itu_ai_data_2025_direct": ("yapay zeka ve veri", "veri muhendis", "yzv"),
+            "admission_itu_compe_2025_direct": ("itu bilgisayar", "bilgisayar gelir", "bilgisayara gir"),
+        }
+        if raw_id in competitor_cards and any(
+            _keyword_matches(phrase, folded_query) for phrase in competitor_cards[raw_id]
+        ):
+            score += 75.0
         exact_cards = {
+            "curriculum_database_practice_card": ("veritabani", "veri tabani", "database", "sql"),
+            "cloud_technologies_honesty_card": ("bulut teknoloji", "bulut bilisim", "cloud computing", "aws", "azure", "google cloud"),
             "insider_faculty_interest_card": ("hocalar ilgili", "hocalari ilgili", "ogrencilere karsi ilgili", "ogrencilerle ilgilen", "hoca destegi"),
-            "insider_teaching_english_card": ("hocalarin ingilizcesi", "hocalar ingilizce", "ingilizce ders anlat", "dersleri anlayabilir", "dersi anlam"),
+            "insider_teaching_english_card": ("hocalarin ingilizcesi", "hocalar ingilizce", "ingilizce ders anlat", "dersleri anlayabilir", "dersi anlam", "hocalar dersleri anlasilir", "dersleri anlasilir anlat", "anlasilir anlatiyor"),
             "insider_lab_access_card": ("laboratuvara gire", "laboratuvarlara ders disinda", "laboratuvara ders disinda", "laboratuvara hoca", "lab erisim", "hoca izni", "hocadan izin", "hocayla calis"),
             "insider_dorm_life_card": ("yurt internet", "yurtlarda internet", "yurtta internet", "yurtlarda mutfak", "yurtta mutfak", "oda secenek", "kac kisilik oda", "oda yasami"),
             "insider_dorm_probability_card": ("yurt cikar", "yurt cikma", "yurt garanti"),
@@ -354,6 +459,7 @@ def retrieve_facts(
             "curriculum_algorithms_difficulty_card": ("algoritma dersleri cok zor", "algoritma dersi cok zor", "algoritma dersi zor", "algoritma analizi zor", "algoritmadan kal"),
             "curriculum_language_card": ("python", "java", "c++", "c dili", "programlama dili"),
             "curriculum_study_habits_card": ("dersleri duzenli takip", "dersi duzenli takip", "takip etmek yeterli", "derse gitmek yeterli"),
+            "curriculum_capstone_process_card": ("bitirme projesi nasil", "bitirme projesi sec", "proje danismani", "tasarim projesi nasil"),
             "insider_faculty_course_support_card": ("ders destegi", "hocadan destek", "konuyu anlamadim", "ders icin hocaya"),
             "housing_application_path_card": ("kalacak yerim yok", "nasil ayarlarim", "yurt basvuru", "yurda nasil"),
             "game_interest_fit_card": ("bilgisayar oyunu", "oyun oynamayi sevmek", "oyun sevmek", "bolum icin yeterli"),
@@ -361,18 +467,63 @@ def retrieve_facts(
             "double_major_minor_card": ("cift anadal", "cap ", "cap ve", "yandal"),
             "erasmus_course_recognition_card": ("dersler sayil", "ders saydir", "ola", "taninma"),
             "undergraduate_research_card": ("lisans arastirma", "lisans ogrencisi", "hocayla arastirma", "hocayla proje"),
-            "student_profile_honesty_card": ("ogrenci profili", "rekabetci", "dayanisma", "arkadas ortami"),
+            "student_profile_honesty_card": (
+                "ogrenci profili", "rekabetci", "dayanisma", "arkadas ortami",
+                "genel olarak ortam", "bolum ortami", "fakulte ortami", "ogrenci ortami", "ortam nasil",
+            ),
             "psychological_support_card": ("psikolojik", "yalniz", "kaygi", "bunal", "stres"),
             "graduation_requirements_card": ("mezuniyet", "mezun olmak", "kac akts", "kac kredi", "azami sure"),
             "academic_recovery_honesty_card": ("dersten kal", "notlarim dusuk", "dunyanin sonu"),
             "career_guidance_card": ("kime danis", "kariyer konusunda kararsiz", "kariyer gunleri"),
+            "project_competition_honesty_card": ("projeler yarism", "yarismalara gonder", "proje yarismasi"),
+            "future_salary_ai_honesty_card": ("maaslar gelecekte", "gelecekte duser", "maas duser", "yapay zeka isimizi"),
+            "faculty_industry_experience_honesty_card": ("sektorel deneyim", "sektor deneyimi", "hocalar sektorden"),
+            "curriculum_modernity_answer_card": ("ders icerikleri guncel", "mufredat guncel", "guncel teknoloji", "eski teknoloji"),
+            "student_software_licenses_answer_card": ("ucretsiz yazilim lisans", "yazilim lisansi", "github student", "office 365", "matlab lisans"),
+            "robotics_lab_access_answer_card": ("robotik laboratuvar", "robotik lab"),
+            "erasmus_grant_sufficiency_answer_card": ("erasmus bursu yeterli", "erasmus hibesi yeterli", "hibe yeterli"),
+            "global_exchange_america_honesty_card": ("amerika'da degisim", "amerikada degisim", "amerika degisim", "abd'de degisim", "abd de degisim", "abd degisim", "amerika cift diploma", "abd cift diploma"),
+            "worship_exam_policy_honesty_card": ("ramazanda sinav", "sinavda namaz", "namaz izni", "oruc sinav"),
+            "lab_computer_currency_honesty_card": ("laboratuvarlardaki bilgisayar", "bilgisayarlar guncel", "son model bilgisayar"),
+            "ai_gpu_access_honesty_card": ("gpu destegi", "gpu erisimi", "yapay zeka gpu", "gpu sunucu"),
+            "erasmus_compe_partner_examples_card": ("hangi universitelere gid", "bilgisayar muhendisligi erasmus", "erasmus universiteleri"),
+            "erasmus_language_requirement_card": ("erasmus dil sinavi", "dil sinavi zor", "erasmus ingilizce"),
+            "curriculum_update_frequency_honesty_card": ("mufredat ne siklikla", "mufredati ne siklikla", "mufredat ne zaman guncellen", "mufredati ne zaman guncellen", "her yil yenilen"),
+            "equipment_loan_honesty_card": ("ekipman odunc", "cihaz odunc", "proje ekipmani"),
+            "academic_career_support_card": ("akademisyen olmak", "akademik kariyer", "arastirmaci olmak"),
+            "teaching_materials_honesty_card": ("dersler slayttan", "slayttan islen", "slayttan mi islen", "cogunlukla slayt", "slayt agirlikli"),
+            "differentiator_qs_abet_faculty_card": ("diger guclu okul", "guclu okullardan", "ayiran sey"),
         }
-        if raw_id in exact_cards and any(phrase in folded_query for phrase in exact_cards[raw_id]):
+        if raw_id in exact_cards and any(_keyword_matches(phrase, folded_query) for phrase in exact_cards[raw_id]):
             is_direct_answer = raw_id.startswith("insider_") or raw_id in {
                 "curriculum_exam_coding_card",
                 "curriculum_algorithms_difficulty_card",
                 "curriculum_language_card",
                 "curriculum_study_habits_card",
+                "curriculum_capstone_process_card",
+                "project_competition_honesty_card",
+                "future_salary_ai_honesty_card",
+                "ai_faculty_lab_answer_card",
+                "comparison_bilkent_honesty_card",
+                "comparison_difficulty_honesty_card",
+                "faculty_industry_experience_honesty_card",
+                "curriculum_modernity_answer_card",
+                "student_software_licenses_answer_card",
+                "robotics_lab_access_answer_card",
+                "erasmus_grant_sufficiency_answer_card",
+                "global_exchange_america_honesty_card",
+                "worship_exam_policy_honesty_card",
+                "lab_computer_currency_honesty_card",
+                "ai_gpu_access_honesty_card",
+                "erasmus_compe_partner_examples_card",
+                "erasmus_language_requirement_card",
+                "curriculum_update_frequency_honesty_card",
+                "equipment_loan_honesty_card",
+                "academic_career_support_card",
+                "teaching_materials_honesty_card",
+                "differentiator_qs_abet_faculty_card",
+                "curriculum_database_practice_card",
+                "cloud_technologies_honesty_card",
                 "insider_faculty_course_support_card",
                 "housing_application_path_card",
                 "game_interest_fit_card",
@@ -392,6 +543,8 @@ def retrieve_facts(
         if "curriculum_overview" in topics and raw_id == "curriculum_overview_card":
             score += 8.0
         focused_prefixes = {
+            "database_course": ("curriculum_database_",),
+            "cloud_technologies": ("cloud_technologies_", "department_lab_"),
             "programming_languages": ("curriculum_",),
             "curriculum_systems": ("curriculum_",),
             "curriculum_ai": ("curriculum_", "department_"),
@@ -399,13 +552,15 @@ def retrieve_facts(
             "curriculum_projects": ("curriculum_", "internship_", "undergraduate_"),
             "academic_workload": ("curriculum_", "summer_", "academic_"),
             "teaching_quality": ("teaching_quality_", "department_"),
-            "technical_resources": ("department_", "library_", "curriculum_", "lab_access_"),
+            "technical_resources": ("department_", "library_", "curriculum_", "lab_access_", "student_software_", "robotics_lab_"),
             "internship": ("internship_", "erasmus_internship"),
             "research_projects": ("undergraduate_", "robotics_", "department_", "department_clubs", "lab_access_"),
             "specialization": ("curriculum_", "department_", "robotics_"),
             "double_major_transfer": ("double_major_", "transfer_"),
-            "erasmus": ("erasmus_",),
+            "erasmus": ("erasmus_", "global_exchange_"),
+            "global_exchange": ("global_exchange_",),
             "clubs_teams": ("department_clubs_", "clubs_"),
+            "worship_facilities": ("campus_worship_",),
             "housing_details": ("housing_", "student_support_"),
             "istanbul_life": ("istanbul_",),
             "student_social": ("student_profile_", "department_clubs_", "clubs_", "international_", "campus_student_"),
@@ -459,14 +614,19 @@ def retrieve_facts(
     return RagResult(query_topics=topics, facts=scored[:max_facts], allowed_numbers=list(dict.fromkeys(allowed_numbers)))
 
 
-def _focus_terms(user_text: str, profile: CandidateProfile) -> list[str]:
+def _focus_terms(
+    user_text: str,
+    profile: CandidateProfile,
+    *,
+    include_profile: bool = True,
+) -> list[str]:
     low = f" {_fold(user_text)} "
     interest = profile.interests
     aliases: list[str] = []
 
     if (
         any(p in low for p in (" yapay zeka", " ai ", " yz ", " makine ogren", " derin ogren", " machine learning", " deep learning"))
-        or interest.get("ai", 0.0) > 0.15
+        or (include_profile and interest.get("ai", 0.0) > 0.15)
     ):
         aliases.extend([
             "artificial intelligence", "yapay zeka", "machine learning", "makine ogrenmesi",
@@ -477,16 +637,16 @@ def _focus_terms(user_text: str, profile: CandidateProfile) -> list[str]:
     if any(p in low for p in (" nlp ", " dogal dil", " natural language", " dil isleme")):
         aliases.extend(["natural language processing", "dogal dil isleme", "nlp"])
 
-    if any(p in low for p in (" robot", " robotik", " robotics")) or interest.get("robotics", 0.0) > 0.15:
+    if any(p in low for p in (" robot", " robotik", " robotics")) or (include_profile and interest.get("robotics", 0.0) > 0.15):
         aliases.extend(["robotics", "robotik", "human computer interaction", "wearable computing"])
 
-    if any(p in low for p in (" siber", " guvenlik", " cybersecurity", " security", " ag ", " network")) or interest.get("cybersec", 0.0) > 0.15:
+    if any(p in low for p in (" siber", " guvenlik", " cybersecurity", " security", " ag ", " network")) or (include_profile and interest.get("cybersec", 0.0) > 0.15):
         aliases.extend(["cybersecurity", "security", "privacy", "computer networks", "bilgisayar aglari", "cryptography", "blockchain"])
 
     if any(p in low for p in (" saglik", " tip", " biyoinformatik", " bioinformatics", " biomedical", " tibbi")):
         aliases.extend(["bioinformatics", "biyoinformatik", "health informatics", "saglik bilisimi", "medical image", "biomedical"])
 
-    if any(p in low for p in (" yazilim", " software", " test", " formal verification")) or interest.get("software", 0.0) > 0.15:
+    if any(p in low for p in (" yazilim", " software", " test", " formal verification")) or (include_profile and interest.get("software", 0.0) > 0.15):
         aliases.extend(["software engineering", "software testing", "formal verification", "yazilim muhendisligi", "yazilim testi"])
 
     terms: list[str] = []
@@ -495,12 +655,13 @@ def _focus_terms(user_text: str, profile: CandidateProfile) -> list[str]:
     return list(dict.fromkeys(terms))
 
 
-_TR_FOLD = str.maketrans("çğıöşüÇĞİÖŞÜ", "cgiosucgiosu")
+_TR_FOLD = str.maketrans("çğıöşüâîûÇĞİÖŞÜÂÎÛ", "cgiosuaiucgiosuaiu")
 
 
 def _fold(text: str) -> str:
     """ASCII-toleranslı eşleşme: aday 'Cekirdek' yazsa da 'çekirdek' keyword'ü tutsun."""
-    return text.translate(_TR_FOLD).lower()
+    normalized = text.replace("’", "'").replace("‘", "'")
+    return normalized.translate(_TR_FOLD).lower()
 
 
 def infer_query_topics(
@@ -540,7 +701,7 @@ def infer_query_topics(
         if profile.constraints.housing_needed:
             topics.append("housing")
     financial_direct = bool(
-        set(direct_topics) & {"financial_support", "financial_concern", "scholarship", "comparison"}
+        set(direct_topics) & {"financial_support", "financial_concern", "scholarship"}
     )
     if (
         profile.constraints.cost_sensitivity
@@ -563,9 +724,10 @@ def _tokens(text: str) -> list[str]:
 
 def _keyword_matches(keyword: str, folded_text: str) -> bool:
     folded_keyword = _fold(keyword)
-    if " " not in folded_keyword and len(folded_keyword) <= 3:
-        return bool(re.search(
-            rf"(?<![a-z0-9]){re.escape(folded_keyword)}(?![a-z0-9])",
-            folded_text,
-        ))
-    return folded_keyword in folded_text
+    if not folded_keyword:
+        return False
+    end = r"(?![a-z0-9])" if len(folded_keyword) <= 3 else ""
+    return bool(re.search(
+        rf"(?<![a-z0-9]){re.escape(folded_keyword)}{end}",
+        folded_text,
+    ))

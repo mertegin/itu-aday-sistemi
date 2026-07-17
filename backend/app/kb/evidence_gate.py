@@ -41,6 +41,7 @@ class EvidenceGateResult:
 
 REQUIREMENTS: dict[str, EvidenceRequirement] = {
     "itu_financial_support": EvidenceRequirement(number=True),
+    "itu_entrepreneurship_ecosystem": EvidenceRequirement(number=True, example=True),
     "itu_campus_life": EvidenceRequirement(number=True, example=True),
     "itu_dining": EvidenceRequirement(number=True, example=True),
     "itu_career_evidence": EvidenceRequirement(number=True, example=True),
@@ -72,13 +73,14 @@ REQUIREMENTS: dict[str, EvidenceRequirement] = {
     "itu_erasmus_mobility": EvidenceRequirement(number=True, example=True),
     "itu_clubs_teams": EvidenceRequirement(number=True, example=True),
     "itu_clubs_projects": EvidenceRequirement(number=True, example=True),
+    "itu_social_venues": EvidenceRequirement(example=True),
     "itu_housing_details": EvidenceRequirement(number=True, example=True),
     "itu_istanbul_life": EvidenceRequirement(example=True),
     "itu_student_wellbeing": EvidenceRequirement(number=True, example=True),
     "itu_graduation_requirements": EvidenceRequirement(number=True, example=True),
 }
 
-_TR_FOLD = str.maketrans("çğıöşüÇĞİÖŞÜ", "cgiosuCGIOSU")
+_TR_FOLD = str.maketrans("çğıöşüâîûÇĞİÖŞÜÂÎÛ", "cgiosuaiucgiosuaiu")
 
 
 def enforce_evidence_contract(

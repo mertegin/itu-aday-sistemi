@@ -33,11 +33,13 @@ class ChatResponse(BaseModel):
     ethics_check: dict
     voice_check: dict = {}
     fact_gate: dict = {}
+    admission_check: dict = {}
     answer_relevance: dict = {}
     repetition_check: dict = {}
     followup_check: dict = {}
     evidence_check: dict = {}
     generation_fallback: dict = {}
+    response_pipeline: dict = {}
     speech_check: dict = {}
     rag: dict = {}
     analysis: dict

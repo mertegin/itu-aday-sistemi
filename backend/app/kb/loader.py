@@ -222,7 +222,7 @@ def _area_tags(areas: list[str]) -> list[str]:
 
 
 def slugify(text: str) -> str:
-    repl = str.maketrans("çğıöşüÇĞİÖŞÜ", "cgiosuCGIOSU")
+    repl = str.maketrans("çğıöşüâîûÇĞİÖŞÜÂÎÛ", "cgiosuaiucgiosuaiu")
     s = text.translate(repl).lower()
     chars = [c if c.isalnum() else "_" for c in s]
     return "_".join("".join(chars).split("_")).strip("_")[:48] or "fact"

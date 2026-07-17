@@ -1,0 +1,26 @@
+# Secrets — ASLA commit'lenmez
+.env
+*.env
+!.env.example
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Veritabanları (konuşma verisi — kişisel test verileri içerir)
+*.db
+*.db-journal
+
+# Üretilen raporlar / geçici çıktılar
+backend/scenario_report.md
+backend/long_scenario_report.md
+backend/question_bank_report.md
+backend/eval_report.md
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

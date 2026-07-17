@@ -1,0 +1,104 @@
+meta:
+  section: "İTÜ Bilgisayar öğrencisinin akademik ve mesleki yolları"
+  source: "İTÜ resmî yönetmelik, yönerge ve bölüm sayfaları"
+  year: "2025-2026"
+  last_verified: "2026-07-16"
+  confidence: high
+  topics: ["student_pathways"]
+  tags: ["staj", "Erasmus", "çap", "yandal", "araştırma", "mezuniyet"]
+
+facts:
+  - id: "internship_requirements_card"
+    text: "İTÜ Bilgisayar'da toplam 40 iş günü zorunlu staj, iki ayrı kurumda en az 20'şer gün yapılır; 10-15 günlük kayıt kabul edilmez. En fazla bir zorunlu staj, komisyon onayıyla çevrim içi olabilir."
+    answer_card: true
+    topics: ["internship"]
+    examples: ["40 iş günü", "iki ayrı kurum", "20'şer gün"]
+    source: "İTÜ BBF Bilgisayar Mühendisliği Staj Ek Esasları"
+    source_url: "https://bbf.itu.edu.tr/docs/librariesprovider62/default-document-library/blg_staj_ek_esaslar.pdf?sfvrsn=8df67dc0_2"
+    tags: ["staj zorunlu", "kaç gün", "hangi sınıf", "online staj"]
+
+  - id: "internship_scope_card"
+    text: "Staj; yazılım geliştirme-test-bakım veya onaylı tasarım işi olabilir; donanım zorunlu değildir. Mikroişlemci, arayüz devresi, ağ kurulumu gibi donanım işleri kabul edilebilir; yalnız paket program kullanmak ya da bilgisayar tamiri kabul edilmez."
+    answer_card: true
+    topics: ["internship", "curriculum_projects"]
+    examples: ["yazılım geliştirme", "mikroişlemci", "ağ kurulumu"]
+    source: "İTÜ BBF Bilgisayar Mühendisliği Staj Ek Esasları"
+    source_url: "https://bbf.itu.edu.tr/docs/librariesprovider62/default-document-library/blg_staj_ek_esaslar.pdf?sfvrsn=8df67dc0_2"
+    tags: ["stajda ne yapılır", "yazılım stajı", "donanım stajı", "staj alanı"]
+
+  - id: "erasmus_selection_card"
+    text: "Erasmus öğrenim hareketliliğinde lisans öğrencisi için asgari GNO 2,50; seçim puanı akademik başarı %50 ve yabancı dil %50'dir. Önceki Erasmus katılımı yeni başvuruda 10 puan düşürür; anlaşma ve kontenjanlar çağrıya göre değişir."
+    answer_card: true
+    topics: ["erasmus", "abroad"]
+    examples: ["2,50 GNO", "%50 akademik", "%50 yabancı dil"]
+    source: "İTÜ Erasmus Ofisi seçim kriterleri"
+    source_url: "https://erasmus.itu.edu.tr/giden-%C3%B6%C4%9Frenci-personel-hareketlilikleri/ka131-program-%C3%BClkeleri/giden-%C3%B6%C4%9Frenciler/se%C3%A7im-kriterleri"
+    tags: ["erasmus şart", "gno", "dil puanı", "kaçıncı sınıf"]
+
+  - id: "erasmus_internship_card"
+    text: "Erasmus stajı öğrenim alanıyla ilgili olmalı ve en az 60 gün, en çok 12 ay sürmelidir. Hazırlık ve ilk sınıfta hemen hareketlilik yapılamaz; ilk sınıf öğrencisi sonraki yıl için başvurabilir. Dil eşiği B1/65'tir."
+    answer_card: true
+    topics: ["erasmus", "internship", "abroad"]
+    examples: ["60 gün", "12 ay", "B1/65"]
+    source: "İTÜ Erasmus Ofisi staj hareketliliği"
+    source_urls:
+      - "https://erasmus.itu.edu.tr/giden-%C3%B6%C4%9Frenci-personel-hareketlilikleri/ka131-program-%C3%BClkeleri/staj-hareketliligi/kimler-ba%C5%9Fvurabilir"
+      - "https://erasmus.itu.edu.tr/giden-%C3%B6%C4%9Frenci-personel-hareketlilikleri/ka131-program-%C3%BClkeleri/staj-hareketliligi/staj-yeri"
+    tags: ["erasmus staj", "yurt dışında staj", "kaç ay", "birinci sınıf"]
+
+  - id: "double_major_minor_card"
+    text: "ÇAP için en az 3,00 GNO, tüm derslerde başarı ve sınıfın üst %20'si gerekir; başvuru en erken 3., en geç 5. yarıyıldadır. Yandal eşiği 2,50'dir ve ikinci diploma değil sertifika verir."
+    answer_card: true
+    topics: ["double_major_transfer"]
+    examples: ["3,00 GNO", "üst %20", "3.-5. yarıyıl", "2,50"]
+    source: "İTÜ Yatay Geçiş, ÇAP ve Yandal Yönergesi"
+    source_url: "https://www.sis.itu.edu.tr/TR/mevzuat/yatay-cap-yandal-yonerge.php"
+    tags: ["çap", "çift anadal", "yandal", "ikinci diploma", "ortalama"]
+
+  - id: "transfer_card"
+    text: "Kurum içi yatay geçiş ilk ve son iki yarıyılda yapılamaz; 3. yarıyıl başvurusunda en az 2,50, 5. yarıyılda aynı fakülte içi başvuruda 2,60 GNO ve tüm derslerde başarı aranır. Kontenjan yıllıktır."
+    answer_card: true
+    topics: ["double_major_transfer", "admission"]
+    examples: ["2,50 GNO", "2,60 GNO", "tüm derslerde başarı"]
+    source: "İTÜ Yatay Geçiş, ÇAP ve Yandal Yönergesi"
+    source_url: "https://www.sis.itu.edu.tr/TR/mevzuat/yatay-cap-yandal-yonerge.php"
+    tags: ["bölüm değiştirme", "yatay geçiş", "kurum içi", "kurum dışı"]
+
+  - id: "undergraduate_research_card"
+    text: "Lisans öğrencisi araştırmaya yalnız izleyici olarak katılmaz: İTÜ BAP'ın LÖKAP türünde danışman, öğrenciyi araştırma projesine dahil ederek başvurur. Bölümdeki 18 laboratuvar; AI, NLP, robotik, siber güvenlik ve sağlık bilişimi gibi alanlar sunar."
+    answer_card: true
+    topics: ["research_projects", "labs"]
+    examples: ["LÖKAP", "18 laboratuvar", "NLP", "robotik"]
+    source: "İTÜ BAP LÖKAP ve İTÜ BBF aday öğrenci sayfası"
+    source_urls:
+      - "https://bapsis.itu.edu.tr/GetDoc.ashx?ID=1207"
+      - "https://bbf.itu.edu.tr/ogrenciler/aday-ogrenciler"
+    tags: ["araştırma projesi", "lisans öğrencisi", "hocayla proje", "tübitak"]
+
+  - id: "robotics_lab_student_evidence"
+    text: "Somut örnek: İTÜ Robotik Laboratuvarı tanıtımında 120'den fazla yayın, 1.300'den fazla atıf ve 100'den fazla lisans bitirme tezi bildiriliyor; 17 kişilik ekipte 5 lisans öğrencisi bulunduğu da belirtiliyor."
+    topics: ["research_projects", "labs", "specialization"]
+    examples: ["120+ yayın", "1.300+ atıf", "100+ lisans tezi", "5 lisans öğrencisi"]
+    source: "İTÜ BBF Araştırma Laboratuvarları tanıtım dokümanı"
+    source_url: "https://bbf.itu.edu.tr/docs/librariesprovider62/default-document-library/bbf_lablar.pdf"
+    tags: ["robotik", "laboratuvara katılma", "lisans projesi", "yayın"]
+
+  - id: "graduation_requirements_card"
+    text: "Güncel plan 8 yarıyıl, 130 yerel kredi ve 240 AKTS'dir; mezuniyet için plan dersleri, zorunlu stajlar ve en az 2,00 GNO tamamlanır. Son yıl Tasarım I-II dizisi vardır; azami lisans süresi 7 yıldır."
+    answer_card: true
+    topics: ["graduation"]
+    examples: ["240 AKTS", "2,00 GNO", "Tasarım I-II", "7 yıl"]
+    source: "İTÜ ÖBS ders planı ve Lisans Eğitim-Öğretim Yönetmeliği"
+    source_urls:
+      - "https://obs.itu.edu.tr/public/DersPlan/DersPlanDetay/2340"
+      - "https://www.sis.itu.edu.tr/TR/mevzuat/lisans-yonetmelik.php?v=1.0.20"
+    tags: ["mezuniyet şart", "kaç kredi", "kaç yıl", "ortalama", "bitirme projesi"]
+
+  - id: "summer_school_card"
+    text: "Yaz öğretimi mezuniyeti hızlandırabilir ancak her dersin açılması garanti değildir; açılan/eşdeğer ders, bölüm-fakülte onayı ve yönetmelik koşulları gerekir. Yaz dönemi sonunda şartlarını tamamlayan öğrenci mezun olabilir."
+    answer_card: true
+    topics: ["graduation", "academic_workload"]
+    examples: ["yaz öğretimi", "eşdeğer ders", "mezuniyet"]
+    source: "İTÜ Yaz Öğretimi Yönetmeliği"
+    source_url: "https://www.sis.itu.edu.tr/TR/mevzuat/yaz-ogretimi-yonetmelik.php"
+    tags: ["yaz okulu", "erken mezun", "ders tekrarı", "uzatma"]

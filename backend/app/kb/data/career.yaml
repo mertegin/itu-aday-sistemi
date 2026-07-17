@@ -1,0 +1,54 @@
+meta:
+  section: "İTÜ Bilgisayar kariyer ve işveren bağlantıları"
+  source: "İTÜ resmi"
+  year: 2026
+  last_verified: "2026-07-16"
+  confidence: high
+  topics: ["career_evidence", "career"]
+  tags: ["kariyer", "mezun olmadan iş", "Kariyer Zirvesi", "şirket"]
+
+facts:
+  - id: "career_employment_companies_card"
+    text: "İTÜ Bilgisayar aday sayfasındaki çalışmada mezunların %54'ü mezun olmadan işe başladı; 2026 Kariyer Zirvesi katılımcıları arasında Turkcell, THY, Siemens, ASELSAN ve Bosch vardı. Bu veri kişisel iş garantisi değildir."
+    answer_card: true
+    examples: ["Turkcell", "THY", "Siemens", "ASELSAN", "Bosch"]
+    source: "İTÜ Bilgisayar ve Bilişim Fakültesi + İTÜ Kariyer Zirvesi resmi"
+    source_url: "https://bbf.itu.edu.tr/ogrenciler/aday-ogrenciler"
+    source_urls:
+      - "https://bbf.itu.edu.tr/ogrenciler/aday-ogrenciler"
+      - "https://itukariyerzirvesi.itu.edu.tr/"
+    year: "kaynak çalışma yılı belirtilmemiş; şirket listesi 2026"
+    confidence: medium
+    tags: ["54", "%54", "mezuniyet öncesi", "firma örnekleri"]
+
+  - id: "career_employment_timing"
+    text: "İTÜ Bilgisayar ve Bilişim Fakültesi aday sayfasının aktardığı Kariyer Merkezi çalışmasında Bilgisayar Mühendisliği mezunlarının %54'ü mezun olmadan, %20'si mezuniyetten sonra en geç 6 ay içinde işe başlamıştır; çalışma yılı sayfada belirtilmez."
+    source: "İTÜ Bilgisayar ve Bilişim Fakültesi aday sayfası"
+    source_url: "https://bbf.itu.edu.tr/ogrenciler/aday-ogrenciler"
+    year: "kaynakta belirtilmemiş"
+    confidence: medium
+    tags: ["54", "%54", "20", "%20", "6 ay", "işe başlama"]
+
+  - id: "career_summit_2026"
+    text: "İTÜ Kariyer Zirvesi 23-27 Şubat 2026'da 22. kez, dört kampüs ve toplam 11 birimde düzenlendi; şirket stantları, CV paylaşımı ve mülakat simülasyonları bütün İTÜ öğrencilerine ve mezunlarına ücretsiz sunuldu."
+    source: "İTÜ Kariyer Zirvesi resmi"
+    source_url: "https://itukariyerzirvesi.itu.edu.tr/"
+    examples: ["CV paylaşımı", "mülakat simülasyonları"]
+    tags: ["22", "4", "dört kampüs", "11", "23-27 Şubat 2026"]
+
+  - id: "career_summit_2023_scale"
+    text: "İTÜ'nün 2023 Kariyer Zirvesi haberine göre etkinlikte 145 firma, 170 stant ve 80 kariyer etkinliği yer aldı."
+    source: "İTÜ Haberler"
+    source_url: "https://haberler.itu.edu.tr/haberdetay/2023/05/07/itu-kariyer-zirvesinde-firmalar-ve-genc-yetenekler-bir-araya-geldi"
+    year: 2023
+    examples: ["Kariyer Zirvesi"]
+    tags: ["145", "170", "80", "firma", "stant"]
+
+  - id: "career_compe_employer_interest_2024"
+    text: "Kariyer.net'in 2024 analizini aktaran İTÜ haberine göre İTÜ Bilgisayar Mühendisliği 79,2 puanla üniversite-bölüm bazlı işveren ilgisi ve hızlı işe girme endeksinde birinci oldu."
+    source: "İTÜ Haberler / Kariyer.net 2024 analizi"
+    source_url: "https://haberler.itu.edu.tr/haberdetay/2025/07/09/itu-luler-is-hayatina-saglam-adimlarla-basliyor"
+    year: 2024
+    examples: ["Kariyer.net"]
+    tags: ["79,2", "79.2", "birinci", "işveren ilgisi", "hızlı işe girme"]
+

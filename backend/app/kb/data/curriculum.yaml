@@ -1,0 +1,178 @@
+meta:
+  section: "İTÜ Bilgisayar Mühendisliği güncel lisans ders planı"
+  source: "İTÜ Öğrenci Bilgi Sistemi resmî ders planı"
+  source_url: "https://obs.itu.edu.tr/public/DersPlan/DersPlanDetay/2340"
+  year: "2024-2025 Güz ve sonrası"
+  last_verified: "2026-07-16"
+  confidence: high
+  topics: ["curriculum"]
+  tags: ["müfredat", "ders planı", "yarıyıl", "Bilgisayar Mühendisliği"]
+
+facts:
+  - id: "curriculum_year1_card"
+    text: "1. yarıyıl: Fizik I+Lab, Bilgi Sistemlerine Giriş, Bilgisayar Mühendisliğine Giriş ve Etik, Matematik I, Lineer Cebir, ING 100. 2. yarıyıl: Ayrık Matematik, C ile Programlamaya Giriş, Matematik II, Fizik II+Lab, ING 112A, DAN 102."
+    answer_card: true
+    topics: ["curriculum_year1"]
+    examples: ["Bilgi Sistemlerine Giriş", "Bilgisayar Mühendisliğine Giriş ve Etik", "Ayrık Matematik", "C Programlama"]
+    tags: ["ilk sınıf", "birinci sınıf", "ilk yıl", "1. yarıyıl", "2. yarıyıl"]
+
+  - id: "curriculum_semester1_codes"
+    text: "Güncel 1. yarıyıl kodları: FIZ 101E, FIZ 101EL, BBF 101E, BLG 113E, MAT 103E, BBF 102E ve ING 100. Toplam 30 AKTS'dir."
+    topics: ["curriculum_year1"]
+    examples: ["BBF 101E", "BLG 113E", "MAT 103E", "30 AKTS"]
+    tags: ["birinci dönem", "1. dönem", "ders kodu", "kaç akts"]
+
+  - id: "curriculum_semester2_codes"
+    text: "Güncel 2. yarıyıl kodları: BBF 103E, BLG 102E, MAT 104E, FIZ 102E, FIZ 102EL, ING 112A ve DAN 102. Toplam 30 AKTS'dir."
+    topics: ["curriculum_year1"]
+    examples: ["BBF 103E", "BLG 102E", "MAT 104E", "30 AKTS"]
+    tags: ["ikinci dönem", "2. dönem", "ders kodu", "kaç akts"]
+
+  - id: "curriculum_beginner_programming_card"
+    text: "Kod bilmeden başlanabilir: BLG 102E ikinci yarıyılda C ile algoritma, değişken, döngü, fonksiyon, dizi ve işaretçileri temelden öğretir; resmî amacı öğrencileri programlamaya başlatmaktır. Ders 8 AKTS ve haftada 3+2 saattir."
+    answer_card: true
+    topics: ["curriculum_beginner", "programming_languages"]
+    examples: ["C", "algoritma", "fonksiyon", "dizi", "işaretçi"]
+    source: "İTÜ ÖBS BLG 102E ders kataloğu"
+    source_url: "https://obs.itu.edu.tr/public/DersKatalog/DersKatalogBilgiBransDersKodu?bransKodu=BLG&dersNo=102"
+    tags: ["hiç programlama yapmadım", "kod bilmiyorum", "başlangıç", "hangi dil"]
+
+  - id: "curriculum_overview_card"
+    text: "Program C ve matematik temelinden veri yapıları, devreler, algoritmalar, veritabanı, mikroişlemci, mimari, işletim sistemi, yapay zekâ ve yazılım mühendisliğine ilerler; 8 yarıyıl, 130 yerel kredi ve 240 AKTS iki dönemlik tasarımla tamamlanır."
+    answer_card: true
+    topics: ["curriculum_overview", "graduation"]
+    examples: ["işletim sistemi", "yapay zekâ", "iki dönemlik tasarım", "240 AKTS"]
+    tags: ["ne öğretiliyor", "bölümde ne öğrenilir", "tam olarak", "genel müfredat"]
+
+  - id: "curriculum_semester3"
+    text: "3. yarıyıl: Olasılık ve İstatistik, Veri Yapıları, Sayısal Devreler, Elektroniğe Giriş, ING 201A ve ATA 121. BLG 223E; liste, ağaç, yığın, kuyruk, özyineleme ve dinamik belleği C/C++ ile işler."
+    topics: ["curriculum_year2", "programming_languages", "academic_workload"]
+    examples: ["Veri Yapıları", "C/C++", "Sayısal Devreler"]
+    source_urls:
+      - "https://obs.itu.edu.tr/public/DersPlan/DersPlanDetay/2340"
+      - "https://obs.itu.edu.tr/public/DersKatalog/DersKatalogBilgiBransDersKodu?bransKodu=BLG&dersNo=223"
+    tags: ["3. yarıyıl", "ikinci sınıf", "veri yapıları", "c++"]
+
+  - id: "curriculum_semester4"
+    text: "4. yarıyıl: Sayısal Yöntemler, Nesne Yönelimli Programlama, Biçimsel Diller ve Otomata, Bilgisayar Organizasyonu, Mantık Devreleri Laboratuvarı, TUR 121 ve bir TM seçmeli; toplam 30 AKTS."
+    topics: ["curriculum_year2", "curriculum_systems", "academic_workload"]
+    examples: ["Nesne Yönelimli Programlama", "Bilgisayar Organizasyonu", "Mantık Devreleri Laboratuvarı"]
+    tags: ["4. yarıyıl", "ikinci sınıf", "teorik ders", "uygulama"]
+
+  - id: "curriculum_semester5"
+    text: "5. yarıyıl: Algoritmaların Analizi I, Veritabanı Sistemleri, Mikroişlemci Sistemleri, Mikrobilgisayar Laboratuvarı, Elektroniğe Giriş Laboratuvarı, TUR 122, bir İTÜ ve bir TM seçmeli; toplam 30 AKTS."
+    topics: ["curriculum_year3", "curriculum_systems", "technical_resources"]
+    examples: ["Algoritmaların Analizi I", "Veritabanı Sistemleri", "Mikrobilgisayar Laboratuvarı"]
+    tags: ["5. yarıyıl", "üçüncü sınıf", "laboratuvar"]
+
+  - id: "curriculum_semester6"
+    text: "6. yarıyıl: Algoritmaların Analizi II, Veriden Öğrenme, İşletim Sistemleri, Bilgisayar Mimarisi, Bilgisayar Mühendisleri için İşaret ve Sistemler ve bir TM seçmeli; toplam 30 AKTS."
+    topics: ["curriculum_year3", "curriculum_systems", "curriculum_ai"]
+    examples: ["Veriden Öğrenme", "İşletim Sistemleri", "Bilgisayar Mimarisi"]
+    tags: ["6. yarıyıl", "üçüncü sınıf", "makine öğrenmesi", "işletim sistemi"]
+
+  - id: "curriculum_operating_systems_card"
+    text: "BLG 312E; süreç, iş parçacığı, senkronizasyon, kilitlenme, CPU zamanlama, sanal bellek ve dosya sistemlerini işler. Resmî katalogda Unix sistem çağrılarıyla 3 programlama ödevi bulunur; teori doğrudan uygulamaya bağlanır."
+    answer_card: true
+    topics: ["curriculum_systems", "curriculum_projects", "academic_workload"]
+    examples: ["Unix", "3 programlama ödevi", "sanal bellek"]
+    source: "İTÜ ÖBS BLG 312E ders kataloğu"
+    source_url: "https://obs.itu.edu.tr/public/DersKatalog/DersKatalogBilgiBransDersKodu?bransKodu=BLG&dersNo=312"
+    tags: ["işletim sistemi", "ödev", "proje", "uygulamalı"]
+
+  - id: "curriculum_semester7"
+    text: "7. yarıyıl: Yazılım Mühendisliği, Yapay Zekâ, Bilgisayar Mühendisliği Tasarımı I, bir meslek tasarım ve bir İTÜ seçmeli; toplam 30 AKTS. BLG 411E grup projesiyle gereksinim, tasarım ve testi uygular."
+    topics: ["curriculum_year4", "curriculum_ai", "curriculum_projects"]
+    examples: ["Yapay Zekâ", "Tasarım I", "BLG 411E grup projesi"]
+    source_urls:
+      - "https://obs.itu.edu.tr/public/DersPlan/DersPlanDetay/2340"
+      - "https://obs.itu.edu.tr/public/DersKatalog/DersKatalogBilgiBransDersKodu?bransKodu=BLG&dersNo=411"
+    tags: ["7. yarıyıl", "dördüncü sınıf", "bitirme projesi", "yazılım mühendisliği"]
+
+  - id: "curriculum_semester8"
+    text: "8. yarıyıl: Bilgisayar Mühendisliği Tasarımı II, Ekonomi, ATA 122 ve iki meslek tasarım seçmelisi; toplam 30 AKTS. Tasarım II tek başına 12 AKTS ve haftada 1 teori+8 uygulama saatidir."
+    topics: ["curriculum_year4", "curriculum_projects", "graduation"]
+    examples: ["Tasarım II", "12 AKTS", "1+8 saat"]
+    tags: ["8. yarıyıl", "dördüncü sınıf", "bitirme projesi", "capstone"]
+
+  - id: "curriculum_ai_security_electives_card"
+    text: "Güncel meslek seçmeli havuzunda Bilgisayarla Görme, Robotik, Bilgisayar Güvenliği, Güvenli Programlama, Ağ Güvenliği, AI Accelerators Lab ve AI Aided Computer Engineering var. Havuz 27 ders içerir; fiilî açılış dönem programına bağlıdır."
+    answer_card: true
+    topics: ["curriculum_ai", "curriculum_security", "specialization", "technical_resources"]
+    examples: ["Bilgisayarla Görme", "Bilgisayar Güvenliği", "AI Accelerators Lab"]
+    source: "İTÜ ÖBS güncel MT seçmeli grubu"
+    source_url: "https://obs.itu.edu.tr/public/DersPlan/_DersGrupSearch?grupId=11782"
+    tags: ["yapay zeka", "siber güvenlik", "seçmeli", "robotik", "bilgisayarlı görü"]
+
+  - id: "curriculum_ai_aided_course"
+    text: "2026'da eklenen BLG 483E, 14 haftada LLM ve prompt, üretken yapay zekâ, görsel/ses uygulamaları, AI destekli kodlama-test-hata ayıklama ve etiği kapsar; değerlendirme 4 ödev %40, ara sınav %20, final %40'tır."
+    topics: ["curriculum_ai", "curriculum_projects", "specialization"]
+    examples: ["BLG 483E", "LLM", "4 ödev", "%40"]
+    source: "İTÜ Bilgisayar Mühendisliği bölüm duyurusu"
+    source_url: "https://bm.itu.edu.tr/haberdetay/2026/01/05/yeni-se%C3%A7meli-ders---yapay-zeka-destekli-bilgisayar-m%C3%BChendisli%C4%9Fi"
+    year: 2026
+    tags: ["güncel mi", "modern teknoloji", "llm", "üretken yapay zeka"]
+
+  - id: "curriculum_balance_card"
+    text: "İTÜ Bilgisayar yalnız yazılım değildir: zorunlu planda Veri Yapıları ve Algoritmalar kadar Sayısal Devreler, Elektronik, Mikroişlemci, Bilgisayar Mimarisi ve İşletim Sistemleri de var. Bu geniş temel, yazılım-AI-sistem-gömülü yolları arasında seçim esnekliği sağlar."
+    answer_card: true
+    topics: ["curriculum_overview", "curriculum_systems", "specialization"]
+    examples: ["Mikroişlemci", "Bilgisayar Mimarisi", "İşletim Sistemleri"]
+    tags: ["yazılım donanım dengesi", "çok teorik", "uygulamalı", "hangi alan"]
+
+  - id: "curriculum_language_card"
+    label: "Derslerde kullanılan programlama dilleri"
+    text: "Zorunlu çekirdekte BLG 102E C, BLG 223E ise C/C++ kullanır. Java ve Python bölüm çapında her öğrenciye zorunlu tek dil olarak tanımlanmıyor; seçilen ders, hoca ve projeye göre kullanılabilir. Yani C ve C++ kesin temel, Java/Python ise ders-proje yoluna göre değişir."
+    answer_card: true
+    topics: ["programming_languages", "english_prep", "curriculum_projects"]
+    examples: ["C", "C/C++", "Unix", "grup projesi"]
+    source_urls:
+      - "https://obs.itu.edu.tr/public/DersKatalog/DersKatalogBilgiBransDersKodu?bransKodu=BLG&dersNo=102"
+      - "https://obs.itu.edu.tr/public/DersKatalog/DersKatalogBilgiBransDersKodu?bransKodu=BLG&dersNo=223"
+      - "https://obs.itu.edu.tr/public/DersKatalog/DersKatalogBilgiBransDersKodu?bransKodu=BLG&dersNo=312"
+    tags: ["hangi dil", "python", "java", "c++", "ingilizce terim"]
+
+  - id: "curriculum_study_habits_card"
+    label: "Dersleri takip etmek ve düzenli çalışma"
+    text: "Dersleri düzenli takip etmek güçlü bir başlangıç, fakat bizim teknik derslerde tek başına dinlemek genelde yetmez. BLG 102E ve BLG 223E kod pratiği, BLG 312E 3 programlama ödevi, BLG 335E ise 3 proje içeriyor; haftalık kod yazıp problem çözmek yükün sınav haftasına birikmesini önler."
+    answer_card: true
+    topics: ["academic_workload", "curriculum_projects", "programming_languages"]
+    examples: ["BLG 102E", "BLG 223E", "BLG 312E", "3 programlama ödevi", "BLG 335E", "3 proje"]
+    source: "İTÜ ÖBS BLG 102E, BLG 223E, BLG 312E ve BLG 335E ders katalogları"
+    source_urls:
+      - "https://obs.itu.edu.tr/public/DersKatalog/DersKatalogBilgiBransDersKodu?bransKodu=BLG&dersNo=102"
+      - "https://obs.itu.edu.tr/public/DersKatalog/DersKatalogBilgiBransDersKodu?bransKodu=BLG&dersNo=223"
+      - "https://obs.itu.edu.tr/public/DersKatalog/DersKatalogBilgiBransDersKodu?bransKodu=BLG&dersNo=312"
+      - "https://obs.itu.edu.tr/public/DersKatalog/DersKatalogBilgiBransDersKodu?bransKodu=BLG&dersNo=335"
+    tags: ["dersleri düzenli takip", "takip etmek yeterli", "derse gitmek yeterli", "nasıl çalışmalı", "haftalık çalışma"]
+
+  - id: "curriculum_workload_honesty_card"
+    label: "Ders yükü ve çalışma düzeni"
+    text: "Bizim müfredatımız her yarıyılı 30, mezuniyeti 240 AKTS tasarlar; algoritma, sistem ve laboratuvar dönemleri düzenli çalışma ister. İTÜ'de başarı bağıl değerlendirmeyle belirlenir; 2026 öğrenci deneyiminde sınavlar yoğunlaşsa da çoğu zaman yaklaşık 2 gün ara olur."
+    answer_card: true
+    topics: ["academic_workload", "student_wellbeing"]
+    examples: ["30 AKTS", "240 AKTS", "algoritma-sistem-lab"]
+    tags: ["zor mu", "ders yükü", "haftada kaç saat", "kalma oranı", "gece gündüz"]
+
+  - id: "curriculum_exam_coding_card"
+    label: "Sınavlarda kod yazma"
+    text: "Bizim programlama ve veri yapıları derslerinde sınavda kod okuma, kod yazma veya algoritma kurma soruları görebilirsin; format derse ve hocaya göre değişir. BLG 102E C, BLG 223E C/C++ ile uygulama hedefliyor; bölüm genelinde tek bir sınav formatı yok."
+    answer_card: true
+    confidence: medium
+    topics: ["academic_workload", "programming_languages", "curriculum_projects"]
+    examples: ["BLG 102E", "C", "BLG 223E", "C/C++"]
+    source: "İTÜ ÖBS ders çıktıları + öğrenci deneyimi"
+    source_urls:
+      - "https://obs.itu.edu.tr/public/DersKatalog/DersKatalogBilgiBransDersKodu?bransKodu=BLG&dersNo=102"
+      - "https://obs.itu.edu.tr/public/DersKatalog/DersKatalogBilgiBransDersKodu?bransKodu=BLG&dersNo=223"
+    tags: ["sınavlarda kod", "sınavda kod", "kod yazmamız isteniyor", "kağıtta kod", "programlama sınavı"]
+
+  - id: "curriculum_algorithms_difficulty_card"
+    label: "Algoritma dersinin yapısı"
+    text: "Algoritma Analizi I kolay derslerden sayılmaz, ama düzenli problem çözerek yönetilebilir. BLG 335E asimptotik analiz, yinelemeler, sıralama ve ağaçları işliyor; resmî katalogda 3 proje var ve proje sorularından sınavlarda yararlanılabiliyor. Ezberden çok çözüm mantığı ve karmaşıklık analizi istiyor."
+    answer_card: true
+    topics: ["academic_workload", "curriculum_systems", "student_wellbeing"]
+    examples: ["BLG 335E", "3 proje", "asimptotik analiz", "sıralama"]
+    source: "İTÜ ÖBS BLG 335E ders kataloğu"
+    source_url: "https://obs.itu.edu.tr/public/DersKatalog/DersKatalogBilgiBransDersKodu?bransKodu=BLG&dersNo=335"
+    tags: ["algoritma dersleri çok zor", "algoritma dersi zor", "algoritma analizi zor", "algoritmadan kalır mıyım"]

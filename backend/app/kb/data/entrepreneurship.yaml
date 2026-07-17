@@ -1,0 +1,26 @@
+meta:
+  section: "İTÜ Çekirdek girişimcilik ekosistemi"
+  source: "İTÜ Çekirdek"
+  source_url: "https://itucekirdek.com/haberler/itu-cekirdek-girisimleri-bugune-kadar-325-milyon-dolardan-fazla-yatirim-aldi/"
+  year: 2025
+  last_verified: "2026-07-16"
+  confidence: high
+  topics: ["entrepreneurship"]
+  tags: ["İTÜ Çekirdek", "startup", "girişim", "şirketleşme", "yatırım"]
+
+facts:
+  - id: "itu_cekirdek_impact_2025"
+    text: "İTÜ Çekirdek'in 1 Ağustos 2025 tarihli resmi açıklamasına göre 14 yılda 5.000'den fazla teknoloji girişimi desteklendi, 2.000 girişimin şirketleşmesine katkı sağlandı ve girişimler 11.000'den fazla kişilik istihdam oluşturdu."
+    tags: ["5000", "5.000", "2000", "2.000", "11000", "11.000", "istihdam"]
+
+  - id: "itu_cekirdek_investment_2025"
+    text: "İTÜ Çekirdek'in 1 Ağustos 2025 tarihli resmi açıklamasına göre ekosistemdeki girişimlerin bugüne kadar aldığı toplam yatırım 325 milyon doları, toplam değerlemeleri 3,2 milyar doları aştı. Bu ekosistem toplamıdır; tek bir öğrenciye yatırım garantisi anlamına gelmez."
+    tags: ["325 milyon dolar", "3,2 milyar dolar", "değerleme"]
+
+  - id: "itu_cekirdek_2025_first_half"
+    text: "2025'in ilk yarısında 29 İTÜ Çekirdek girişimi 31 yatırım turunda toplam 15,7 milyon dolar yatırım aldı; yatırım alan girişimlerin yüzde 70'i yazılım tabanlı çözümler geliştiriyordu."
+    tags: ["29 girişim", "31 yatırım turu", "15,7 milyon dolar", "yüzde 70", "%70", "yazılım"]
+
+  - id: "itu_cekirdek_annual_support"
+    text: "İTÜ Çekirdek'in 2025 tarihli resmi açıklamasına göre kuluçka merkezi her yıl ortalama 500 startup'ı destekliyor. Başvuru, kabul ve yatırım ayrı aşamalardır; öğrencilik otomatik kabul veya finansman sağlamaz."
+    tags: ["500 startup", "kuluçka", "başvuru", "kabul"]

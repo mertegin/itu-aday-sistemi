@@ -1,0 +1,26 @@
+meta:
+  section: "İTÜ İngilizce hazırlık ve yeterlik"
+  source: "İTÜ Yabancı Diller Yüksekokulu"
+  source_url: "https://ydy.itu.edu.tr/programlar"
+  year: 2026
+  last_verified: "2026-07-16"
+  confidence: high
+  topics: ["english_prep", "curriculum"]
+  tags: ["hazırlık", "yeterlik", "proficiency", "muafiyet", "TOEFL", "PTE"]
+
+facts:
+  - id: "prep_flow_card"
+    text: "Hazırlık, İngilizce yeterlik/muafiyet sağlayamayan öğrenci için zorunlu. İngilizceni yeterli görüyorsan İTÜ Yeterlik Sınavı'na girersin; geçersen bölüme, geçemezsen en az 1, en çok 2 yarıyıl hazırlığa başlarsın. TOEFL iBT ve PTE de kabul edilen sınavlardandır."
+    answer_card: true
+    examples: ["İTÜ Yeterlik Sınavı", "TOEFL iBT", "PTE"]
+    source_urls:
+      - "https://ydy.itu.edu.tr/programlar"
+      - "https://ydy.itu.edu.tr/programlar/lisans-hazirlik-programi/yeterlik-sinavi"
+    tags: ["1", "2", "yarıyıl", "hazırlık atlama", "doğrudan bölüm"]
+
+  - id: "prep_proficiency_stages"
+    text: "İTÜ İngilizce Yeterlik Sınavı iki aşamalıdır; ikinci aşamaya geçmek için birinci aşamadan en az 25/50, ikinci aşamadan da en az 25/50 almak gerekir. Programın toplam geçme puanı öğrencinin programına göre değişebilir."
+    source_url: "https://ydy.itu.edu.tr/programlar/lisans-hazirlik-programi/yeterlik-sinavi"
+    examples: ["İTÜ İngilizce Yeterlik Sınavı"]
+    tags: ["2", "iki aşama", "25/50", "geçme puanı"]
+

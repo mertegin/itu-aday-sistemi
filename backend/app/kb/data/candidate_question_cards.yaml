@@ -1,0 +1,143 @@
+meta:
+  section: "Adayların sık sorduğu karar ve belirsizlik soruları"
+  source: "İTÜ resmî sayfaları"
+  year: "2025-2026"
+  last_verified: "2026-07-16"
+  confidence: high
+  tags: ["aday soruları", "tercih", "belirsizlik", "öğrenci desteği"]
+
+facts:
+  - id: "admission_compe_cutoff_card"
+    text: "İTÜ Bilgisayar 2025'te 533,14 puan ve yaklaşık 1.435 SAY sırasıyla kapattı; 2024 yaklaşık 1.348, 2023 yaklaşık 1.147 idi. Gelecek taban sıra kontenjan ve talebe göre oluşur; garanti edilemez."
+    answer_card: true
+    topics: ["ranking", "admission"]
+    examples: ["1.435", "1.348", "1.147"]
+    source: "YÖK Atlas"
+    source_url: "https://yokatlas.yok.gov.tr/"
+    tags: ["kaç bin", "taban sıralama", "puanı", "sınırda", "yeter mi", "kontenjan artarsa"]
+
+  - id: "admission_preference_strategy_card"
+    text: "Tercih sırası istek sırasıdır: üstteki tercih tutmazsa alttaki yanmaz. İTÜ Bilgisayar'ın 2025 tabanı yaklaşık 1.435'ti; adayın kendi SAY sırası bilinmeden 'kesin gelir' denemez, hedef-risk-güvenli seçenekler birlikte yazılmalıdır."
+    answer_card: true
+    topics: ["ranking", "admission"]
+    examples: ["1.435", "hedef-risk-güvenli"]
+    source: "ÖSYM yerleştirme kuralı ve YÖK Atlas"
+    source_urls:
+      - "https://www.osym.gov.tr/"
+      - "https://yokatlas.yok.gov.tr/"
+    tags: ["tercih etmeli miyim", "şansım", "sıralamam yeter", "kaçıncı tercih"]
+
+  - id: "teaching_quality_honesty_card"
+    text: "Bizim bölümümüzde 37 öğretim üyesi, 10 tam zamanlı öğretim görevlisi ve 18 laboratuvar var; her öğrenciye danışman atanıyor. 2026 öğrenci deneyiminde hocalarımızın İngilizcesi ve ders anlatımı genel olarak güçlü, iletişimleri erişilebilir değerlendiriliyor."
+    answer_card: true
+    topics: ["teaching_quality", "faculty", "student_wellbeing"]
+    examples: ["37 öğretim üyesi", "18 laboratuvar", "danışman"]
+    source: "İTÜ BBF resmî sayfası + öğrenci geri bildirimi"
+    source_url: "https://bbf.itu.edu.tr/ogrenciler/aday-ogrenciler"
+    tags: ["anlaşılır anlat", "hocaların ingilizcesi", "ders anlatımı", "ilgileniyor mu", "kalabalık sınıf"]
+
+  - id: "lab_access_honesty_card"
+    text: "Fakültemizde 18 araştırma laboratuvarı var. Lisans öğrencisi LÖKAP'a veya ilgili hocanın projesine katılıp hocayla görüşerek laboratuvarda çalışabiliyor; erişim otomatik değil, izin ve proje uyumu gerekiyor. Robotik Lab ekibinde 5 lisans öğrencisi örneği var."
+    answer_card: true
+    topics: ["technical_resources", "labs", "research_projects"]
+    examples: ["18 laboratuvar", "LÖKAP", "5 lisans öğrencisi"]
+    source: "İTÜ BBF ve İTÜ BAP resmî"
+    source_urls:
+      - "https://bbf.itu.edu.tr/ogrenciler/aday-ogrenciler"
+      - "https://bapsis.itu.edu.tr/GetDoc.ashx?ID=1207"
+    tags: ["ders dışında kullan", "öğrenciler laboratuvara", "robotik laboratuvar", "gpu", "cihaz"]
+
+  - id: "erasmus_course_recognition_card"
+    text: "Erasmus dersleri otomatik sayılmaz: 2 temel belge, OLA ve Tanınma Belgesi, bölüm/Erasmus koordinatörü onayıyla hazırlanır. Dönüşte karşı kurum transkripti gerekir; ders adı ve AKTS uyuşmazsa İTÜ transkriptine FF işlenebilir."
+    answer_card: true
+    topics: ["erasmus", "abroad"]
+    examples: ["OLA", "Tanınma Belgesi", "AKTS", "FF"]
+    source: "İTÜ Erasmus Ofisi ders saydırma kuralları"
+    source_url: "https://erasmus.itu.edu.tr/docs/librariesprovider15/default-document-library/ders-se%C3%A7im-s%C3%BCreci-ve-ders-sayd%C4%B1rma-i%C5%9Fleminde-takip-edilmesi-gereken-kurallardfedf9f7f3c64f54b0850afed2e220c1.pdf?sfvrsn=aa1b3887_0"
+    tags: ["dersler sayılır mı", "ders saydırma", "learning agreement", "tanınma"]
+
+  - id: "abroad_outcomes_honesty_card"
+    text: "İTÜ Bilgisayar mezunlarının Türkiye-yurt dışı dağılımı veya yurt dışı yüksek lisans kabul oranı yayımlanmıyor. Destekleyen somut zemin %100 İngilizce program, ABET, 2,50 GNO eşiğiyle Erasmus ve 18 araştırma laboratuvarıdır; kabul garantisi değildir."
+    answer_card: true
+    topics: ["abroad", "erasmus", "career_evidence", "research_projects"]
+    examples: ["%100 İngilizce", "ABET", "2,50 GNO", "18 laboratuvar"]
+    source: "İTÜ BBF ve Erasmus resmî"
+    source_urls:
+      - "https://bbf.itu.edu.tr/ogrenciler/aday-ogrenciler"
+      - "https://erasmus.itu.edu.tr/giden-%C3%B6%C4%9Frenci-personel-hareketlilikleri/ka131-program-%C3%BClkeleri/giden-%C3%B6%C4%9Frenciler/se%C3%A7im-kriterleri"
+    tags: ["yurt dışında çalış", "yüksek lisans kolay", "uluslararası itibar", "yurt dışına çık"]
+
+  - id: "career_guidance_card"
+    text: "Kariyer konusunda kararsız öğrenci Ayazağa'daki İTÜ Kariyer ve Staj Merkezi'ne başvurabilir. Merkez 2005'ten beri Kariyer Zirvesi düzenliyor; çarşamba Kariyer Atölyeleri, iş-staj ilanları, CV ve mülakat içerikleri sunuyor."
+    answer_card: true
+    topics: ["career", "career_evidence", "student_wellbeing"]
+    examples: ["Kariyer ve Staj Merkezi", "2005", "Kariyer Atölyeleri", "CV"]
+    source: "İTÜ Kariyer ve Staj Merkezi"
+    source_url: "https://ikm.itu.edu.tr/"
+    tags: ["kime danış", "kariyer günleri", "kariyer kararsız", "cv", "mülakat"]
+
+  - id: "career_name_not_enough_card"
+    text: "İTÜ adı tek başına iş garantisi değildir; güçlü sinyaller somuttur: bölüm araştırmasında %54 mezun olmadan işe başladı, 2024 Kariyer.net analizinde bölüm 79,2 puanla birinciydi. Sonucu proje, staj, İngilizce ve mülakat performansı belirler."
+    answer_card: true
+    topics: ["career", "career_evidence", "future_of_field"]
+    examples: ["%54", "79,2", "proje", "staj"]
+    source: "İTÜ BBF + İTÜ Haberler/Kariyer.net"
+    source_urls:
+      - "https://bbf.itu.edu.tr/ogrenciler/aday-ogrenciler"
+      - "https://haberler.itu.edu.tr/haberdetay/2025/07/09/itu-luler-is-hayatina-saglam-adimlarla-basliyor"
+    tags: ["adı iş buldurur", "garanti iş", "not kariyeri etkiler", "maaş düşer"]
+
+  - id: "clubs_sports_scale_card"
+    text: "BBF'de 5 bölüm kulübü ve 3 takım var; İTÜ genelinde kulüp ve proje takımları onlarca alana yayılıyor. 2025 üniversite verisinde 8 açık ve 6 kapalı spor alanı bulunuyor; takım seçimi branşa göre değişir."
+    answer_card: true
+    topics: ["clubs_teams", "student_social", "campus_life"]
+    examples: ["5 bölüm kulübü", "3 takım", "8 açık", "6 kapalı spor alanı"]
+    source: "İTÜ Öğrenci Faaliyetleri ve Sayılarla İTÜ"
+    source_urls:
+      - "https://ogrencifaaliyetleri.itu.edu.tr/"
+      - "https://sayilarla.itu.edu.tr/"
+    tags: ["spor takımı", "takıma seçilmek", "sosyal hayat canlı", "kulübe katıl"]
+
+  - id: "international_student_honesty_card"
+    text: "İTÜ'nün güncel sayfalarında Bilgisayar Mühendisliği özelinde uluslararası öğrenci sayısı yayımlanmıyor. Üniversite 31 Aralık 2025'te 37.210 aktif öğrenci bildiriyor; bölümün %100 İngilizce eğitimi uluslararası sınıf ortamını destekler, oran garantisi vermez."
+    answer_card: true
+    topics: ["student_social", "abroad"]
+    examples: ["37.210 aktif öğrenci", "%100 İngilizce"]
+    source: "İTÜ Hakkında ve İTÜ BBF resmî"
+    source_urls:
+      - "https://itu.edu.tr/hakkimizda"
+      - "https://bbf.itu.edu.tr/ogrenciler/aday-ogrenciler"
+    tags: ["uluslararası öğrenci", "yabancı öğrenci", "kaç öğrenci"]
+
+  - id: "itu_scale_comparison_card"
+    text: "İTÜ'nün ölçeği somut: 1773'ten beri, 37.210 aktif öğrenci ve 250.000+ mezun; Bilgisayar tarafında ABET, %100 İngilizce ve 18 laboratuvar var. Karşılaştırmada 'daha iyi' sonucu maliyet, kampüs ve hedef alana göre kurulmalıdır."
+    answer_card: true
+    topics: ["comparison", "differentiators", "abroad"]
+    examples: ["1773", "37.210", "250.000+", "18 laboratuvar"]
+    source: "İTÜ Hakkında + İTÜ BBF resmî"
+    source_urls:
+      - "https://itu.edu.tr/hakkimizda"
+      - "https://bbf.itu.edu.tr/ogrenciler/aday-ogrenciler"
+    tags: ["odtüden fark", "bilkent mi", "yıldız teknik mi", "uluslararası itibar"]
+
+  - id: "academic_recovery_honesty_card"
+    text: "Bölümün ders kalma oranı yayımlanmıyor; bir dersten kalmak tek başına kariyerin sonu değildir. Mezuniyet eşiği 2,00 GNO'dur; danışman, yaz öğretimi ve 7 yıllık azami süre toparlanma alanı sağlar, fakat ders açılışı garanti değildir."
+    answer_card: true
+    topics: ["academic_workload", "student_wellbeing", "graduation"]
+    examples: ["2,00 GNO", "7 yıl", "danışman", "yaz öğretimi"]
+    source: "İTÜ Lisans ve Yaz Öğretimi yönetmelikleri"
+    source_urls:
+      - "https://www.sis.itu.edu.tr/TR/mevzuat/lisans-yonetmelik.php?v=1.0.20"
+      - "https://www.sis.itu.edu.tr/TR/mevzuat/yaz-ogretimi-yonetmelik.php"
+    tags: ["dersten kalmak", "notlar düşük", "dünyanın sonu", "okulu uzat"]
+
+  - id: "candidate_fit_card"
+    text: "İTÜ Bilgisayar için 'dâhi' profili gerekmez; düzenli emek gerekir. Program dönem başına 30 AKTS, C ile sıfırdan başlangıç, grup projeleri ve 18 laboratuvar sunar. Merak, problem çözme ve üretme isteği iyi uyum sinyalleridir."
+    answer_card: true
+    topics: ["candidate_fit", "curriculum_beginner", "academic_workload"]
+    examples: ["30 AKTS", "C ile başlangıç", "grup projeleri", "18 laboratuvar"]
+    source: "İTÜ ÖBS ve İTÜ BBF resmî"
+    source_urls:
+      - "https://obs.itu.edu.tr/public/DersPlan/DersPlanDetay/2340"
+      - "https://bbf.itu.edu.tr/ogrenciler/aday-ogrenciler"
+    tags: ["bana uygun mu", "nasıl biri", "yaratıcı", "başarılı olabilir miyim", "mantıklı mı"]

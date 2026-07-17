@@ -1,0 +1,362 @@
+meta:
+  section: "İTÜ Bilgisayar Mühendisliği Öğretim Üyeleri"
+  source: "İTÜ Bilgisayar Mühendisliği Öğretim Üyeleri"
+  source_url: "https://bm.itu.edu.tr/personel/ogretim-uyeleri"
+  english_page_url: "https://bm.itu.edu.tr/en/staff/department-members"
+  static_source_url: "https://bm.itu.edu.tr/docs/librariesprovider92/assets/static_html_bm/staff__faculty_members_en.html"
+  last_verified: "2026-07-16"
+  year: 2026
+
+area_groups:
+  - id: "faculty_area_ai_data"
+    area: "Artificial Intelligence, Machine Learning, Deep Learning and Data Science"
+    text: >
+      İTÜ Bilgisayar Mühendisliği resmi öğretim üyesi sayfasında yapay zeka, makine öğrenmesi,
+      derin öğrenme, veri bilimi veya veri analitiğiyle ilişkili görünen isimler arasında
+      Burak Berk Üstündağ, Hazım Kemal Ekenel, Mehmet Keskinöz, Nizamettin Aydın, Ali Çakmak,
+      Ayşe Tosun Kühn, Mehmet Baysan, Yusuf Yaslan ve Muhammet Alkan yer alır.
+    tags: ["ai", "yapay zeka", "makine öğrenmesi", "machine learning", "deep learning", "derin öğrenme", "data science", "veri bilimi", "veri analitiği"]
+
+  - id: "faculty_area_vision_robotics"
+    area: "Computer Vision, Image Processing, Graphics, Robotics and 3D Vision"
+    text: >
+      Görüntü işleme, bilgisayarlı görü, grafik, robotik veya 3D vision hattında resmi sayfada
+      Hazım Kemal Ekenel, Mustafa Ersel Kamaşak, Uluğ Bayazıt, Gökhan İnce, İlkay Öksüz,
+      Yusuf Hüseyin Şahin ve Arda İnceoğlu gibi isimler görünür.
+    tags: ["computer vision", "bilgisayarlı görü", "görüntü işleme", "image processing", "robotik", "robotics", "3d vision", "graphics"]
+
+  - id: "faculty_area_networks_security"
+    area: "Computer Networks, Cybersecurity, Privacy and Distributed Systems"
+    text: >
+      Bilgisayar ağları, siber güvenlik, gizlilik, blockchain, sensör ağları veya dağıtık sistemler
+      tarafında resmi sayfada Abdül Halim Zaim, Deniz Turgay Altılar, Hacı Ali Mantar,
+      Şerif Bahtiyar, Gökhan Seçinti, Mehmet Tahir Sandıkkaya ve Sanem Kabadayı gibi isimler görünür.
+    tags: ["computer networks", "bilgisayar ağları", "ağ", "cybersecurity", "siber güvenlik", "privacy", "blockchain", "sensor networks", "distributed systems"]
+
+  - id: "faculty_area_health_bioinformatics"
+    area: "Bioinformatics, Health Informatics, Biomedical and Medical Imaging"
+    text: >
+      Sağlık teknolojileri, biyoinformatik, sağlık bilişimi, biyomedikal veya tıbbi görüntüleme ilgisi
+      için resmi sayfada Ali Çakmak, Mustafa Ersel Kamaşak, Nizamettin Aydın, İlkay Öksüz,
+      Mehmet Baysan, Yusuf Hüseyin Şahin ve Muhammet Alkan ile ilişkili araştırma alanları yer alır.
+    tags: ["sağlık", "tıp", "healthtech", "bioinformatics", "biyoinformatik", "health informatics", "sağlık bilişimi", "biomedical", "medical image", "tıbbi görüntüleme"]
+
+  - id: "faculty_area_software_systems"
+    area: "Software Engineering, Software Testing, Formal Verification, Computing Systems and Architectures"
+    text: >
+      Yazılım mühendisliği, yazılım testi, formal verification, edge computing, paralel hesaplama veya
+      bilgisayar mimarileri tarafında resmi sayfada Ayşe Tosun Kühn, Feza Buzluca, Tolga Ovatman,
+      Yavuz Köroğlu ve Ayşe Yılmazer gibi isimler görünür.
+    tags: ["software engineering", "yazılım mühendisliği", "software testing", "yazılım testi", "formal verification", "edge computing", "parallel computing", "computer architecture"]
+
+  - id: "faculty_area_nlp"
+    area: "Natural Language Processing"
+    text: >
+      Doğal dil işleme / NLP için resmi öğretim üyesi sayfasında Dilara Torunoğlu-Selamet'in
+      araştırma alanı Natural Language Processing olarak verilmiştir.
+    tags: ["nlp", "doğal dil işleme", "natural language processing", "dil modeli", "llm"]
+
+faculty_members:
+  - id: "faculty_abdul_halim_zaim"
+    name: "Abdül Halim Zaim"
+    title: "Prof. Dr."
+    role_group: "Computer Engineering Department"
+    research_areas: ["Computer Networks", "Cybersecurity", "AI-Powered Data Analytics and Modeling", "Internet of Things (IoT)", "Satellite Networks", "Optical Networks"]
+    profile_url: "https://akademi.itu.edu.tr/en/azaim"
+    email: "azaim@itu.edu.tr"
+
+  - id: "faculty_burak_berk_ustundag"
+    name: "Burak Berk Üstündağ"
+    title: "Prof. Dr."
+    role_group: "Computer Engineering Department"
+    research_areas: ["Artificial Intelligence", "Signal Processing", "Forecasting", "Agricultural Informatics"]
+    profile_url: "https://akademi.itu.edu.tr/en/bustundag"
+    email: "berk@berk.tc"
+
+  - id: "faculty_deniz_turgay_altilar"
+    name: "Deniz Turgay Altılar"
+    title: "Prof. Dr."
+    role_group: "Computer Engineering Department"
+    research_areas: ["Parallel Distributed Computing", "Real-Time Computing", "Sensor Networks", "Vehicular Networks"]
+    profile_url: "https://akademi.itu.edu.tr/en/altilar"
+    email: "altilar@itu.edu.tr"
+
+  - id: "faculty_haci_ali_mantar"
+    name: "Hacı Ali Mantar"
+    title: "Prof. Dr."
+    role_group: "Computer Engineering Department"
+    research_areas: ["Computer Networks", "Blockchain", "Software Defined Networks", "Security"]
+    profile_url: "https://akademi.itu.edu.tr/en/hamantar"
+    email: "hamantar@itu.edu.tr"
+
+  - id: "faculty_hazim_kemal_ekenel"
+    name: "Hazım Kemal Ekenel"
+    title: "Prof. Dr."
+    role_group: "Computer Engineering Department"
+    research_areas: ["Facial Image Processing", "Computer Vision", "Machine Learning", "Deep Learning"]
+    profile_url: "https://akademi.itu.edu.tr/en/ekenel"
+    email: "ekenel@itu.edu.tr"
+
+  - id: "faculty_mehmet_keskinoz"
+    name: "Mehmet Keskinöz"
+    title: "Prof. Dr."
+    role_group: "Computer Engineering Department"
+    research_areas: ["Data Analytics", "Deep Learning", "Biometric and Multimedia Security", "Financial AI"]
+    profile_url: "https://akademi.itu.edu.tr/en/keskinoz"
+    email: "keskinoz@itu.edu.tr"
+
+  - id: "faculty_mustafa_ersel_kamasak"
+    name: "Mustafa Ersel Kamaşak"
+    title: "Prof. Dr."
+    role_group: "Computer Engineering Department"
+    research_areas: ["Image Processing", "Signal Processing", "Biomedical", "Medical Instrumentation"]
+    profile_url: "https://akademi.itu.edu.tr/en/kamasak"
+    email: "kamasak@itu.edu.tr"
+
+  - id: "faculty_nizamettin_aydin"
+    name: "Nizamettin Aydın"
+    title: "Prof. Dr."
+    role_group: "Computer Engineering Department"
+    research_areas: ["Signal/Image Processing", "Health Informatics", "System-on-Chip", "Artificial Intelligence"]
+    profile_url: "https://akademi.itu.edu.tr/en/naydin"
+    email: "naydin@itu.edu.tr"
+
+  - id: "faculty_tolga_ovatman"
+    name: "Tolga Ovatman"
+    title: "Prof. Dr."
+    role_group: "Computer Engineering Department"
+    research_areas: ["Edge Computing", "State Machines", "Formal Verification"]
+    profile_url: "https://akademi.itu.edu.tr/en/ovatman"
+    email: "ovatman@itu.edu.tr"
+
+  - id: "faculty_ulug_bayazit"
+    name: "Uluğ Bayazıt"
+    title: "Prof. Dr."
+    role_group: "Computer Engineering Department"
+    research_areas: ["Image and Graphics Compression", "Deep Learning", "Computer Vision", "Computer Graphics"]
+    profile_url: "https://akademi.itu.edu.tr/en/ulugbayazit"
+    email: "ulugbayazit@itu.edu.tr"
+
+  - id: "faculty_serif_bahtiyar"
+    name: "Şerif Bahtiyar"
+    title: "Prof. Dr."
+    role_group: "Computer Engineering Department"
+    research_areas: ["Security", "Privacy", "Financial Systems", "Trust"]
+    profile_url: "https://akademi.itu.edu.tr/en/bahtiyars"
+    email: "bahtiyars@itu.edu.tr"
+
+  - id: "faculty_ali_cakmak"
+    name: "Ali Çakmak"
+    title: "Assoc. Prof. Dr."
+    role_group: "Computer Engineering Department"
+    research_areas: ["Bioinformatics", "Medical Informatics", "Applied Machine Learning", "Data Management"]
+    profile_url: "https://akademi.itu.edu.tr/en/alicakmak"
+    email: "ali.cakmak@itu.edu.tr"
+
+  - id: "faculty_ayse_tosun_kuhn"
+    name: "Ayşe Tosun Kühn"
+    title: "Assoc. Prof. Dr."
+    role_group: "Computer Engineering Department"
+    research_areas: ["AI for Software Engineering", "Software Engineering for AI", "Mining Software Repositories", "Software Testing"]
+    profile_url: "https://akademi.itu.edu.tr/en/tosunay"
+    email: "tosunay@itu.edu.tr"
+
+  - id: "faculty_feza_buzluca"
+    name: "Feza Buzluca"
+    title: "Assoc. Prof. Dr."
+    role_group: "Computer Engineering Department"
+    research_areas: ["Object-Oriented Software Design", "Measurement and Assessment of Software Quality"]
+    profile_url: "https://akademi.itu.edu.tr/en/buzluca"
+    email: "buzluca@itu.edu.tr"
+
+  - id: "faculty_gokhan_ince"
+    name: "Gökhan İnce"
+    title: "Assoc. Prof. Dr."
+    role_group: "Computer Engineering Department"
+    research_areas: ["Robotics", "Artificial Intelligence", "Human Computer Interaction", "Wearable Computing"]
+    profile_url: "https://akademi.itu.edu.tr/en/incegokh"
+    email: "gokhan.ince@itu.edu.tr"
+
+  - id: "faculty_gokhan_secinti"
+    name: "Gökhan Seçinti"
+    title: "Assoc. Prof. Dr."
+    role_group: "Computer Engineering Department"
+    research_areas: ["Ad-hoc Networks", "Wireless Communication", "Software-Defined Networks", "UAV Networks"]
+    profile_url: "https://akademi.itu.edu.tr/en/secinti"
+    email: "secinti@itu.edu.tr"
+
+  - id: "faculty_ilkay_oksuz"
+    name: "İlkay Öksüz"
+    title: "Assoc. Prof. Dr."
+    role_group: "Computer Engineering Department"
+    research_areas: ["Medical Image Analysis", "Time Series Analysis", "Computer Vision"]
+    profile_url: "https://akademi.itu.edu.tr/en/oksuzilkay"
+    email: "oksuzilkay@itu.edu.tr"
+
+  - id: "faculty_mehmet_baysan"
+    name: "Mehmet Baysan"
+    title: "Assoc. Prof. Dr."
+    role_group: "Computer Engineering Department"
+    research_areas: ["Data Science", "Bioinformatics", "Clinical Genomics", "Health Informatics"]
+    profile_url: "https://akademi.itu.edu.tr/en/baysanm"
+    email: "baysanm@itu.edu.tr"
+
+  - id: "faculty_yusuf_yaslan"
+    name: "Yusuf Yaslan"
+    title: "Assoc. Prof. Dr."
+    role_group: "Computer Engineering Department"
+    research_areas: ["Machine Learning", "Data Science", "Deep Learning", "Recommendation Systems"]
+    profile_url: "https://akademi.itu.edu.tr/en/yyaslan"
+    email: "yyaslan@itu.edu.tr"
+
+  - id: "faculty_ayse_yilmazer"
+    name: "Ayşe Yılmazer"
+    title: "Asst. Prof. Dr."
+    role_group: "Computer Engineering Department"
+    research_areas: ["GPGPU Computing", "High Performance Computer Architectures", "Accelerated Computing", "Parallel Computing"]
+    profile_url: "https://akademi.itu.edu.tr/en/yilmazerayse"
+    email: "yilmazerayse@itu.edu.tr"
+
+  - id: "faculty_mehmet_tahir_sandikkaya"
+    name: "Mehmet Tahir Sandıkkaya"
+    title: "Asst. Prof. Dr."
+    role_group: "Computer Engineering Department"
+    research_areas: ["Computer Security", "Cryptography", "Computer Networks"]
+    profile_url: "https://akademi.itu.edu.tr/en/sandikkaya"
+    email: "sandikkaya@itu.edu.tr"
+
+  - id: "faculty_sanem_kabadayi"
+    name: "Sanem Kabadayı"
+    title: "Asst. Prof. Dr."
+    role_group: "Computer Engineering Department"
+    research_areas: ["Sensor Networks", "Pervasive Computing", "Wireless Geolocation"]
+    profile_url: "https://akademi.itu.edu.tr/en/kabadayi"
+    email: "kabadayi@itu.edu.tr"
+
+  - id: "faculty_yavuz_koroglu"
+    name: "Yavuz Köroğlu"
+    title: "Asst. Prof. Dr."
+    role_group: "Computer Engineering Department"
+    research_areas: ["Software Testing and Verification"]
+    profile_url: "https://akademi.itu.edu.tr/en/yakoroglu"
+    email: "yakoroglu@itu.edu.tr"
+
+  - id: "faculty_yusuf_huseyin_sahin"
+    name: "Yusuf Hüseyin Şahin"
+    title: "Asst. Prof. Dr."
+    role_group: "Computer Engineering Department"
+    research_areas: ["3D Vision", "Deep Learning", "Medical Image Processing"]
+    profile_url: "https://akademi.itu.edu.tr/en/sahinyu"
+    email: "sahinyu@itu.edu.tr"
+
+  - id: "faculty_arda_inceoglu"
+    name: "Arda İnceoğlu"
+    title: "Lect. Dr."
+    role_group: "Computer Engineering Department"
+    research_areas: ["Robotics", "Deep Learning", "Computer Vision"]
+    profile_url: "https://akademi.itu.edu.tr/en/inceoglua"
+    email: "inceoglua@itu.edu.tr"
+
+  - id: "faculty_dilara_torunoglu_selamet"
+    name: "Dilara Torunoğlu-Selamet"
+    title: "Lect."
+    role_group: "Computer Engineering Department"
+    research_areas: ["Natural Language Processing"]
+    profile_url: "https://akademi.itu.edu.tr/en/torunoglud"
+    email: "torunoglud@itu.edu.tr"
+
+  - id: "faculty_muhammet_alkan"
+    name: "Muhammet Alkan"
+    title: "Lect. Dr."
+    role_group: "Computer Engineering Department"
+    research_areas: ["Data Science", "Deep Learning", "Clinical Decision Systems"]
+    profile_url: "https://akademi.itu.edu.tr/en/mualkan"
+    email: "mualkan@itu.edu.tr"
+
+  - id: "faculty_erke_aribas"
+    name: "Erke Arıbaş"
+    title: "Lect. Dr. (BIL Coordinator)"
+    role_group: "BIL Course Coordination Staff"
+    research_areas: []
+    profile_url: "https://akademi.itu.edu.tr/en/aribas"
+    email: "aribas@itu.edu.tr"
+
+  - id: "faculty_evren_daglarli"
+    name: "Evren Dağlarlı"
+    title: "Assoc. Prof. Dr."
+    role_group: "BIL Course Coordination Staff"
+    research_areas: []
+    profile_url: "https://akademi.itu.edu.tr/en/daglarli"
+    email: "daglarli@itu.edu.tr"
+
+  - id: "faculty_berfin_kalay"
+    name: "Berfin Kalay"
+    title: "Lect. Dr."
+    role_group: "BIL Course Coordination Staff"
+    research_areas: []
+    profile_url: "https://akademi.itu.edu.tr/en/kalay"
+    email: "kalay@itu.edu.tr"
+
+  - id: "faculty_dogu_sirt"
+    name: "Doğu Sırt"
+    title: "Lect. Dr."
+    role_group: "BIL Course Coordination Staff"
+    research_areas: []
+    profile_url: "https://akademi.itu.edu.tr/en/sirtd"
+    email: "sirtd@itu.edu.tr"
+
+  - id: "faculty_omer_ozyildirim"
+    name: "Ömer Özyıldırım"
+    title: "Lect. Dr."
+    role_group: "BIL Course Coordination Staff"
+    research_areas: []
+    profile_url: "https://akademi.itu.edu.tr/en/omerozyildirim/"
+    email: "omerozyildirim@itu.edu.tr"
+
+  - id: "faculty_esref_adali"
+    name: "Eşref Adalı"
+    title: "Prof. Dr."
+    role_group: "Part Time Faculty Members"
+    research_areas: []
+    profile_url: ""
+    email: "adali@itu.edu.tr"
+
+  - id: "faculty_ahmet_hamdi_kayran"
+    name: "Ahmet Hamdi Kayran"
+    title: "Prof. Dr."
+    role_group: "Part Time Faculty Members"
+    research_areas: []
+    profile_url: ""
+    email: "kayran@itu.edu.tr"
+
+  - id: "faculty_selin_metin_dogu"
+    name: "Selin Metin Doğu"
+    title: "Dr. (Orion Innovation Türkiye)"
+    role_group: "Part Time Faculty Members"
+    research_areas: []
+    profile_url: ""
+    email: "smetin@itu.edu.tr"
+
+  - id: "faculty_ethem_utku_aktas"
+    name: "Ethem Utku Aktaş"
+    title: "Dr. (Softtech)"
+    role_group: "Part Time Faculty Members"
+    research_areas: []
+    profile_url: ""
+    email: "utku.aktas@softtech.com.tr"
+
+  - id: "faculty_burak_saglam"
+    name: "Burak Sağlam"
+    title: "(Eteration)"
+    role_group: "Part Time Faculty Members"
+    research_areas: []
+    profile_url: ""
+    email: ""
+
+  - id: "faculty_alper_almelek"
+    name: "Alper Almelek"
+    title: ""
+    role_group: "Part Time Faculty Members"
+    research_areas: []
+    profile_url: ""
+    email: "almelek@itu.edu.tr"

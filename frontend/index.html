@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İTÜ Aday Sistemi</title>
+    <link rel="stylesheet" href="style.css?v=3">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+</head>
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <h2>İTÜ Aday Sistemi</h2>
+
+            <div class="session-card">
+                <div class="card-title">Aktif Session</div>
+                <div class="session-info">
+                    <div class="row"><span class="k">ID</span> <code id="sessionId">—</code></div>
+                    <div class="row"><span class="k">Aşama</span> <span id="fsmState" class="fsm-pill">Karşılama</span></div>
+                    <div class="row"><span class="k">Tur</span> <code id="turnCount">0</code></div>
+                </div>
+            </div>
+
+            <div class="session-card">
+                <div class="card-title">Aday Profili</div>
+                <div class="session-info">
+                    <div class="row"><span class="k">İsim</span> <code id="candName">—</code></div>
+                    <div class="row"><span class="k">YKS Sırası</span> <code id="yksRank">?</code></div>
+                    <div class="row"><span class="k">Risk Bandı</span> <span id="riskBand" class="risk-pill unknown">?</span></div>
+                    <div class="row"><span class="k">Motivasyon</span> <code id="motivation">—</code></div>
+                    <div class="row"><span class="k">Kararsızlık</span> <code id="indecisionMain">—</code></div>
+                    <div class="row"><span class="k">Aşama</span> <code id="decisionStage">keşif</code></div>
+                    <div class="row"><span class="k">Engagement</span> <code id="engagement">—</code></div>
+                </div>
+                <div id="constraintsRow" class="constraints-row" style="display:none">
+                    <div class="card-title" style="margin-top:10px">Bilinen Kısıtlar</div>
+                    <div id="constraintsList" class="constraints-list"></div>
+                </div>
+            </div>
+
+            <div class="session-card">
+                <div class="card-title">Hazır Senaryolar</div>
+                <select id="scenarioSelect" class="scenario-select">
+                    <option value="">— Senaryo seç —</option>
+                </select>
+                <button id="scenarioStartBtn" class="scenario-btn">▶ Senaryoyu Başlat</button>
+                <button id="scenarioNextBtn" class="scenario-btn next" style="display:none">⏵ Sonraki Mesaj (<span id="scenarioRemaining">0</span>)</button>
+            </div>
+
+            <div class="actions">
+                <button id="newSessionBtn" class="primary">+ Yeni Görüşme</button>
+                <button id="exportBtn" class="secondary">↓ Transcript İndir</button>
+                <a id="fsmDiagramLink" href="/fsm.html" target="_blank" class="button-link diagram-link">FSM Diyagramı →</a>
+                <a href="/stats.html" target="_blank" class="button-link diagram-link">Bandit İstatistikleri →</a>
+                <a href="/conversations.html" target="_blank" class="button-link diagram-link">Geçmiş Sohbetler →</a>
+                <button id="resetBtn" class="secondary">Session Sil</button>
+            </div>
+
+            <div class="sidebar-footer">
+                v0.2 · MVP · GPT-4o-mini
+            </div>
+        </aside>
+
+        <main class="chat">
+            <header class="chat-header">
+                <div>
+                    <div class="title">Neco · Tercih Danışmanı</div>
+                    <div class="subtitle">İTÜ Bilgisayar Mühendisliği aday danışmanlığı</div>
+                </div>
+                <div class="header-right">
+                    <span id="stageBadge" class="stage-badge">Karşılama</span>
+                    <div class="bot-avatar">N</div>
+                </div>
+            </header>
+
+            <div id="messages" class="messages"></div>
+
+            <form id="chatForm" class="input-row">
+                <input type="text" id="messageInput" placeholder="Mesajınızı yazın..." autocomplete="off" autofocus>
+                <button type="submit">Gönder</button>
+            </form>
+        </main>
+
+        <aside class="xai-panel">
+            <div class="xai-header">
+                <h3>Karar Açıklaması</h3>
+                <div class="xai-toggle">
+                    <button id="xaiModeSimple" class="toggle-btn active">Basit</button>
+                    <button id="xaiModeTech" class="toggle-btn">Teknik</button>
+                </div>
+            </div>
+            <div id="xaiContent" class="xai-content">
+                <p class="muted">İlk mesajı gönderdiğinizde bot'un neden bu şekilde cevap verdiği burada görünecek.</p>
+            </div>
+        </aside>
+    </div>
+
+    <script src="app.js?v=4"></script>
+</body>
+</html>

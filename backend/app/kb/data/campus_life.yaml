@@ -1,0 +1,44 @@
+meta:
+  section: "İTÜ kampüsleri ve Ayazağa yaşamı"
+  source: "İTÜ Tanıtım ve İTÜ Bilgisayar Mühendisliği resmi"
+  source_url: "https://tanitim.itu.edu.tr/kesfet/yerleskelerimiz"
+  year: 2026
+  last_verified: "2026-07-16"
+  confidence: high
+  topics: ["campus_life", "campus"]
+  tags: ["Ayazağa", "Maslak", "kampüs", "Bilgisayar Mühendisliği"]
+
+facts:
+  - id: "campus_compe_ayazaga_card"
+    text: "Bilgisayar Mühendisliği 1.600.000 m²'lik Ayazağa Kampüsü'nde; 7/24 Mustafa İnan Kütüphanesi, 5.100 kişilik stadyum, olimpik havuz ve metro var. 2026 öğrenci deneyiminde Selfish ile Med Çim öne çıkıyor; Bestra, Küçük Ev ve Unkapanı Pilavcısı yemek seçeneklerinden."
+    answer_card: true
+    examples: ["Mustafa İnan Kütüphanesi", "olimpik havuz", "İTÜ metro istasyonu", "Selfish", "Med Çim", "Bestra", "Küçük Ev", "Unkapanı Pilavcısı"]
+    source: "İTÜ Tanıtım ve İTÜ Bilgisayar resmi + öğrenci geri bildirimi"
+    source_urls:
+      - "https://tanitim.itu.edu.tr/kesfet/yerleskelerimiz"
+      - "https://bm.itu.edu.tr/iletisim"
+    tags: ["1600000", "1.600.000", "5100", "5.100", "7/24", "kütüphane", "stadyum", "havuz", "metro"]
+
+  - id: "campus_itu_locations"
+    text: "İTÜ'nün eğitim yaşamı Ayazağa, Gümüşsuyu, Maçka, Taşkışla ve Tuzla kampüslerine yayılır; Bilgisayar ve Bilişim Fakültesi ile Bilgisayar Mühendisliği Ayazağa-Maslak'tadır."
+    examples: ["Ayazağa", "Gümüşsuyu", "Maçka", "Taşkışla", "Tuzla"]
+    source_urls:
+      - "https://tanitim.itu.edu.tr/kesfet/yerleskelerimiz"
+      - "https://bm.itu.edu.tr/iletisim"
+    tags: ["kampüs seçenekleri", "fakülte", "konum"]
+
+  - id: "campus_ayazaga_student_services"
+    text: "Ayazağa Kampüsü'nde 75. Yıl Öğrenci Sosyal Merkezi, Mediko Sosyal Merkezi ve toplam 3.882 öğrenci kapasiteli 13 yurt bulunur."
+    examples: ["75. Yıl Öğrenci Sosyal Merkezi", "Mediko Sosyal Merkezi"]
+    tags: ["3882", "3.882", "13", "yurt", "sosyal merkez", "sağlık"]
+
+  - id: "campus_student_social_food_spots_2026"
+    label: "Ayazağa'da sosyalleşme ve günlük yaşam"
+    text: "2026 öğrenci deneyimine göre Ayazağa'da Selfish ve öğrencilerin çimlerde oturup sosyalleştiği Med Çim öne çıkar; tenis kortları da kullanılır. Bestra, Küçük Ev ve Unkapanı Pilavcısı yemek/tatlı seçeneklerindendir; kampüste Migros, A101 ve ŞOK bulunur."
+    answer_card: true
+    source: "Öğrenci geri bildirimi (kullanıcı tarafından sağlandı)"
+    year: 2026
+    confidence: medium
+    examples: ["Selfish", "Med Çim", "tenis kortları", "Bestra", "Küçük Ev", "Unkapanı Pilavcısı", "Migros", "A101", "ŞOK"]
+    topics: ["student_experience", "student_social", "campus_life", "dining"]
+    tags: ["sosyalleşme", "çim", "kafe", "tatlı", "market", "kampüste yemek"]

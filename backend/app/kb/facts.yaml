@@ -1,0 +1,344 @@
+# İTÜ Aday Sistemi — Bilgi Tabanı
+# Her fact: text (zorunlu), source, year, confidence (high|medium|low)
+# confidence: low → prompt'ta "(doğrulanmalı)" etiketiyle görünür; bot bu sayıyı "yaklaşık/topluluk verisi" diye çerçeveler.
+#
+# ⚠ DEMO ÖNCESİ: last_verified tarihine bak — sıralama/QS/maaş verileri her yıl değişir.
+
+meta:
+  last_verified: "2026-07-09"
+  verify_before_demo:
+    - "2025/2026 taban sıralamaları (YÖK Atlas'tan)"
+    - "QS 2026 sıralamaları"
+    - "Maaş verileri (topluluk anketleri)"
+    - "İTÜ Çekirdek istatistikleri"
+
+sections:
+  - title: "SIRALAMA-BÖLÜM REHBERİ (Türkiye YKS 2025)"
+    facts:
+      - text: "İlk 1.000 SAY → İTÜ Bilgisayar için GÜVENLİ bölge (taban ~1.435; asla 'sınırda' deme, rahat girer)."
+        source: "YÖK Atlas"
+        year: 2025
+        confidence: high
+      - text: "1.000-1.435 SAY → İTÜ Bilgisayar ulaşılabilir; 1.300+ için 'geçen yıl tabanı buradaydı, yakın takip iyi olur' çerçevesi kullan."
+        source: "YÖK Atlas"
+        year: 2025
+        confidence: high
+      - text: "1.435-2.000 SAY → Bilgisayar geçen yıl tabanının GERİSİNDE (dürüst söyle); İTÜ YZ-Veri (~1.947) güçlü alternatif."
+        source: "YÖK Atlas"
+        year: 2025
+        confidence: high
+      - text: "2.000-5.000 SAY → İTÜ Elektronik-Haberleşme (~2.126), Uçak (~2.235), Matematik (~3.495), Endüstri (~3.723), Uzay (~3.988), Kontrol-Otomasyon (~4.486)."
+        source: "YÖK Atlas"
+        year: 2025
+        confidence: high
+      - text: "5.000-10.000 SAY → İTÜ Makine (~6.106), Elektrik (~6.124), Gemi/İnşaat/Kimya bandı."
+        source: "YÖK Atlas"
+        year: 2025
+        confidence: high
+      - text: "TIP: en seçici devlet tıpları ~5.000-15.000 SAY (Cerrahpaşa/Hacettepe/İstanbul Tıp bu aralıkta); orta tıplar 20.000-50.000 SAY. 1.000-2.000 sıralaması TIP için FAZLASIYLA yeterli — o sıralamada aday zaten tıp kazanır. Sıralaması iyi bir aday 'tıp mı mühendislik mi' ikilemi yaşıyorsa bu ALAN tercihi ikilemidir, 'puan yetip yetmemesi' değil."
+        source: "YÖK Atlas"
+        year: 2025
+        confidence: high
+      - text: "Sıralamayı yorumlarken küçük sayı = daha üstün. 1.000 < 5.000; 1.000 daha iyi."
+        source: "tanım"
+        year: 2025
+        confidence: high
+      - text: "TERCİH LİSTESİ STRATEJİSİ: YKS yerleştirme sisteminde en çok istediğin bölümü üst sıraya yazmak kaybettirmez — yerleştirme tercih sırana ve puanına göre yapılır, 'tutmayan üst tercih' alt tercihlerini etkilemez. Bu yüzden İTÜ Bilgisayar'ı istiyorsan listenin en üstüne yazması risksizdir; altına sıralamana uygun güvenli seçenekler eklenir. Kesin liste tavsiyesi verme, bu genel kuralı anlat ve rehber öğretmene danışmasını öner."
+        source: "ÖSYM yerleştirme kuralı — genel bilgi"
+        year: 2025
+        confidence: high
+
+  - title: "İTÜ BİLGİSAYAR MÜHENDİSLİĞİ"
+    facts:
+      - text: "2025 taban puan/sıra: 533,14 / ~1.435 (2024: ~1.348, 2023: ~1.147)."
+        source: "YÖK Atlas"
+        year: 2025
+        confidence: high
+      - text: "%100 İngilizce eğitim; ABET akrediteli; devlet üniversitesi olduğu için ücretsiz."
+        source: "İTÜ resmi"
+        year: 2025
+        confidence: high
+      - text: "Kontenjan ~105 ve her yıl kontenjan tamamen doluyor (yüksek talep)."
+        source: "YÖK Atlas"
+        year: 2025
+        confidence: high
+      - text: "Güncel fakülte sayfasında 37 öğretim üyesi (19 profesör, 11 doçent, 7 doktor öğretim üyesi), 10 tam zamanlı öğretim görevlisi ve 18 araştırma laboratuvarı yer alır; ayrıca 53 araştırma görevlisi bildirilir."
+        source: "İTÜ BBF web"
+        year: 2025
+        confidence: medium
+      - text: "Donanım/sistem çekirdeği güçlü: Digital Circuits, Logic Lab, Microprocessor Systems, Computer Architecture, Electronics+lab."
+        source: "İTÜ müfredat"
+        year: 2025
+        confidence: high
+      - text: "ABD üniversiteleriyle çift diploma (SUNY Bilişim Sistemleri) + Erasmus imkânı."
+        source: "İTÜ resmi"
+        year: 2025
+        confidence: high
+      - text: "İki yarıyıllık capstone: Computer Engineering Design I & II (BLG 4901E + 4902E)."
+        source: "İTÜ müfredat"
+        year: 2025
+        confidence: high
+
+  - title: "İTÜ DİĞER BÖLÜMLER (2025 taban sıraları)"
+    facts:
+      - text: "Yapay Zeka ve Veri Müh: ~1.947 · Elektronik-Haberleşme: ~2.126 · Uçak: ~2.235 · Matematik: ~3.495 · Endüstri: ~3.723 · Uzay: ~3.988 · Kontrol-Otomasyon: ~4.486 · Makine: ~6.106 · Elektrik: ~6.124."
+        source: "YÖK Atlas"
+        year: 2025
+        confidence: high
+      - text: "Siber Güvenlik Müh. ayrı lisans bölümü olarak yalnızca İTÜ'de var (2024'te açıldı; güncel taban sırasını teyit et)."
+        source: "İTÜ resmi"
+        year: 2024
+        confidence: medium
+      - text: "Yapay Zeka ve Veri Müh. lisans programı yalnızca İTÜ ve YTÜ'de; diğer büyük üniversitelerde AI lisansüstü düzeyde."
+        source: "YÖK Atlas"
+        year: 2025
+        confidence: medium
+
+  - title: "BÖLÜM, HOCALAR, LABORATUVARLAR VE PROGRAMLAR"
+    topics: ["faculty", "labs", "curriculum", "gamedev", "healthtech"]
+    tags: ["hoca", "öğretim üyesi", "laboratuvar", "araştırma", "oyun", "sağlık", "biyoinformatik"]
+    facts:
+      - id: "faculty_official_page"
+        text: "Bilgisayar Mühendisliği öğretim üyeleri için kesin isim ve unvan bilgisi resmi 'Öğretim Üyeleri' sayfasından doğrulanmalı; RAG'de isim yoksa hoca adı uydurma."
+        source: "İTÜ Bilgisayar Müh. resmi"
+        year: 2026
+        confidence: high
+        topics: ["faculty"]
+        tags: ["öğretim üyeleri", "akademik kadro", "hocalar"]
+      - id: "compe_research_areas"
+        text: "Bölümün araştırma alanları arasında bilgisayar ağları, bilgisayarlı görü, doğal dil işleme, makine öğrenmesi, veri madenciliği, yapay zeka, robotik, biyoinformatik ve yazılım modelleme gibi başlıklar yer alır."
+        source: "İTÜ Bilgisayar Müh. resmi"
+        year: 2026
+        confidence: high
+        topics: ["faculty", "labs", "curriculum"]
+        tags: ["araştırma alanları", "ai", "robotics", "bioinformatics", "nlp"]
+      - id: "compe_labs_overview"
+        text: "Fakültede 18 araştırma laboratuvarı bulunur; AI Sistemleri, Veri Analitiği, Doğal Dil İşleme, Görsel Zekâ, Biyoinformatik, Sağlık Bilişimi, Robotik, Siber Güvenlik ve Oyun gibi alanlarda çalışmalar vardır."
+        source: "İTÜ BBF / bölüm web"
+        year: 2026
+        confidence: medium
+        topics: ["labs", "faculty", "healthtech"]
+        tags: ["laboratuvar", "sağlık bilişimi", "biyoinformatik", "robotik"]
+      - id: "healthtech_labs"
+        text: "Sağlık teknolojisi ilgisi için bölüm/lab düzeyinde Biyoinformatik ve Sağlık Bilişimi başlıkları özellikle ilişkilidir; bunu tıp yerine kesin alternatif diye değil, kesişim alanı diye anlat."
+        source: "İTÜ BBF / bölüm web"
+        year: 2026
+        confidence: medium
+        topics: ["healthtech", "labs"]
+        tags: ["tıp", "sağlık", "biyoinformatik", "sağlık bilişimi"]
+      - id: "game_tech_grad_program"
+        text: "Oyun ve Etkileşim Teknolojileri İTÜ'de lisans programı/bölümü olarak değil, lisansüstü program başlığı olarak çerçevelenmelidir; lisans adayı için Bilgisayar Mühendisliği + kulüp/proje/lab yolu anlat."
+        source: "İTÜ Lisansüstü Eğitim Enstitüsü"
+        year: 2026
+        confidence: high
+        topics: ["gamedev", "curriculum"]
+        tags: ["oyun teknolojileri", "oyun", "lisansüstü", "kulüp"]
+      - id: "double_major_caution"
+        text: "Çift anadal/yandal sorularında kesin 'yapabilirsin' deme; kontenjan, not ortalaması ve güncel yönerge şartları Öğrenci İşleri/ilgili fakülte sayfasından doğrulanmalıdır."
+        source: "İTÜ Öğrenci İşleri / yönergeler"
+        year: 2026
+        confidence: high
+        topics: ["curriculum"]
+        tags: ["çift anadal", "çap", "yandal", "ortalama"]
+
+  - title: "QS SIRALAMALARI (2026)"
+    facts:
+      - text: "QS Genel: ODTÜ 269 · İTÜ 298 · Koç 323 · Boğaziçi 371. (ODTÜ genelde İTÜ'nün önünde — sorulursa dürüstçe kabul et.)"
+        source: "QS 2026"
+        year: 2026
+        confidence: high
+      - text: "QS Mühendislik & Teknoloji: İTÜ 91 (dünyada ilk 100'deki tek Türk üniversitesi) · ODTÜ 103 · Boğaziçi 236 · Koç 267."
+        source: "QS 2026"
+        year: 2026
+        confidence: high
+      - text: "QS Bilgisayar Bilimi: İTÜ 152. THE Bilgisayar Bilimi: 251-300 bandı."
+        source: "QS/THE"
+        year: 2026
+        confidence: medium
+      - text: "CS 2025 taban karşılaştırma: ODTÜ ~1.204 · İTÜ ~1.435 · Boğaziçi ~1.448 · Koç burslu ~113 (Koç %50/ücretli kontenjanlar çok daha düşük tabanlı ve ÜCRETLİ; İTÜ devlet → ücretsiz) · YTÜ ~7.395 (Türkçe ağırlıklı)."
+        source: "YÖK Atlas"
+        year: 2025
+        confidence: high
+
+  - title: "İNGİLİZCE HAZIRLIK & YETERLİK"
+    topics: ["curriculum"]
+    tags: ["hazırlık", "ingilizce", "yeterlik", "atlama", "proficiency"]
+    facts:
+      - text: "İngilizce yeterlik veya kabul edilen muafiyet koşulunu sağlayamayan öğrenci hazırlık okur; İTÜ Yeterlik Sınavı'nı geçen ya da kabul edilen TOEFL iBT/PTE sonucunu sunan öğrenci doğrudan bölümüne başlar."
+        source: "İTÜ Yabancı Diller Yüksekokulu"
+        source_url: "https://ydy.itu.edu.tr/programlar"
+        year: 2026
+        confidence: high
+
+  - title: "GİRİŞİMCİLİK & KARİYER"
+    facts:
+      - text: "Ana kampüs Ayazağa (Maslak) — İstanbul'un teknoloji/finans merkezi; içinde ARI Teknokent (yüzlerce teknoloji firması)."
+        source: "İTÜ resmi"
+        year: 2025
+        confidence: high
+      - text: "2026 İTÜ Kariyer Zirvesi dört kampüs ve 11 birimde düzenlendi; resmi katılımcı görselinde Turkcell, Türk Hava Yolları, Siemens, ASELSAN, Bosch, Toyota, Akbank, Garanti BBVA, STM, Token ve Argela gibi şirketler yer aldı."
+        source: "İTÜ Kariyer Zirvesi resmi"
+        source_url: "https://itukariyerzirvesi.itu.edu.tr/"
+        year: 2026
+        confidence: high
+      - text: "ARI Teknokent Ayazağa Kampüsü'nün içindedir; Kariyer Zirvesi de şirket stantları, CV paylaşımı ve mülakat simülasyonlarıyla öğrenci-işveren temasını kampüse taşır."
+        source: "İTÜ ARI Teknokent + İTÜ Kariyer Zirvesi"
+        source_url: "https://itukariyerzirvesi.itu.edu.tr/"
+        year: 2026
+        confidence: high
+
+  - title: "İTÜ'YÜ SEÇERSEN KAZANIMLARIN (fark/kazanım/eşsizlik soruları — SAYILARLA cevapla)"
+    topics: ["comparison"]
+    tags: ["fark", "kazanç", "avantaj", "eşsiz", "neden itü", "ne kazanırım"]
+    facts:
+      - text: "SAYILARLA İTÜ farkı — genel konuşma yerine kaynaklı kartlardan 2-3'ünü kullan: QS Mühendislik&Teknoloji dünya 91. · devlet/ücretsiz eğitim · 37 öğretim üyesi + 10 tam zamanlı öğretim görevlisi + 18 araştırma laboratuvarı · İTÜ Çekirdek 5.000+ girişim ve 325M$+ yatırım · 250+ yıllık ekol (1773) · ABET + %100 İngilizce."
+        source: "QS 2026 + İTÜ resmi + UBI Global"
+        year: 2026
+        confidence: high
+      # (Hoca örnekleri data/faculty_members.yaml'da RESMİ kaynaklı ve alan-gruplu —
+      #  buradaki gözlem-bazlı tekrar kart kaldırıldı.)
+
+  - title: "KALİTE KANITLARI (aday 'kaliteli mi / gerçekten iyi mi / değer mi' diye sorunca)"
+    topics: ["comparison", "curriculum"]
+    tags: ["kalite", "kaliteli", "eğitim kalitesi", "iyi mi", "değer mi", "memnun"]
+    facts:
+      - text: "İTÜ Bilgisayar'ın eğitim kalitesi kanıtları: QS Mühendislik & Teknoloji dünya 91., doğrudan ABET akreditasyonu, %100 İngilizce, 37 öğretim üyesi + 10 tam zamanlı öğretim görevlisi ve 18 araştırma laboratuvarı. Devlet okulu-kalite ilişkisinde bu ölçülebilir göstergeleri kullan."
+        source: "QS 2026 + ABET + İTÜ resmi"
+        year: 2026
+        confidence: high
+      - text: "Öğrenci memnuniyeti yüksek; zorlayıcı ama itibarı, AI odağı ve kariyer fırsatları öne çıkıyor. Dürüst not: yoğun talep nedeniyle bazı dönem lab/derslik sıkışıklığı olabildiği de öğrencilerce dile getiriliyor."
+        source: "öğrenci geri bildirimi"
+        year: 2025
+        confidence: medium
+
+  - title: "KAMPÜS & ÖĞRENCİ YAŞAMI"
+    facts:
+      - text: "SOSYAL HAYAT dengesi: bölüm yoğun ve sınav haftaları planlama ister. BBF resmî sayfasında 5 bölüm kulübü ve 3 öğrenci takımı listelenir; hazırlık öğrencilerinin güncel katılım koşulları ilgili kulüpten teyit edilmelidir."
+        source: "İTÜ resmi + öğrenci deneyimi"
+        year: 2025
+        confidence: medium
+      - text: "BBF'nin resmî sayfasındaki 5 bölüm kulübü: Yapay Zekâ, Blockchain Technologies, Oyun Tasarlama ve Geliştirme, İTÜ ACM ve GDG on Campus; ayrıca W-TECH, DATABEES ve VCAMP adlı 3 takım tanıtılır. Üniversite genelinde başka kulüp ve takımlar da vardır."
+        source: "İTÜ resmi"
+        year: 2025
+        confidence: medium
+      - text: "Proje takımı başarıları: İTÜ Autobee otonom gemide dünya 1.si; Teknofest 2023'te 11 ödül. CS-odaklı takımlar: AnthRo (insansı robotik), YONGA (çip/RISC-V), Rover."
+        source: "İTÜ haber"
+        year: 2023
+        confidence: medium
+      - text: "Ayazağa Kampüsü'nde İTÜ'nün resmi tanıtım sayfasına göre toplam 3.882 öğrenci kapasiteli 13 yurt bulunur; başarı ödülündeki yurt imkanları derece ve yerleştirme koşullarına göre değişir."
+        source: "İTÜ resmi"
+        source_url: "https://tanitim.itu.edu.tr/kesfet/yerleskelerimiz"
+        year: 2026
+        confidence: high
+      # (Burs tutarları data/financial_support.yaml'da rank-dilimli ve KESİN — buradaki
+      #  eski "rakam verme" yönergesi kaldırıldı, kesin verilerle çelişiyordu.)
+
+  - title: "DÜRÜST TAVİZLER (aday 'İTÜ'nün kötü/geride olduğu bir şey söyle' derse YALNIZCA bunlardan seç — uydurma taviz verme)"
+    facts:
+      - text: "QS GENEL sıralamada ODTÜ İTÜ'nün önünde (269 < 298) — kabul et, sonra Müh&Tek 91'e geç."
+        source: "QS 2026"
+        year: 2026
+        confidence: high
+      - text: "Bilgisayar taban sıralamasında ODTÜ bir tık daha seçici (~1.204 < ~1.435)."
+        source: "YÖK Atlas"
+        year: 2025
+        confidence: high
+      - text: "Yoğun talep nedeniyle bazı dönemlerde lab/derslik kaynak sıkışıklığı olabildiği öğrenciler tarafından dile getiriliyor."
+        source: "öğrenci geri bildirimi"
+        year: 2025
+        confidence: medium
+      - text: "İstanbul'un yaşam maliyeti ve trafiği Ankara'ya göre yüksek — kampüs Maslak'ta olsa da şehir pahalı."
+        source: "genel bilgi"
+        year: 2025
+        confidence: medium
+      - text: "Kalabalık devlet üniversitesi gerçeği: bazı zorunlu derslerde sınıflar büyük; birebir hoca ilgisi Koç gibi butik üniversitelerden daha zor."
+        source: "genel bilgi"
+        year: 2025
+        confidence: medium
+      - text: "Koç tam burslu paketi (burs+yurt+harçlık) maddi açıdan çok güçlü bir teklif — adayın elinde varsa bunu küçümseme, ciddi bir alternatif olarak kabul et."
+        source: "genel bilgi"
+        year: 2025
+        confidence: medium
+      - text: "Boğaziçi'nin sosyal bilimler/liberal arts çeşitliliği ve kampüs kültürü kendine özgü güçlü — 'her şeyde İTÜ önde' deme."
+        source: "genel bilgi"
+        year: 2025
+        confidence: medium
+      - text: "YANLIŞ TAVİZ UYARISI: 'ODTÜ daha köklü' DEME — İTÜ 1773 kuruluşlu (ODTÜ 1956); köklülük İTÜ'nün güçlü yanıdır, taviz konusu değildir."
+        source: "İTÜ resmi"
+        year: 2025
+        confidence: high
+
+  - title: "YAZILIM MÜH. vs BİLGİSAYAR MÜH. (sık soru)"
+    topics: ["curriculum", "software_vs_compe"]
+    facts:
+      - text: "İTÜ'de lisans düzeyinde ayrı bir 'Yazılım Mühendisliği' bölümü YOK — yazılım eğitimi Bilgisayar Mühendisliği çekirdeğinin içindedir (Software Engineering dersi + Data Structures, Algorithms, Database, OS + yazılım ağırlıklı teknik seçmeliler)."
+        source: "İTÜ müfredat"
+        year: 2025
+        confidence: high
+      - text: "Kavramsal fark: Yazılım Müh. programları yazılım geliştirme yaşam döngüsüne odaklanır (gereksinim, tasarım, test, bakım, proje yönetimi); Bilgisayar Müh. bunun üstüne donanım, bilgisayar mimarisi, işletim sistemleri, ağlar ve algoritma teorisini ekleyen daha geniş bir temel verir."
+        source: "genel bilgi"
+        year: 2025
+        confidence: high
+      - text: "Türkiye'de Yazılım Müh. lisansı daha çok bazı vakıf ve yeni devlet programlarında var; sektörde her iki bölümün mezunu da 'yazılım mühendisi' rollerinde çalışır — işe alımda bölüm adından çok beceri ve portfolyo belirleyicidir."
+        source: "genel bilgi"
+        year: 2025
+        confidence: medium
+
+  - title: "ÜNİVERSİTE KARŞILAŞTIRMA EK (Boğaziçi / Sabancı / YTÜ)"
+    topics: ["comparison"]
+    facts:
+      - text: "KARŞILAŞTIRMA ÖNCELİĞİ (yönerge): İTÜ'yü savunurken sırayla şu kartları öne çıkar — 1) QS Mühendislik&Teknoloji 91, 2) 37 öğretim üyesi + 10 tam zamanlı öğretim görevlisi + 18 araştırma laboratuvarı, 3) ABET + %100 İngilizce + devlet/ücretsiz, 4) Çekirdek + ARI Teknokent ekosistemi. Müfredat yapısını yalnız adayın ilgisine bağlayarak kullan."
+        source: "strateji yönergesi"
+        year: 2025
+        confidence: high
+      - text: "Boğaziçi CS: 2025 taban ~1.448 (İTÜ ~1.435 ile başabaş); QS genel 371 (İTÜ 298); müfredatı daha yazılım/teori ağırlıklı, donanım-sistem ders yükü İTÜ'den az. Kampüs kültürü ve sosyal bilim çeşitliliği kendine özgü güçlü."
+        source: "YÖK Atlas + QS 2026"
+        year: 2025
+        confidence: high
+      - text: "Sabancı: vakıf üniversitesi (ücretli; burslu kontenjanlar seçici). Ayırt edici yapısı: öğrenciler bölüme değil üniversiteye girer, ilk yıllar ortak temel eğitim sonrası diploma alanı seçilir — bölüm kararsızlığı yaşayan adaya esneklik sunar. Taban/QS sayıları için güncel kaynağa bak, ezberden sayı verme."
+        source: "genel bilgi — sayılar teyit edilmeli"
+        year: 2025
+        confidence: medium
+      - text: "YTÜ Bilgisayar: 2025 taban ~7.395; eğitim dili Türkçe (%30 İngilizce); MÜDEK akrediteli; Davutpaşa kampüsünde büyük bir teknopark ekosistemi var. İngilizce hazırlıktan çekinen veya bu sıralama bandındaki aday için güçlü devlet alternatifi."
+        source: "YÖK Atlas"
+        year: 2025
+        confidence: medium
+      - text: "Devlet-devlet karşılaştırmada (İTÜ vs YTÜ): İTÜ daha seçici tabanlı, %100 İngilizce ve doğrudan ABET; YTÜ Türkçe ağırlıklı eğitim ister ve daha erişilebilir tabanlıdır. İkisi de köklü teknik okuldur — adayın diline/sıralamasına göre dürüst yönlendir."
+        source: "YÖK Atlas + kurum bilgisi"
+        year: 2025
+        confidence: high
+
+  - title: "BİLGİSAYAR MÜHENDİSLİĞİNİN GELECEĞİ & YAPAY ZEKÂ (sık kaygı)"
+    topics: ["future_of_field", "career"]
+    facts:
+      - text: "Yapay zekâ, bilgisayar mühendisliğinin bir alt alanıdır — AI sistemlerini tasarlayan, eğiten, ölçekleyen ve güvenli kılan mühendislerin çekirdek eğitimi bilgisayar mühendisliğidir. 'AI geldi, CompE bitti' kurgusu tersinedir: AI dalgası CompE temelli mühendis talebini besliyor."
+        source: "kavramsal — alan tanımı"
+        year: 2025
+        confidence: high
+      - text: "ABD BLS projeksiyonu: yazılım geliştirici istihdamı 2023-2033 arasında %17,9 büyüme (tüm mesleklerin ortalamasının çok üzerinde). Bu projeksiyon AI araçlarının yaygınlaştığı dönemde yayımlandı."
+        source: "US BLS"
+        year: 2024
+        confidence: high
+      - text: "AI kod asistanları geliştirme pratiğini değiştiriyor: rutin kodlama kısmen otomatikleşirken sistem tasarımı, algoritmik düşünme, güvenlik, veri ve AI sistemleri kurma becerilerinin değeri artıyor. Temeli güçlü mühendis için bu bir tehdit değil kaldıraç — ama kesin gelecek tahmini kimse veremez, bunu dürüstçe söyle."
+        source: "sektör gözlemi — dengeli çerçevele"
+        year: 2025
+        confidence: medium
+      - text: "Tarihsel perspektif: derleyiciler, hazır kütüphaneler ve IDE'ler de 'programcılığı bitireceği' söylenen otomasyon dalgalarıydı; pratikte işin doğasını değiştirip mühendis talebini artırdılar. Benzetme kur ama garanti verme."
+        source: "genel bilgi"
+        year: 2025
+        confidence: medium
+
+  - title: "MAAŞ & İSTİHDAM (İTÜ'ye özgü DEĞİL — genel proxy; 'topluluk verisi' diye çerçevele)"
+    facts:
+      - text: "Yazılım mühendisliği Türkiye'de en yüksek başlangıç maaşlı alanlardan; İstanbul giriş seviyesi medyanı ~985 bin TL/yıl."
+        source: "topluluk anketi"
+        year: 2025
+        confidence: low
+      - text: "ABD BLS: yazılım istihdamı 2023-2033 %17,9 büyüme (meslek ortalamasının çok üzerinde)."
+        source: "US BLS"
+        year: 2024
+        confidence: high
+      - text: "Bilişim, Türkiye'de en yüksek istihdam oranlı alanlardan (TÜİK 2024 proxy ~%78,7). İTÜ'ye özgü kesin oran kamuya açık değil — İTÜ oranıymış gibi sunma."
+        source: "TÜİK"
+        year: 2024
+        confidence: medium

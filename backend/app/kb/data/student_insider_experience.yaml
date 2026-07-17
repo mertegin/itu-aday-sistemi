@@ -1,0 +1,144 @@
+meta:
+  section: "İTÜ Bilgisayar öğrenci deneyimi ve içeriden yaşam"
+  source: "İTÜ resmî sayfaları + 2026 öğrenci geri bildirimi"
+  year: 2026
+  last_verified: "2026-07-16"
+  confidence: medium
+  tags: ["öğrenci deneyimi", "bizim bölümümüz", "fakültemiz", "kampüsümüz"]
+
+facts:
+  - id: "insider_faculty_interest_card"
+    label: "Hocaların öğrenci ilgisi"
+    text: "Evet, bizim bölümümüzde hocalarımızla yalnız derste değil, proje ve danışmanlık için de iletişim kurulabiliyor. Her öğrenciye danışman hoca atanıyor; öğrenci deneyiminde Burak Berk Üstündağ gibi hocaların e-postayla ve birebir görüşmeyle yardımcı olduğu özellikle aktarılıyor."
+    answer_card: true
+    topics: ["teaching_quality", "faculty", "research_projects", "student_experience"]
+    examples: ["Burak Berk Üstündağ", "e-posta", "danışman hoca"]
+    source: "İTÜ BBF resmî + öğrenci geri bildirimi"
+    source_urls:
+      - "https://bbf.itu.edu.tr/ogrenciler/aday-ogrenciler"
+      - "https://bm.itu.edu.tr/personel/ogretim-uyeleri"
+    tags: ["hocalar ilgili mi", "öğrencilere karşı ilgili", "öğrencilerle ilgileniyor", "hoca desteği"]
+
+  - id: "insider_faculty_course_support_card"
+    label: "Ders desteği için hocaya ulaşma"
+    text: "Ders desteği gerektiğinde önce dersin hocasına kurumsal e-postasından ulaşabilir, anlamadığın konuyu veya denediğin çözümü somut biçimde paylaşabilirsin; bölüm sitesinde iletişim adresleri açık. Danışman hocan ikinci bir kanal; öğrenci deneyiminde Burak Berk Üstündağ gibi hocalarla e-posta ve birebir görüşme üzerinden destek alınabildiği aktarılıyor, ancak her mesaja anlık dönüş garantisi yok."
+    answer_card: true
+    topics: ["faculty", "teaching_quality", "student_experience"]
+    examples: ["kurumsal e-posta", "danışman hoca", "Burak Berk Üstündağ", "birebir görüşme"]
+    source: "İTÜ Bilgisayar öğretim üyeleri sayfası + öğrenci geri bildirimi"
+    source_url: "https://bm.itu.edu.tr/personel/ogretim-uyeleri"
+    year: 2026
+    confidence: medium
+    tags: ["ders desteği", "hocadan destek", "konuyu anlamadım", "ders için hocaya ulaşmak"]
+
+  - id: "insider_teaching_english_card"
+    label: "Hocaların ders anlatımı ve İngilizcesi"
+    text: "İTÜ Bilgisayar %100 İngilizce; 2026 öğrenci deneyiminde hocalarımızın İngilizcesi ve ders anlatımı genel olarak güçlü değerlendiriliyor. Teknik terimler ilk haftalarda zorlayabilse de İngilizce dersleri takip etme becerisi zamanla gelişiyor."
+    answer_card: true
+    topics: ["teaching_quality", "english_prep", "faculty", "student_experience"]
+    examples: ["%100 İngilizce", "hocalarımız", "teknik terimler"]
+    source: "İTÜ BBF resmî + öğrenci geri bildirimi"
+    source_urls:
+      - "https://bbf.itu.edu.tr/ogrenciler/aday-ogrenciler"
+      - "https://bm.itu.edu.tr/personel/ogretim-uyeleri"
+    tags: ["hocaların ingilizcesi", "ders anlatımı", "ingilizce dersi anlama", "hocalar iyi anlatıyor mu"]
+
+  - id: "insider_lab_access_card"
+    label: "Laboratuvar erişimi ve hocayla proje"
+    text: "Fakültemizde 18 araştırma laboratuvarı var. 2026 öğrenci deneyimine göre lisans öğrencileri laboratuvarı yürüten hocayla görüşüp izin alarak çalışmalara katılabiliyor; fırsat öğrencinin hevesine, hazırlığına ve proje uyumuna göre değişiyor."
+    answer_card: true
+    topics: ["technical_resources", "labs", "research_projects", "student_experience"]
+    examples: ["18 araştırma laboratuvarı", "hoca izni", "proje"]
+    source: "İTÜ BBF resmî + öğrenci geri bildirimi"
+    source_urls:
+      - "https://bbf.itu.edu.tr/ogrenciler/aday-ogrenciler"
+      - "https://bm.itu.edu.tr/arastirma/laboratuvarlar"
+    tags: ["laboratuvara girebilir miyim", "lab erişimi", "hocayla çalışmak", "hoca izni"]
+
+  - id: "insider_faculty_examples_card"
+    label: "Hoca ve araştırma alanı örnekleri"
+    text: "Fakültemizde Burak Berk Üstündağ yapay zekâ ve sinyal işleme; Gökhan İnce robotik, yapay zekâ, insan-bilgisayar etkileşimi ve giyilebilir bilişim çalışıyor. Öğrenci deneyiminde hocalarımızla e-posta veya birebir görüşüp proje konuşmak mümkün."
+    answer_card: true
+    topics: ["faculty", "labs", "research_projects", "student_experience"]
+    examples: ["Burak Berk Üstündağ", "Gökhan İnce", "robotik", "yapay zekâ", "e-posta"]
+    source: "İTÜ akademik profil + öğrenci geri bildirimi"
+    source_urls:
+      - "https://akademi.itu.edu.tr/en/bustundag"
+      - "https://akademi.itu.edu.tr/en/incegokh"
+    tags: ["donanım projesi", "robotik hoca", "yapay zeka hoca", "iletişime açık hoca", "hocayla proje"]
+
+  - id: "insider_dorm_life_card"
+    label: "Yurtlarda oda, mutfak ve internet"
+    text: "Yurtlarımızda mutfak, internet ve tek, iki, üç, dört kişilik oda seçenekleri var; 2026 öğrenci deneyiminde oda yaşamı rahat ve sosyal. Uygun altyapıda 1.000 Mbps görülebiliyor, fakat hız her bina ve bağlantıda garanti değil."
+    answer_card: true
+    topics: ["housing_details", "housing", "technical_resources", "student_experience"]
+    examples: ["mutfak", "1.000 Mbps", "tek kişilik", "üç kişilik"]
+    source: "İTÜ Yurt ve Burslar Ofisi + öğrenci geri bildirimi"
+    source_urls:
+      - "https://tanitim.itu.edu.tr/kesfet/yurt-burs-imkanlarimiz"
+      - "https://yurtburs.itu.edu.tr/docs/librariesprovider174/default-document-library/yurt-ofisi-tanitim-katalogu.pdf"
+    tags: ["yurtta mutfak", "yurt internet", "1000 mbps", "oda yaşamı", "tek kişilik oda", "üç kişilik oda"]
+
+  - id: "insider_dorm_probability_card"
+    label: "Yurt çıkma ihtimali"
+    text: "Bilgisayar öğrencileri arasında yurt çıkma ihtimali yüksek deneyimlense de bölüm için yayımlanmış %99-%100 yerleşme oranı yoktur. İlk 1.000 başarı ödülündeki yurt hakkı cinsiyet, derece ve ilk tercih koşullarına göre ayrıca değerlendirilir."
+    answer_card: true
+    topics: ["housing_details", "housing", "financial_support", "student_experience"]
+    examples: ["ilk 1.000", "başarı ödülü", "ilk tercih"]
+    source: "İTÜ başarı ödülü koşulları + öğrenci geri bildirimi"
+    source_url: "https://yurtburs.itu.edu.tr/burs/basari-bursu"
+    tags: ["yurt çıkar mı", "yurt çıkma ihtimali", "bilgisayar öğrencisine yurt", "yurt garanti"]
+
+  - id: "insider_exam_curve_card"
+    label: "Sınav takvimi ve çan sistemi"
+    text: "İTÜ yönetmeliğinde ders başarısı bağıl değerlendirmeyle belirleniyor. 2026 Bilgisayar öğrenci deneyiminde vizeler ve finaller aynı haftada yoğunlaşabilse de sınavlar arasında çoğu zaman yaklaşık 2 gün bırakılıyor; takvim ve çan dağılımı derse göre değişiyor."
+    answer_card: true
+    topics: ["academic_workload", "graduation", "student_experience"]
+    examples: ["bağıl değerlendirme", "yaklaşık 2 gün", "vize", "final"]
+    source: "İTÜ Lisans Yönetmeliği + öğrenci geri bildirimi"
+    source_url: "https://www.sis.itu.edu.tr/TR/mevzuat/lisans-yonetmelik.php?v=1.0.20"
+    tags: ["sınavlar aynı hafta", "iki gün ara", "çan sistemi", "vize final", "sınav haftası"]
+
+  - id: "insider_course_failure_curve_card"
+    label: "Dersten kalma ve bağıl değerlendirme"
+    text: "Bizim bölümümüzde bağıl değerlendirme uygulanıyor. 2026 öğrenci deneyiminde çan dağılımı çoğu derste dengeli, dersten kalma düşük gözlemleniyor; resmî ders bazlı oran yayımlanmıyor. Mezuniyet için GNO eşiği 2,00."
+    answer_card: true
+    topics: ["academic_workload", "student_wellbeing", "graduation", "student_experience"]
+    examples: ["bağıl değerlendirme", "çan", "2,00 GNO"]
+    source: "İTÜ Lisans Yönetmeliği + öğrenci geri bildirimi"
+    source_url: "https://www.sis.itu.edu.tr/TR/mevzuat/lisans-yonetmelik.php?v=1.0.20"
+    tags: ["dersten kalma oranı", "çan güzel mi", "kalma düşük", "dersi geçmek", "çan dağılımı"]
+
+  - id: "insider_four_year_graduation_estimate_card"
+    label: "Dört yılda mezuniyet"
+    text: "2026 öğrenci topluluğu gözlemi, Bilgisayar öğrencilerinin dört yılda mezuniyetini yaklaşık %85-90 düzeyinde değerlendiriyor; bu bölümün yayımladığı resmî bir oran değildir. Resmî mezuniyet eşiği 240 AKTS, 2,00 GNO; azami süre 7 yıldır."
+    answer_card: true
+    confidence: low
+    topics: ["graduation", "academic_workload", "student_experience"]
+    examples: ["yaklaşık %85-90", "240 AKTS", "2,00 GNO", "7 yıl"]
+    source: "Öğrenci topluluğu gözlemi + İTÜ Lisans Yönetmeliği"
+    source_url: "https://www.sis.itu.edu.tr/TR/mevzuat/lisans-yonetmelik.php?v=1.0.20"
+    tags: ["dört yılda mezun", "okul uzar mı", "mezuniyet oranı", "kaç kişi uzatıyor"]
+
+  - id: "insider_employment_outcome_card"
+    label: "Mezuniyet öncesi ve sonrası iş bulma"
+    text: "Bizim bölümümüzün resmî araştırmasında mezunların %54'ü mezun olmadan, %20'si mezuniyetten sonraki en geç 6 ayda işe başladı; toplam %74. Bu güçlü tabloya rağmen bireysel sonuç proje, staj, İngilizce ve mülakata bağlıdır."
+    answer_card: true
+    topics: ["career", "career_evidence", "student_experience"]
+    examples: ["%54", "%20", "6 ay", "%74"]
+    source: "İTÜ Bilgisayar ve Bilişim Fakültesi resmî"
+    source_url: "https://bbf.itu.edu.tr/ogrenciler/aday-ogrenciler"
+    tags: ["mezun olmadan iş", "yüzde 70 iş", "iş bulma oranı", "mezuniyet sonrası iş"]
+
+  - id: "insider_current_tech_teams_card"
+    label: "İHA, uydu ve TEKNOFEST takımları"
+    text: "Okulumuzun güncel takımlarında 19 üyeli İTÜNOM İHA, 2 roket, 3 uydu ve 1 İHA geliştiren UZAYTEK ile TEKNOFEST'te yarışan İTÜ Sungur bulunuyor. Fakültemizde ayrıca ITU W-TECH, DATABEES ve VCAMP var."
+    answer_card: true
+    topics: ["clubs_teams", "research_projects", "campus_life", "student_experience"]
+    examples: ["İTÜNOM", "19 üye", "UZAYTEK", "3 uydu", "İTÜ Sungur", "ITU W-TECH"]
+    source: "İTÜ Öğrenci Faaliyetleri + İTÜ BBF resmî"
+    source_urls:
+      - "https://ogrencifaaliyetleri.itu.edu.tr/team/itunom-iha-takimi/26"
+      - "https://ogrencifaaliyetleri.itu.edu.tr/teams?category=air"
+      - "https://bbf.itu.edu.tr/ogrenciler/%C3%B6%C4%9Frenci-tak%C4%B1mlar%C4%B1"
+    tags: ["iha takımı", "uydu takımı", "teknofest", "aktif takım", "uzay takımı", "spor takımı"]

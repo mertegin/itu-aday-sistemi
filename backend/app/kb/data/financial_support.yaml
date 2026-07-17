@@ -1,0 +1,97 @@
+meta:
+  section: "İTÜ burs ve maddi destekler"
+  source: "İTÜ Burslar ve Yurtlar Koordinatörlüğü"
+  source_url: "https://yurtburs.itu.edu.tr/burs/basari-bursu"
+  year: 2025
+  last_verified: "2026-07-16"
+  confidence: high
+  topics: ["financial_support", "scholarship"]
+  tags: ["burs", "maddi destek", "başarı ödülü", "ilk tercih", "ihtiyaç bursu"]
+
+facts:
+  - id: "scholarship_rank_1_10"
+    text: "2025 YKS'de Türkiye 1-10 derecesiyle bir İTÜ lisans programına kayıt yaptıranlara tek seferlik 100.000 TL başarı desteği; hazırlık dahil 1+4 yıl boyunca yılda 9 ay, resmi sayfada 'ayda 10.000 TL + 10.000 TL' olarak listelenen başarı ödülü verilir. Bursun sürmesi için yıl sonu GNO en az 2,50 olmalı ve hazırlık ilk yılda başarıyla tamamlanmalıdır."
+    rank_min: 1
+    rank_max: 10
+    support_type: "merit_cash"
+    answer_card: true
+    topics: ["housing"]
+    tags: ["100000", "100.000", "10000", "10.000", "ilk 10"]
+
+  - id: "scholarship_rank_11_100"
+    text: "2025 YKS'de Türkiye 11-100 derecesiyle bir İTÜ lisans programına kayıt yaptıranlara hazırlık dahil 1+4 yıl boyunca yılda 9 ay, resmi sayfada 'ayda 10.000 TL + 10.000 TL' olarak listelenen başarı ödülü verilir. Bursun sürmesi için yıl sonu GNO en az 2,50 olmalı ve hazırlık ilk yılda başarıyla tamamlanmalıdır."
+    rank_min: 11
+    rank_max: 100
+    support_type: "merit_cash"
+    answer_card: true
+    topics: ["housing"]
+    tags: ["10000", "10.000", "ilk 100"]
+
+  - id: "scholarship_rank_101_500"
+    text: "2025 YKS'de Türkiye 101-500 derecesiyle bir İTÜ lisans programına kayıt yaptıranlara hazırlık dahil 1+4 yıl boyunca yılda 9 ay aylık 8.500 TL başarı ödülü verilir. Bursun sürmesi için yıl sonu GNO en az 2,50 olmalı ve hazırlık ilk yılda başarıyla tamamlanmalıdır."
+    rank_min: 101
+    rank_max: 500
+    support_type: "merit_cash"
+    answer_card: true
+    topics: ["housing"]
+    tags: ["8500", "8.500", "ilk 500"]
+
+  - id: "scholarship_rank_501_1000"
+    text: "2025 YKS'de Türkiye 501-1000 derecesinde olup bir İTÜ lisans programına 1. tercihiyle yerleşenlere hazırlık dahil 1+4 yıl boyunca yılda 9 ay aylık 6.750 TL, yani yılda toplam 60.750 TL başarı ödülü verilir. Bursun sürmesi için yıl sonu GNO en az 2,50 olmalı ve hazırlık ilk yılda başarıyla tamamlanmalıdır."
+    rank_min: 501
+    rank_max: 1000
+    requires_first_choice: true
+    support_type: "merit_cash"
+    answer_card: true
+    topics: ["housing"]
+    tags: ["6750", "6.750", "60750", "60.750", "ilk 1000", "birinci tercih"]
+
+  - id: "scholarship_first_choice"
+    text: "2025 ilk tercih bursunda, tercih listesinde İTÜ'yü ilk sıraya yazıp bu tercihindeki bölüme yerleşenlere hazırlık dahil 1+4 yıl boyunca yılda 9 ay aylık 4.000 TL, öğle yemeği ve spor tesislerinden ücretsiz yararlanma desteği verilir. UOLP ve KKTC ortak programları kapsam dışıdır; devam koşulu GNO 2,50 ve hazırlık başarısıdır."
+    requires_first_choice: true
+    support_type: "first_choice"
+    answer_card: true
+    topics: ["campus"]
+    tags: ["4000", "4.000", "ilk tercih bursu", "yemek bursu"]
+
+  - id: "scholarship_need_based"
+    text: "İTÜ'nün resmi burs sayfasına göre ekonomik gereksinimi olan öğrenciler nakdi ihtiyaç burslarından yararlanabilir; bu destekler İTÜ vakıfları, mezunları, dernekleri ve başka kişi veya kuruluşlarca karşılanır. Resmi sayfa sabit bir tutar ya da herkese burs garantisi belirtmez."
+    support_type: "need_based"
+    topics: ["financial_concern"]
+    tags: ["ihtiyaç bursu", "ekonomik gereksinim", "nakdi burs", "para sıkıntısı"]
+
+  - id: "scholarship_meal"
+    text: "İTÜ yemek bursu, üniversite yemekhanesinde günde bir öğün öğle yemeğini ücretsiz karşılar ve bir akademik yıl için geçerlidir."
+    support_type: "meal"
+    topics: ["financial_concern", "campus"]
+    tags: ["yemek bursu", "ücretsiz öğle yemeği", "yemekhane"]
+
+  - id: "scholarship_merit_benefits_1_100"
+    text: "2025 başarı ödülünde Türkiye 1-100 derecesi için tek kişilik ücretsiz İTÜ yurdu, yılda 9 ay öğle yemeği, spor tesisleri, hazırlığı yurt dışında okuma imkanı ve İTÜ Teknopark'ta şirket açma önceliği listelenir. Bunlar kayıt ve başarı koşullarına bağlı imkanlardır; otomatik yatırım veya şirket başarısı garantisi değildir."
+    rank_min: 1
+    rank_max: 100
+    support_type: "merit_benefits"
+    topics: ["housing", "campus", "abroad", "entrepreneurship"]
+    tags: ["ücretsiz yurt", "teknopark", "şirket açma önceliği"]
+
+  - id: "scholarship_merit_benefits_101_500"
+    text: "2025 başarı ödülünde Türkiye 101-500 derecesi için yılda 9 ay öğle yemeği, spor tesisleri, İTÜ Teknopark'ta şirket açma önceliği ve cinsiyete göre belirtilen ücretsiz yurt imkanları listelenir. Bunlar kayıt ve başarı koşullarına bağlıdır; otomatik yatırım veya şirket başarısı garantisi değildir."
+    rank_min: 101
+    rank_max: 500
+    support_type: "merit_benefits"
+    topics: ["housing", "campus", "entrepreneurship"]
+    tags: ["ücretsiz yurt", "teknopark", "şirket açma önceliği"]
+
+  - id: "scholarship_merit_benefits_501_1000"
+    text: "2025 başarı ödülünde Türkiye 501-1000 derecesinde İTÜ'ye 1. tercihiyle yerleşenler için yılda 9 ay öğle yemeği, spor tesisleri, İTÜ Teknopark'ta şirket açma önceliği; kız öğrenciler için ücretsiz, erkek öğrenciler için üç kişilik standart yurtta yüzde 50 indirimli konaklama listelenir."
+    rank_min: 501
+    rank_max: 1000
+    requires_first_choice: true
+    support_type: "merit_benefits"
+    topics: ["housing", "campus", "entrepreneurship"]
+    tags: ["yurt indirimi", "yüzde 50", "%50", "teknopark", "şirket açma önceliği"]
+
+  - id: "scholarship_combination_rule"
+    text: "2025 İTÜ burs koşullarına göre birden fazla başarı bursuna hak kazanan öğrenciye yalnızca tutarı en yüksek olan burs verilir; başarı bursları öğrencinin yerleştirme puanı esas alınarak belirlenir."
+    support_type: "condition"
+    tags: ["birden fazla burs", "en yüksek burs", "yerleştirme puanı"]

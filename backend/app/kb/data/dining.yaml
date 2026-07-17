@@ -1,0 +1,41 @@
+meta:
+  section: "İTÜ yemekhane ücreti ve menü yapısı"
+  source: "İTÜ Sağlık Kültür ve Spor Daire Başkanlığı"
+  source_url: "https://sks.itu.edu.tr/yemek-fiyatları"
+  year: 2025
+  last_verified: "2026-07-16"
+  confidence: high
+  topics: ["dining", "campus", "financial_concern"]
+  tags: ["yemekhane", "yemek ücreti", "menü", "Ayazağa"]
+
+facts:
+  - id: "dining_price_menu_card"
+    text: "15 Eylül 2025 tarifesinde öğrenci öğle ve akşam yemeği 47,50 TL; resmi menü dört kap. 2026 öğrenci deneyiminde tantuni, Adana dürüm, et döner, hamburger, köfte, balık ve limonata gibi doyurucu örnekler aktarılıyor."
+    answer_card: true
+    examples: ["tantuni", "Adana dürüm", "et döner", "hamburger", "köfte", "balık", "limonata"]
+    source: "İTÜ SKS resmi + öğrenci geri bildirimi"
+    source_urls:
+      - "https://sks.itu.edu.tr/yemek-fiyatları"
+      - "https://sks.itu.edu.tr/hizmetlerimiz/beslenme-hizmetleri"
+    tags: ["47,50", "47.50", "dört kap", "çorba", "pilav", "makarna", "tatlı", "vejetaryen"]
+
+  - id: "dining_nutrition"
+    text: "İTÜ SKS'ye göre aylık menüler gıda mühendisi, gıda teknikeri ve aşçıbaşı tarafından hazırlanır; dört kaplık bir öğün yaklaşık 1.000-1.500 kaloridir."
+    source_url: "https://sks.itu.edu.tr/hizmetlerimiz/beslenme-hizmetleri"
+    examples: ["gıda mühendisi", "gıda teknikeri", "aşçıbaşı"]
+    tags: ["1000", "1.000", "1500", "1.500", "kalori", "beslenme"]
+
+  - id: "dining_ayazaga_hours"
+    text: "Ayazağa öğrenci yemekhanesinde hafta içi öğle yemeği 11.30-14.00, akşam yemeği 17.00-19.30; hafta sonu öğle 12.00-14.00, akşam 17.00-19.30 saatlerindedir."
+    source_url: "https://sks.itu.edu.tr/yemek-saatleri"
+    examples: ["Ayazağa öğrenci yemekhanesi"]
+    tags: ["11.30", "14.00", "17.00", "19.30", "hafta sonu", "saat"]
+
+  - id: "dining_student_menu_examples_2026"
+    text: "2026 öğrenci deneyimine göre İTÜ yemekhanesinde dönemsel olarak tantuni, Adana dürüm, et döner, hamburger, köfte ve balık gibi doyurucu seçenekler; kola, Fanta, gazoz ve limonata gibi çeşitli içecekler sunulabiliyor. Günlük menü değişebilir."
+    source: "Öğrenci geri bildirimi (kullanıcı tarafından sağlandı)"
+    year: 2026
+    confidence: medium
+    examples: ["tantuni", "Adana dürüm", "et döner", "hamburger", "köfte", "balık", "limonata"]
+    topics: ["student_experience"]
+    tags: ["doyurucu", "çeşitli", "kola", "Fanta", "gazoz", "yemek örnekleri"]

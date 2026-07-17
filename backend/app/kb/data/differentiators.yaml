@@ -1,0 +1,43 @@
+meta:
+  section: "İTÜ Bilgisayar'ın ölçülebilir farkları"
+  source: "QS ve İTÜ Bilgisayar Mühendisliği resmi"
+  year: 2026
+  last_verified: "2026-07-16"
+  confidence: high
+  topics: ["differentiators", "comparison", "faculty"]
+  tags: ["neden İTÜ", "fark", "eşsiz", "ABET", "akademik kadro"]
+
+facts:
+  - id: "differentiator_qs_abet_faculty_card"
+    text: "İTÜ, QS 2026 Mühendislik ve Teknoloji'de dünya 91.'si; Bilgisayar Mühendisliği ABET akrediteli. Yapay zekâ çalışan Prof. Dr. Burak Berk Üstündağ'ın, öğrenci geri bildirimlerinde birebir ve e-posta yoluyla yardımcı olduğu aktarılıyor."
+    answer_card: true
+    examples: ["ABET", "Burak Berk Üstündağ", "yapay zekâ", "e-posta"]
+    source: "QS + İTÜ Bilgisayar resmi + öğrenci geri bildirimi"
+    source_urls:
+      - "https://www.topuniversities.com/university-subject-rankings/engineering-technology"
+      - "https://bm.itu.edu.tr/egitim/lisans/bilgisayar-muhendisligi/akreditasyon"
+      - "https://akademi.itu.edu.tr/en/bustundag/"
+    tags: ["91", "ilk 100", "QS 2026", "ABET", "Burak Berk Üstündağ", "AI"]
+
+  - id: "differentiator_faculty_access_and_advising_2026"
+    label: "Hocalara ulaşım ve danışmanlık"
+    text: "Hocalarımıza ulaşmak genelde kolay; kurumsal e-posta adresleri bölüm sitesinde açık. Burak Berk Üstündağ, öğrenci geri bildirimlerinde e-postayla ve birebir görüşmeyle yardımcı olan örneklerden. Ayrıca her öğrenciye danışman hoca atanıyor; yani tek iletişim kanalın ders saati değil."
+    source: "Öğrenci geri bildirimi (kullanıcı tarafından sağlandı)"
+    year: 2026
+    confidence: medium
+    answer_card: true
+    examples: ["Burak Berk Üstündağ", "e-posta", "danışman öğretim üyesi"]
+    topics: ["student_experience", "faculty"]
+    tags: ["öğrenci iletişimi", "mail", "birebir yardım", "akademik danışman", "danışman hoca"]
+
+  - id: "differentiator_compe_employment_card"
+    text: "İTÜ Bilgisayar'ın sektör farkına bir ölçü: Kariyer.net'in 2024 analizinde bölüm 79,2 puanla işveren ilgisi ve hızlı işe girme endeksinde birinci. Kariyer Zirvesi'nde Siemens, ASELSAN, Turkcell ve Bosch gibi şirketlerle doğrudan temas kurulabiliyor."
+    answer_card: true
+    examples: ["Kariyer.net", "Siemens", "ASELSAN", "Turkcell", "Bosch"]
+    source: "İTÜ Haberler + İTÜ Kariyer Zirvesi resmi"
+    source_url: "https://haberler.itu.edu.tr/haberdetay/2025/07/09/itu-luler-is-hayatina-saglam-adimlarla-basliyor"
+    source_urls:
+      - "https://haberler.itu.edu.tr/haberdetay/2025/07/09/itu-luler-is-hayatina-saglam-adimlarla-basliyor"
+      - "https://itukariyerzirvesi.itu.edu.tr/"
+    year: "2024-2026"
+    tags: ["79,2", "79.2", "birinci", "işveren", "şirket"]

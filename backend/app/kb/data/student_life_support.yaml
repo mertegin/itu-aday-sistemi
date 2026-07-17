@@ -1,0 +1,97 @@
+meta:
+  section: "İTÜ öğrenci yaşamı ve destek hizmetleri"
+  source: "İTÜ resmî öğrenci hizmetleri sayfaları"
+  year: "2025-2026"
+  last_verified: "2026-07-16"
+  confidence: high
+  topics: ["student_life"]
+  tags: ["yurt", "kütüphane", "psikolojik destek", "kulüp", "İstanbul"]
+
+facts:
+  - id: "housing_capacity_fees_card"
+    text: "İTÜ yurtları Ayazağa, Gümüşsuyu ve Tuzla'da toplam 5.300 yatak sunuyor. 2025-26 aylık ücretler oda tipine göre 1.720-13.500 TL; örneğin Ayazağa 3 kişilik kız odası 2.920 TL, Gölet normal oda 5.640 TL."
+    answer_card: true
+    topics: ["housing_details", "housing", "financial_concern"]
+    examples: ["5.300 yatak", "1.720 TL", "2.920 TL", "5.640 TL"]
+    source: "İTÜ Yurt ve Burslar Ofisi"
+    source_urls:
+      - "https://yurtburs.itu.edu.tr/"
+      - "https://yurtburs.itu.edu.tr/yurt/yurt-ucretleri"
+    tags: ["yurt fiyat", "kaç kişilik", "kapasite", "garanti", "başvuru"]
+
+  - id: "housing_application_path_card"
+    label: "Yeni öğrenciler için yurt başvurusu"
+    text: "Yeni kayıtlı öğrenci, yerleştirmeden sonra İTÜ Yurt ve Burslar Ofisinin ilan ettiği tarihlerde çevrimiçi yurt sisteminden belgelerini yükleyerek başvurur; sonucu İTÜ Portal/yurt sistemi üzerinden izler. Yerleştirme tercih ve kontenjana bağlıdır, sonuç açıklanmadan garanti değildir. 2026 yeni kayıt takvimi yayımlandığında güncel tarih ayrıca kontrol edilmelidir."
+    answer_card: true
+    topics: ["housing_details", "housing", "financial_concern"]
+    examples: ["çevrimiçi başvuru", "İTÜ Portal", "tercih ve kontenjan"]
+    source: "İTÜ Yurt ve Burslar Ofisi yeni kayıt ve sonuç duyuruları"
+    source_urls:
+      - "https://yurtburs.itu.edu.tr/haberler/2025/08/25/2025-yks-ile-universitemizi-yeni-kazanan-ogrencilerimizin-dikkatine"
+      - "https://yurtburs.itu.edu.tr/haberler/2025/09/16/2025-yks-yurt-basvuru-sonuclari-aciklandi"
+    year: "2025 süreci; 2026 takvimi bekleniyor"
+    tags: ["kalacak yerim yok", "nasıl ayarlarım", "yurt başvuru", "yurda nasıl başvurulur"]
+
+  - id: "student_support_total_card"
+    text: "İTÜ, 2025-26 döneminde öğrencilere burs, yemek ve barınma dahil toplam 408 milyon TL destek açıkladı; bu bireysel burs garantisi değil, destek ekosisteminin toplamıdır. Başarı, ihtiyaç, yemek ve yurt yolları ayrı koşullarla değerlendirilir."
+    answer_card: true
+    topics: ["financial_support", "housing_details", "student_wellbeing"]
+    examples: ["408 milyon TL", "burs", "yemek", "barınma"]
+    source: "İTÜ Yurt ve Burslar Ofisi"
+    source_url: "https://yurtburs.itu.edu.tr/"
+    tags: ["maddi destek", "toplam destek", "geçim", "burs"]
+
+  - id: "psychological_support_card"
+    text: "İTÜ PDR, öğrenci ve personele ücretsiz bireysel/grup danışmanlığı veriyor; merkez Ayazağa ve Maçka'da hizmet sunuyor. 2025 raporunda 934 öğrencinin hizmet için e-posta gönderdiği belirtiliyor; bu, desteğin fiilen kullanıldığını gösterir."
+    answer_card: true
+    topics: ["student_wellbeing"]
+    examples: ["ücretsiz", "Ayazağa", "934 öğrenci"]
+    source: "İTÜ Psikolojik Danışma ve Rehberlik Merkezi"
+    source_urls:
+      - "https://ydy.itu.edu.tr/ofisler/yardimci-birimler/psikolojik-danisma-ve-rehberlik-merkezi"
+      - "https://pdr.itu.edu.tr/docs/librariesprovider251/default-document-library/2025-it%C3%BC-pdr-merkezi-raporu.pdf?sfvrsn=0"
+    tags: ["yalnız hissedersem", "kaygı", "psikolog", "danışmanlık", "stres"]
+
+  - id: "library_study_card"
+    text: "Mustafa İnan Kütüphanesi 7/24 açıktır ve İTÜ kütüphaneleri 1 milyondan fazla basılı+elektronik kaynağa erişim verir. Çalışma alanlarında 25 tek kişilik çalışma hücresi bulunur; grup odalarının bir bölümü lisansüstü/personel kullanımındadır."
+    answer_card: true
+    topics: ["technical_resources", "student_wellbeing", "campus_life"]
+    examples: ["7/24", "1 milyon+ kaynak", "25 çalışma hücresi"]
+    source: "İTÜ Kütüphane ve Dokümantasyon Daire Başkanlığı"
+    source_urls:
+      - "https://kutuphane.itu.edu.tr/haberler/2025/09/26/i-t%C3%BC-k%C3%BCt%C3%BCphaneleri-ne-ho%C5%9Fgeldi-ni-z-%21"
+      - "https://kutuphane.mozaik-test.itu.edu.tr/hizmetler/salon-ve-calisma-alanlari"
+    tags: ["kütüphane", "çalışma alanı", "gece çalışmak", "7/24", "kaynak"]
+
+  - id: "department_clubs_teams_card"
+    label: "Bölüm kulüpleri ve öğrenci takımları"
+    text: "BBF'nin resmî sayfasında 5 bölüm kulübü sayılıyor: Yapay Zekâ, Blockchain Technologies, Oyun Tasarlama ve Geliştirme, İTÜ ACM ve GDG on Campus. Ayrıca W-TECH, DATABEES ve VCAMP adlı 3 öğrenci takımı tanıtılıyor."
+    answer_card: true
+    topics: ["clubs_teams", "research_projects", "student_social"]
+    examples: ["5 bölüm kulübü", "Oyun Tasarlama ve Geliştirme", "İTÜ ACM", "DATABEES", "VCAMP"]
+    source: "İTÜ Bilgisayar ve Bilişim Fakültesi"
+    source_urls:
+      - "https://bbf.itu.edu.tr/ogrenciler/ogrenci-kulupleri"
+      - "https://bbf.itu.edu.tr/ogrenciler/%C3%B6%C4%9Frenci-tak%C4%B1mlar%C4%B1"
+    tags: ["kulüp", "takım", "acm", "oyun", "hackathon", "sosyal çevre"]
+
+  - id: "istanbul_transport_card"
+    text: "Ayazağa Kampüsü M2 üzerindeki İTÜ-Ayazağa istasyonundadır; aynı hat Levent, Şişli-Mecidiyeköy ve Taksim'e bağlanır. Bu, Bilgisayar öğrencisinin kampüsten iş, etkinlik ve şehir merkezine aktarmasız kuzey-güney erişimini güçlendirir; süre saate göre değişir."
+    answer_card: true
+    topics: ["istanbul_life", "campus_life", "career"]
+    examples: ["M2", "İTÜ-Ayazağa", "Levent", "Taksim"]
+    source: "Metro İstanbul M2 Yenikapı-Hacıosman hattı"
+    source_url: "https://www.metro.istanbul/en/Hatlarimiz/HatDetay?hat=M2"
+    tags: ["ulaşım", "metro", "istanbul", "taksim", "levent", "şehir pahalı"]
+
+  - id: "student_profile_honesty_card"
+    text: "Bölümün resmî öğrenci kişilik dağılımı veya 'rekabetçi-dayanışmacı' oranı yayımlanmıyor. Somut temas kanalları ise 5 bölüm kulübü, 3 takım, danışman öğretim üyesi ve 18 araştırma laboratuvarıdır; sosyal uyum kişiden kişiye değişir."
+    answer_card: true
+    topics: ["student_social", "student_wellbeing"]
+    examples: ["5 kulüp", "3 takım", "18 laboratuvar"]
+    source: "İTÜ BBF resmî öğrenci ve aday sayfaları"
+    source_urls:
+      - "https://bbf.itu.edu.tr/ogrenciler/ogrenci-kulupleri"
+      - "https://bbf.itu.edu.tr/ogrenciler/%C3%B6%C4%9Frenci-tak%C4%B1mlar%C4%B1"
+      - "https://bbf.itu.edu.tr/ogrenciler/aday-ogrenciler"
+    tags: ["öğrenci profili", "arkadaş ortamı", "rekabet", "dayanışma", "yalnızlık"]

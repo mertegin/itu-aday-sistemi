@@ -114,6 +114,15 @@ class EthicsFilter:
         for pattern, replacement in replacements:
             result = re.sub(pattern, replacement, result, flags=re.IGNORECASE)
 
+        # Adayın sıralamasını mekanik biçimde "güvenli bölge" diye etiketlemek
+        # doğal konuşmayı bozuyor ve yerleşme garantisi çağrışımı yapıyor.
+        result = re.sub(
+            r"[^.!?]*(?:güvenli\s+bir\s+bölge(?:de|desin)|güvenli\s+bölgedesin)[.!?]?\s*",
+            "",
+            result,
+            flags=re.IGNORECASE,
+        ).strip()
+
         # "Doğru mu anladım?" kalıbını cümlenin sonundaysa temizle
         result = re.sub(r"[.,!]?\s*Doğru\s+mu\s+anladım\s*\??", ".", result, flags=re.IGNORECASE)
         # Uç-cümledeki ", doğru mu?" da benzer şekilde

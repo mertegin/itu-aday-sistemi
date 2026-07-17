@@ -75,6 +75,16 @@ facts:
       - "https://bbf.itu.edu.tr/ogrenciler/%C3%B6%C4%9Frenci-tak%C4%B1mlar%C4%B1"
     tags: ["kulüp", "takım", "acm", "oyun", "hackathon", "sosyal çevre"]
 
+  - id: "game_interest_fit_card"
+    label: "Oyun ilgisi ve bölüme uygunluk"
+    text: "Bilgisayar oyunu oynamayı sevmek tek başına Bilgisayar Mühendisliği için yeterli değil; oyunun arkasındaki algoritmayı, yazılımı ve problem çözmeyi merak etmek daha belirleyici. Bunu denemek için fakültemizdeki 5 kulüpten Oyun Tasarlama ve Geliştirme topluluğuna katılıp tüketmekten üretmeye geçebilirsin."
+    answer_card: true
+    topics: ["gamedev", "candidate_fit", "clubs_teams", "curriculum_beginner"]
+    examples: ["5 kulüp", "Oyun Tasarlama ve Geliştirme", "algoritma", "problem çözme"]
+    source: "İTÜ BBF öğrenci kulüpleri sayfası + bölüm uygunluğu çerçevesi"
+    source_url: "https://bbf.itu.edu.tr/ogrenciler/ogrenci-kulupleri"
+    tags: ["bilgisayar oyunu", "oyun oynamayı sevmek", "oyun sevmek yeterli", "bölüme uygun muyum"]
+
   - id: "istanbul_transport_card"
     text: "Ayazağa Kampüsü M2 üzerindeki İTÜ-Ayazağa istasyonundadır; aynı hat Levent, Şişli-Mecidiyeköy ve Taksim'e bağlanır. Bu, Bilgisayar öğrencisinin kampüsten iş, etkinlik ve şehir merkezine aktarmasız kuzey-güney erişimini güçlendirir; süre saate göre değişir."
     answer_card: true

@@ -337,6 +337,52 @@ def enforce_non_repetition(
     }
 
 
+def enforce_scholarship_eligibility(
+    text: str,
+    rag: RagResult,
+    question: str,
+) -> tuple[str, dict]:
+    """Keep a known-rank burs answer on the applicable cash tier and its conditions."""
+    folded_question = question.lower().translate(_TR_FOLD_GATE)
+    direct_burs_question = any(term in folded_question for term in ("burs", "basari odulu", "maddi destek"))
+    ranked_cards = [
+        fact for fact in rag.facts
+        if fact.applicable and fact.id.startswith("scholarship_rank_")
+    ]
+    if not ranked_cards:
+        return text, {"repaired": False, "reason": "no_applicable_rank_card"}
+
+    card = ranked_cards[0]
+    expected_amounts = {
+        "scholarship_rank_1_10": ("100.000", "10.000"),
+        "scholarship_rank_11_100": ("10.000",),
+        "scholarship_rank_101_500": ("8.500",),
+        "scholarship_rank_501_1000": ("6.750", "60.750"),
+    }.get(card.id, ())
+    folded_text = text.lower().translate(_TR_FOLD_GATE)
+    has_expected_amount = any(amount in text for amount in expected_amounts)
+
+    if direct_burs_question and expected_amounts and not has_expected_amount:
+        return card.text, {
+            "repaired": True,
+            "reason": "applicable_rank_tier",
+            "card_id": card.id,
+            "original_text": text,
+        }
+
+    requires_first_choice = card.id == "scholarship_rank_501_1000"
+    mentions_first_choice = "ilk tercih" in folded_text or "1. tercih" in folded_text
+    if has_expected_amount and requires_first_choice and not mentions_first_choice:
+        return f"{text.rstrip()} Bu destek ilk tercih ve devam koşullarına bağlı.", {
+            "repaired": True,
+            "reason": "missing_first_choice_condition",
+            "card_id": card.id,
+            "original_text": text,
+        }
+
+    return text, {"repaired": False, "reason": "eligible_tier_and_conditions_present", "card_id": card.id}
+
+
 def _token_similarity(left: str, right: str) -> float:
     left_tokens = set(_q_tokens(left))
     right_tokens = set(_q_tokens(right))

@@ -130,7 +130,7 @@ _TOPIC_RULES: list[tuple[str, tuple[str, ...], str, float]] = [
     ),
     (
         "housing_details",
-        ("yurt fiy", "yurt ucret", "yurt kapas", "yurtlarda mutfak", "yurtta mutfak", "yurt internet", "yurtlarda internet", "yurtta internet", "oda secenek", "kac kisilik oda", "yurt cikar", "yurt cikma", "yurt basvuru", "ozel yurt", "eve cik"),
+        ("yurt fiy", "yurt ucret", "yurt kapas", "yurtlarda mutfak", "yurtta mutfak", "yurt internet", "yurtlarda internet", "yurtta internet", "oda secenek", "kac kisilik oda", "yurt cikar", "yurt cikma", "yurt basvuru", "ozel yurt", "eve cik", "kalacak yer", "nasil ayarlarim"),
         "itu_housing_details",
         0.98,
     ),

@@ -28,6 +28,7 @@ from .kb.fact_gate import (
     enforce_answer_relevance,
     enforce_fact_gate,
     enforce_non_repetition,
+    enforce_scholarship_eligibility,
 )
 from .kb.evidence_gate import enforce_evidence_contract
 from .kb.retriever import retrieve_facts
@@ -56,7 +57,9 @@ class Orchestrator:
         # 1. Load or create conversation
         conv = await self._get_or_create_conversation(session_id, db)
         profile = CandidateProfile.from_dict(conv.profile or {})
-        ctx = conv.context or {}
+        # JSON columns are not mutation-tracked deeply; a fresh outer dict makes
+        # last_route and nested bandit updates persist on every turn.
+        ctx = dict(conv.context or {})
         bandit_stats = ctx.setdefault("bandit_stats", {})
 
         # 2. Analyze user message
@@ -208,6 +211,8 @@ class Orchestrator:
         response_text, ethics_result = self.ethics.enforce(response_text)
         response_text, fact_gate_result = enforce_fact_gate(response_text, rag_result, question=text)
         response_text, relevance_result = enforce_answer_relevance(response_text, rag_result, text)
+        response_text, scholarship_result = enforce_scholarship_eligibility(response_text, rag_result, text)
+        fact_gate_result["scholarship_eligibility"] = scholarship_result
         response_text, pre_evidence_speech = enforce_spoken_length(response_text, max_words=65)
         response_text, evidence_result = enforce_evidence_contract(
             response_text,
@@ -315,7 +320,7 @@ class Orchestrator:
 
     @staticmethod
     def _should_ask_followup(history: list[dict], analysis: dict, argument_id: str) -> bool:
-        if argument_id in {"socratic_probe", "rank_probe"}:
+        if argument_id in {"socratic_probe", "rank_probe", "koc_vs_itu_value"}:
             return True
         if analysis.get("intent") in {"close", "disengaged", "reject"}:
             return False

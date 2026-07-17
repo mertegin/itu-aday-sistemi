@@ -34,11 +34,11 @@ facts:
 
   - id: "campus_student_social_food_spots_2026"
     label: "Ayazağa'da sosyalleşme ve günlük yaşam"
-    text: "2026 öğrenci deneyimine göre Ayazağa'da Selfish ve öğrencilerin çimlerde oturup sosyalleştiği Med Çim öne çıkar; tenis kortları da kullanılır. Bestra, Küçük Ev ve Unkapanı Pilavcısı yemek/tatlı seçeneklerindendir; kampüste Migros, A101 ve ŞOK bulunur."
+    text: "2026 öğrenci deneyiminde Ayazağa'da Selfish ve öğrencilerin çimlerde oturduğu Med Çim öne çıkıyor; tenis kortları da kullanılıyor. Bölüm tarafında Oyun Tasarlama ve Geliştirme ile İTÜ ACM'nin de bulunduğu 5 kulüp, ayrıca 3 öğrenci takımı var; daha sakin başlayan biri için tekrar eden etkinlikler tanışmayı kolaylaştırabilir."
     answer_card: true
     source: "Öğrenci geri bildirimi (kullanıcı tarafından sağlandı)"
     year: 2026
     confidence: medium
-    examples: ["Selfish", "Med Çim", "tenis kortları", "Bestra", "Küçük Ev", "Unkapanı Pilavcısı", "Migros", "A101", "ŞOK"]
+    examples: ["Selfish", "Med Çim", "tenis kortları", "Oyun Tasarlama ve Geliştirme", "İTÜ ACM", "5 kulüp", "3 öğrenci takımı"]
     topics: ["student_experience", "student_social", "campus_life", "dining"]
     tags: ["sosyalleşme", "çim", "kafe", "tatlı", "market", "kampüste yemek"]

@@ -334,9 +334,11 @@ def retrieve_facts(
         ):
             score += 36.0
         if raw_id == "differentiator_faculty_access_and_advising_2026" and any(
-            phrase in folded_query for phrase in ("mail", "e-posta", "danisman", "ulas")
+            phrase in folded_query for phrase in ("mail", "e-posta", "danisman", "ulas", "iletisim")
         ):
             score += 45.0
+        if raw_id == "insider_faculty_interest_card" and "hoca" in folded_query and "ilgili" in folded_query:
+            score += 55.0
         exact_cards = {
             "insider_faculty_interest_card": ("hocalar ilgili", "hocalari ilgili", "ogrencilere karsi ilgili", "ogrencilerle ilgilen", "hoca destegi"),
             "insider_teaching_english_card": ("hocalarin ingilizcesi", "hocalar ingilizce", "ingilizce ders anlat", "dersleri anlayabilir", "dersi anlam"),
@@ -354,6 +356,7 @@ def retrieve_facts(
             "curriculum_study_habits_card": ("dersleri duzenli takip", "dersi duzenli takip", "takip etmek yeterli", "derse gitmek yeterli"),
             "insider_faculty_course_support_card": ("ders destegi", "hocadan destek", "konuyu anlamadim", "ders icin hocaya"),
             "housing_application_path_card": ("kalacak yerim yok", "nasil ayarlarim", "yurt basvuru", "yurda nasil"),
+            "game_interest_fit_card": ("bilgisayar oyunu", "oyun oynamayi sevmek", "oyun sevmek", "bolum icin yeterli"),
             "internship_requirements_card": ("zorunlu staj", "staj zorunlu", "kac gun", "staj suresi"),
             "double_major_minor_card": ("cift anadal", "cap ", "cap ve", "yandal"),
             "erasmus_course_recognition_card": ("dersler sayil", "ders saydir", "ola", "taninma"),
@@ -372,6 +375,7 @@ def retrieve_facts(
                 "curriculum_study_habits_card",
                 "insider_faculty_course_support_card",
                 "housing_application_path_card",
+                "game_interest_fit_card",
             }
             score += 40.0 if is_direct_answer else 25.0
         if (

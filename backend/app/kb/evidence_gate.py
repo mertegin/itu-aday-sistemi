@@ -47,6 +47,7 @@ REQUIREMENTS: dict[str, EvidenceRequirement] = {
     "itu_english_prep": EvidenceRequirement(number=True, example=True),
     "itu_compe_differentiators": EvidenceRequirement(number=True, example=True),
     "university_comparison_general": EvidenceRequirement(number=True, example=True),
+    "itu_faculty_research": EvidenceRequirement(example=True),
     "itu_first_year_curriculum": EvidenceRequirement(
         number=True,
         example=True,
@@ -88,6 +89,12 @@ def enforce_evidence_contract(
     requirement = REQUIREMENTS.get(argument_id)
     if requirement is None:
         return text, EvidenceGateResult(required=False, clean=True).to_dict()
+    if (
+        argument_id == "itu_housing_details"
+        and rag.facts
+        and rag.facts[0].id == "housing_application_path_card"
+    ):
+        requirement = EvidenceRequirement(example=True, card_ids=("housing_application_path_card",))
 
     eligible_facts = [
         fact for fact in rag.facts
